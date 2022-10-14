@@ -1,0 +1,130 @@
+<resources>
+    <string name="app_name">ENCARGALO</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+
+    <!-- OPCIONES DEL MENU -->
+
+    <string name="menu_mitienda">MI TIENDA</string>
+    <string name="menu_misproductos">MIS PRODUCTOS</string>
+    <string name="menu_misordenes">MIS ORDENES</string>
+    <string name="menu_mipublicidad">MI PUBLICIDAD</string>
+    <string name="menu_miaprendizaje">MI APRENDIZAJE</string>
+    <string name="menu_soporte">SOPORTE</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- GENERALES -->
+    <string name="str_terminos_politicas">Al continuar, usted acepta los Términos y condiciones y Política de Privacidad</string>
+    <string name="str_btn_continuar">Continuar</string>
+    <string name="str_btn_cancelar">Cancelar</string>
+    <string name="str_home">Eso fue rápido!</string>
+    <string name="str_btn_volver_inicio">Volver a inicio</string>
+    <string name="str_btn_volver">Volver</string>
+
+    <!-- 03 MODULO GESTIÓN DE ALMACEN -->
+    <!-- ga_ingresostock -->
+    <string name="ga_varstringresostock0">Ingreso de stock</string>
+    <string name="ga_varstringresostock1">Buscar Producto</string>
+    <string name="ga_varstringresostock2">Cod. SKU</string>
+    <string name="ga_varstringresostock3">Nombre del producto</string>
+    <string name="ga_varstringresostock4">Cantidad a ingresar</string>
+    <string name="ga_varstringresostock5">Stock actual:</string>
+    <string name="ga_varstringresostock6">Registrar stock</string>
+    <!-- ga_menuproveedor -->
+    <string name="ga_varstrmenuproveedor0">Proveedor</string>
+    <string name="ga_varstrmenuproveedor1">Registrar proveedor</string>
+    <!-- ga_registrarproveedor -->
+    <string name="ga_varstrregistrarproveedor0">Registrar proveedor</string>
+    <string name="ga_varstrregistrarproveedor1">Información general</string>
+    <string name="ga_varstrregistrarproveedor2">Ingresar RFC de proveedor</string>
+    <string name="ga_varstrregistrarproveedor3">Nombre de proveedor</string>
+    <string name="ga_varstrregistrarproveedor4">Dirección</string>
+    <string name="ga_varstrregistrarproveedor5">Ciudad</string>
+    <string name="ga_varstrregistrarproveedor6">Distrito</string>
+    <string name="ga_varstrregistrarproveedor7">Contacto</string>
+    <string name="ga_varstrregistrarproveedor8">Teléfono de contacto</string>
+    <string name="ga_varstrregistrarproveedor9">Agregar proveedor</string>
+    <!-- ga_stockactualizado -->
+    <string name="ga_varstrstockactualizado0">El stock se actualizó correctamente</string>
+    <!-- GA_home_02 -->
+    <string name="ga_varstrproveedorregistrado0">El proveedor se registró correctamente</string>
+
+
+    <!-- 06 MODULO PUBLICIDAD -->
+    <!-- PUB_01 -->
+    <string name="pub_01_str0">Publicidad</string>
+    <string name="pub_01_str1">Crea un anuncio y llega  más personas</string>
+    <string name="pub_01_str2">Crear anuncio</string>
+    <string name="pub_01_str3">Mis anuncios</string>
+    <!-- PUB_02 -->
+    <string name="pub_02_str0">Crear anuncio</string>
+    <string name="pub_02_str1">Imagen</string>
+    <string name="pub_02_str2">Seleccionar imagen</string>
+    <string name="pub_02_str3">Título del anuncio</string>
+    <string name="pub_02_str4">Texto del anuncio</string>
+    <string name="pub_02_str5">Link de redireccionamiento</string>
+    <string name="pub_02_str6">Programar fecha de lanzamiento:</string>
+    <string name="pub_02_str7">Fecha de inicio</string>
+    <string name="pub_02_str8">Fecha de fin</string>
+    <!-- PUB_03 -->
+    <!-- pub_03_str1 = pub_02_str1 -->
+    <string name="pub_03_str1">Resumen y pago</string>
+    <string name="pub_03_str2">Resumen:</string>
+    <string name="pub_03_str3">Fecha:</string>
+    <string name="pub_03_str4">Cargo por día</string>
+    <string name="pub_03_str5">Días</string>
+    <string name="pub_03_str6">Total a pagar</string>
+    <string name="pub_03_str7">Desde</string>
+    <string name="pub_03_str8">Hasta</string>
+    <string name="pub_03_str9">Seleccione medio de pago:</string>
+    <string name="pub_03_str10">Efectivo</string>
+    <string name="pub_03_str11">Pagar</string>
+    <!-- PUB_04 -->
+    <string name="pub_04_str0">Mis anuncios</string>
+    <string name="pub_04_str1">Título:</string>
+    <string name="pub_04_str2">Publicado el:</string>
+    <string name="pub_04_str3">Días de duración:</string>
+    <string name="pub_04_str4">Nro. vistas:</string>
+    <string name="pub_04_str5">Tasa de conversión:</string>
+    <!-- PUB_05 -->
+    <!-- pub_05_str1 = pub_04_str1 -->
+    <string name="pub_05_str1">Descripción:</string>
+    <string name="pub_05_str2">Fecha de publicación:</string>
+    <string name="pub_05_str3">Monto pagado:</string>
+    <!-- PUB_home -->
+    <string name="pub_home_str1">Se ha generado el código:</string>
+    <string name="pub_home_str2">Lo puedes pagar en cualquier agente</string>
+
+    <!-- 07 MODULO APRENDIZAJE -->
+    <!-- AP_01 -->
+    <string name="ap_01_str0">Materiales de aprendizaje</string>
+    <string name="ap_01_str1">Busca recursos de aprendizaje y vuelvete un especialista en negocios</string>
+    <string name="ap_01_str2">Categorías</string>
+    <string name="ap_01_str3">Eventos en vivo</string>
+    <!-- AP_02 -->
+    <string name="ap_02_str0">Mi Aprendizaje</string>
+    <string name="ap_02_str1">Buscar</string>
+    <string name="ap_02_str2">Favoritos</string>
+    <string name="ap_02_str3">Ver más</string>
+    <string name="ap_02_str4">Aprendizaje relacionado a vender</string>
+    <string name="ap_02_str5">Aprendizaje relacionado a autoaprendizaje</string>
+    <string name="ap_02_str6">Aprendizaje relacionado a las operaciones del negocio</string>
+    <!-- AP_03 -->
+    <string name="ap_03_str0">Mis favoritos</string>
+    <!-- AP_04 -->
+    <string name="ap_04_str0">Eventos en vivo</string>
+    <string name="ap_04_str1">Recurso web</string>
+    <string name="ap_04_str2">Link</string>
+    <!-- AP_05 -->
+    <string name="ap_05_str0">Cursos</string>
+
+</resources>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".tendero.Inicio_sesion.ui.Mi_publicidad.pub_frg05"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/imgVw_imgMiAnuncio"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/grey_400"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pub_04_str1"/>
+    <TextView
+        android:id="@+id/txt_tituloMiAnuncio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="{dato}"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pub_05_str1"/>
+    <TextView
+        android:id="@+id/txt_descMiAnuncio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="{dato}"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pub_05_str2"/>
+    <TextView
+        android:id="@+id/txt_fechapubMiAnuncio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="{dato}"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pub_04_str3"/>
+    <TextView
+        android:id="@+id/txt_duracionMiAnuncio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="{dato}"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pub_05_str3"/>
+    <TextView
+        android:id="@+id/txt_montoMiAnuncio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="{dato}"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pub_04_str5"/>
+    <TextView
+        android:id="@+id/txt_tasaMiAnuncio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="{dato}"/>
+</LinearLayout>

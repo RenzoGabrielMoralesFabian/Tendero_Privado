@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".tendero.Inicio_sesion.ui.Mi_publicidad.pub_frg03"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pub_03_str1"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pub_03_str2"/>
+
+    <TextView
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:text="@string/pub_03_str4"/>
+    <TextView
+        android:id="@+id/txt_cargo_dia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="{dato}"/>
+
+    <TextView
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:text="@string/pub_03_str5"/>
+    <TextView
+        android:id="@+id/txt_dia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="{dato}"/>
+
+    <TextView
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:text="@string/pub_03_str6"/>
+    <TextView
+        android:id="@+id/txt_totalpago"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="{dato}"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pub_03_str3"/>
+
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="@string/pub_03_str7"/>
+    <TextView
+        android:id="@+id/txt_fechadesde"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="{dato}"/>
+
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="@string/pub_03_str8"/>
+    <TextView
+        android:id="@+id/txt_fechahasta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="{dato}"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pub_03_str9"/>
+
+    <Button
+        android:id="@+id/btn_pagoefectivo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pub_03_str10"/>
+
+    <Button
+        android:id="@+id/btn_cancelarpago"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/str_btn_cancelar"/>
+    <Button
+        android:id="@+id/btn_pagaranuncio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pub_03_str11"/>
+
+</LinearLayout>

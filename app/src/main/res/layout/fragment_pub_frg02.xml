@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".tendero.Inicio_sesion.ui.Mi_publicidad.pub_frg02"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pub_02_str1" />
+    <Button
+        android:id="@+id/btn_seleccionar_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pub_02_str2"/>
+    <ImageView
+        android:id="@+id/imgVw_publicidad_cargada"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/grey_400"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pub_02_str3"/>
+    <EditText
+        android:id="@+id/edt_titulo_anuncio"
+        android:layout_width="match_parent"
+        android:inputType="text"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pub_02_str4"/>
+    <EditText
+        android:id="@+id/edt_texto_anuncio"
+        android:layout_width="match_parent"
+        android:inputType="text"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pub_02_str5"/>
+    <EditText
+        android:id="@+id/edt_link_anuncio"
+        android:layout_width="match_parent"
+        android:inputType="text"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pub_02_str6"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pub_02_str7"/>
+    <DatePicker
+        android:id="@+id/dtPk_fechainit_anuncio"
+        android:layout_width="500dp"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+    <EditText
+        android:id="@+id/edt_fechainit_anuncio"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:inputType="date"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pub_02_str8"/>
+    <DatePicker
+        android:id="@+id/dtPk_fechafin_anuncio"
+        android:layout_width="500dp"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+    <EditText
+        android:id="@+id/edt_fechafin_anuncio"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:inputType="date"/>
+
+    <CheckBox
+        android:id="@+id/chkb_aceptar_terminos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/str_terminos_politicas"/>
+
+    <Button
+        android:id="@+id/btn_continuar_anuncio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/str_btn_continuar"/>
+</LinearLayout>
