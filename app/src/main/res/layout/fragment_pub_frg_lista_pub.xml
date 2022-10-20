@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".tendero.Inicio_sesion.ui.Mi_publicidad.pub_frg04"
+    tools:context=".tendero.Inicio_sesion.ui.Mi_publicidad.pub_frg_lista_pub"
     android:orientation="vertical">
 
 
