@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".tendero.Inicio_sesion.ui.Mi_Aprendizaje.ap_frg02"
+    tools:context=".tendero.Inicio_sesion.ui.Mi_Aprendizaje.ap_frgcategoriaaprendizaje"
     android:orientation="vertical">
 
     <androidx.appcompat.widget.SearchView

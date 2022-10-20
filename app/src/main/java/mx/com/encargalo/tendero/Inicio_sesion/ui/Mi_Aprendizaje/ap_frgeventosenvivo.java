@@ -12,10 +12,10 @@ import mx.com.encargalo.R;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link ap_frg02#newInstance} factory method to
+ * Use the {@link ap_frgeventosenvivo#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class ap_frg02 extends Fragment {
+public class ap_frgeventosenvivo extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -26,7 +26,7 @@ public class ap_frg02 extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public ap_frg02() {
+    public ap_frgeventosenvivo() {
         // Required empty public constructor
     }
 
@@ -36,11 +36,11 @@ public class ap_frg02 extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment ap_frg02.
+     * @return A new instance of fragment ap_frg04.
      */
     // TODO: Rename and change types and number of parameters
-    public static ap_frg02 newInstance(String param1, String param2) {
-        ap_frg02 fragment = new ap_frg02();
+    public static ap_frgeventosenvivo newInstance(String param1, String param2) {
+        ap_frgeventosenvivo fragment = new ap_frgeventosenvivo();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -61,6 +61,6 @@ public class ap_frg02 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_ap_frg02, container, false);
+        return inflater.inflate(R.layout.fragment_ap_frgeventosenvivo, container, false);
     }
 }

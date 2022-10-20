@@ -1,4 +1,4 @@
-package mx.com.encargalo;
+package mx.com.encargalo.tendero.Inicio_sesion.ui.Mi_Aprendizaje;
 
 import android.os.Bundle;
 
@@ -8,12 +8,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import mx.com.encargalo.R;
+
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link ga_frgregistrarproveedor#newInstance} factory method to
+ * Use the {@link ap_frgcategoriaaprendizaje#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class ga_frgregistrarproveedor extends Fragment {
+public class ap_frgcategoriaaprendizaje extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -24,7 +26,7 @@ public class ga_frgregistrarproveedor extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public ga_frgregistrarproveedor() {
+    public ap_frgcategoriaaprendizaje() {
         // Required empty public constructor
     }
 
@@ -34,11 +36,11 @@ public class ga_frgregistrarproveedor extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment ga_frg03.
+     * @return A new instance of fragment ap_frg02.
      */
     // TODO: Rename and change types and number of parameters
-    public static ga_frgregistrarproveedor newInstance(String param1, String param2) {
-        ga_frgregistrarproveedor fragment = new ga_frgregistrarproveedor();
+    public static ap_frgcategoriaaprendizaje newInstance(String param1, String param2) {
+        ap_frgcategoriaaprendizaje fragment = new ap_frgcategoriaaprendizaje();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -59,6 +61,6 @@ public class ga_frgregistrarproveedor extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_ga_frgregistrarproveedor, container, false);
+        return inflater.inflate(R.layout.fragment_ap_frgcategoriaaprendizaje, container, false);
     }
 }
