@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".tendero.Inicio_sesion.ui.Mi_Aprendizaje.ap_frg05">
+    tools:context=".tendero.Inicio_sesion.ui.Mi_Aprendizaje.ap_frg_listacursos">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/listCursos"
