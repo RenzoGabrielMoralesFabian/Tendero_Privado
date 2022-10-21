@@ -9,14 +9,14 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/pub_02_str1" />
+        android:text="@string/pub_varstrcrearanuncio1" />
     <Button
-        android:id="@+id/btn_seleccionar_img"
+        android:id="@+id/pub_cabtnseleccionarimg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/pub_02_str2"/>
+        android:text="@string/pub_varstrcrearanuncio2"/>
     <ImageView
-        android:id="@+id/imgVw_publicidad_cargada"
+        android:id="@+id/pub_caimgvwpubcargada"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:background="@color/grey_400"/>
@@ -24,9 +24,9 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/pub_02_str3"/>
+        android:text="@string/pub_varstrcrearanuncio3"/>
     <EditText
-        android:id="@+id/edt_titulo_anuncio"
+        android:id="@+id/pub_caedttituloanuncio"
         android:layout_width="match_parent"
         android:inputType="text"
         android:layout_height="wrap_content"/>
@@ -34,9 +34,9 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/pub_02_str4"/>
+        android:text="@string/pub_varstrcrearanuncio4"/>
     <EditText
-        android:id="@+id/edt_texto_anuncio"
+        android:id="@+id/pub_caedttextoanuncio"
         android:layout_width="match_parent"
         android:inputType="text"
         android:layout_height="wrap_content"/>
@@ -44,9 +44,9 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/pub_02_str5"/>
+        android:text="@string/pub_varstrcrearanuncio5"/>
     <EditText
-        android:id="@+id/edt_link_anuncio"
+        android:id="@+id/pub_caedtlinkanuncio"
         android:layout_width="match_parent"
         android:inputType="text"
         android:layout_height="wrap_content"/>
@@ -54,19 +54,19 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/pub_02_str6"/>
+        android:text="@string/pub_varstrcrearanuncio6"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/pub_02_str7"/>
+        android:text="@string/pub_varstrcrearanuncio7"/>
     <DatePicker
-        android:id="@+id/dtPk_fechainit_anuncio"
+        android:id="@+id/pub_cadtpkfechainitanuncio"
         android:layout_width="500dp"
         android:layout_height="wrap_content"
         android:visibility="gone"/>
     <EditText
-        android:id="@+id/edt_fechainit_anuncio"
+        android:id="@+id/pub_caedtfechainitanuncio"
         android:layout_width="125dp"
         android:layout_height="wrap_content"
         android:inputType="date"/>
@@ -74,20 +74,20 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/pub_02_str8"/>
+        android:text="@string/pub_varstrcrearanuncio8"/>
     <DatePicker
-        android:id="@+id/dtPk_fechafin_anuncio"
+        android:id="@+id/pub_dtpkfechafinanuncio"
         android:layout_width="500dp"
         android:layout_height="wrap_content"
         android:visibility="gone"/>
     <EditText
-        android:id="@+id/edt_fechafin_anuncio"
+        android:id="@+id/pub_caedtfechafinanuncio"
         android:layout_width="125dp"
         android:layout_height="wrap_content"
         android:inputType="date"/>
 
     <CheckBox
-        android:id="@+id/chkb_aceptar_terminos"
+        android:id="@+id/pub_cachkbaceptarterminos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
     <TextView
@@ -96,7 +96,7 @@
         android:text="@string/str_terminos_politicas"/>
 
     <Button
-        android:id="@+id/btn_continuar_anuncio"
+        android:id="@+id/pub_cabtncontinuar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/str_btn_continuar"/>
