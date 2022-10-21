@@ -3,12 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-<<<<<<<< HEAD:app/src/main/res/layout/fragment_ap_frgeventosenvivo.xml
     tools:context=".tendero.Inicio_sesion.ui.Mi_Aprendizaje.ap_frgeventosenvivo">
-========
-    tools:context=".tendero.Inicio_sesion.ui.Mi_Aprendizaje.ap_frg_listaeventos">
->>>>>>>> b5e437f75cb2340b002948a939969f952b053ab5:app/src/main/res/layout/fragment_ap_frg_listaeventos.xml
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/listEventos"
         android:layout_width="match_parent"
