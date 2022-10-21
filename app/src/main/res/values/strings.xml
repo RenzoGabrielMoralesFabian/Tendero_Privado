@@ -74,27 +74,27 @@
     <string name="pub_varstranunciopagado2">Lo puedes pagar en cualquier agente</string>
 
     <!-- 07 MODULO APRENDIZAJE -->
-    <!-- AP_01 -->
-    <string name="ap_01_str0">Materiales de aprendizaje</string>
-    <string name="ap_01_str1">Busca recursos de aprendizaje y vuelvete un especialista en negocios</string>
-    <string name="ap_01_str2">Categorías</string>
-    <string name="ap_01_str3">Eventos en vivo</string>
-    <!-- AP_02 -->
-    <string name="ap_02_str0">Mi Aprendizaje</string>
-    <string name="ap_02_str1">Buscar</string>
-    <string name="ap_02_str2">Favoritos</string>
-    <string name="ap_02_str3">Ver más</string>
-    <string name="ap_02_str4">Aprendizaje relacionado a vender</string>
-    <string name="ap_02_str5">Aprendizaje relacionado a autoaprendizaje</string>
-    <string name="ap_02_str6">Aprendizaje relacionado a las operaciones del negocio</string>
-    <!-- AP_03 -->
-    <string name="ap_03_str0">Mis favoritos</string>
-    <!-- AP_04 -->
-    <string name="ap_04_str0">Eventos en vivo</string>
-    <string name="ap_04_str1">Recurso web</string>
-    <string name="ap_04_str2">Link</string>
-    <!-- AP_05 -->
-    <string name="ap_05_str0">Cursos</string>
+    <!-- ap_menuaprendizaje -->
+    <string name="ap_varstrmenuaprendizaje0">Materiales de aprendizaje</string>
+    <string name="ap_varstrmenuaprendizaje1">Busca recursos de aprendizaje y vuelvete un especialista en negocios</string>
+    <string name="ap_varstrmenuaprendizaje2">Categorías</string>
+    <string name="ap_varstrmenuaprendizaje3">Eventos en vivo</string>
+    <!-- ap_categoriaaprendizaje -->
+    <string name="ap_varstrcategoriaaprendizaje0">Mi Aprendizaje</string>
+    <string name="ap_varstrcategoriaaprendizaje1">Buscar</string>
+    <string name="ap_varstrcategoriaaprendizaje2">Favoritos</string>
+    <string name="ap_varstrcategoriaaprendizaje3">Ver más</string>
+    <string name="ap_varstrcategoriaaprendizaje4">Aprendizaje relacionado a vender</string>
+    <string name="ap_varstrcategoriaaprendizaje5">Aprendizaje relacionado a autoaprendizaje</string>
+    <string name="ap_varstrcategoriaaprendizaje6">Aprendizaje relacionado a las operaciones del negocio</string>
+    <!-- ap_misfavoritos -->
+    <string name="ap_varsmisfavoritos0">Mis favoritos</string>
+    <!-- ap_eventosenvivo -->
+    <string name="ap_varstreventosenvivo0">Eventos en vivo</string>
+    <string name="ap_varstreventosenvivo1">Recurso web</string>
+    <string name="ap_varstreventosenvivo2">Link</string>
+    <!-- ap_cursoscategoria -->
+    <string name="ap_varstrcursoscategoria0">Cursos</string>
 
 
 </resources>

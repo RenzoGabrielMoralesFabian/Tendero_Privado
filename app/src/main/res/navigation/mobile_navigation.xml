@@ -31,9 +31,9 @@
 
     <fragment
         android:id="@+id/nav_mi_aprendizaje"
-        android:name="mx.com.encargalo.tendero.Inicio_sesion.ui.Mi_Aprendizaje.ap_frgmaterialesdeaprendizaje"
+        android:name="mx.com.encargalo.tendero.Inicio_sesion.ui.Mi_Aprendizaje.ap_frgmenuaprendizaje"
         android:label="@string/menu_miaprendizaje"
-        tools:layout="@layout/fragment_ap_frgmaterialesdeaprendizaje" />
+        tools:layout="@layout/fragment_ap_frgmenuaprendizaje" />
 
     <fragment
         android:id="@+id/nav_soporte"

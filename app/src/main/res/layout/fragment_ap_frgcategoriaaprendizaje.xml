@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".tendero.Inicio_sesion.ui.Mi_Aprendizaje.ap_frgcategoriaaprendizaje"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/ap_casrchvwbuscarcurso"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ap_varstrcategoriaaprendizaje2"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ap_varstrcategoriaaprendizaje3"/>
+
+    <Button
+        android:id="@+id/ap_cabtncursosvender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ap_varstrcategoriaaprendizaje4"/>
+    <Button
+        android:id="@+id/ap_cabtncursosautoaprendizaje"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ap_varstrcategoriaaprendizaje5"/>
+    <Button
+        android:id="@+id/ap_cabtncursosoperiones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ap_varstrcategoriaaprendizaje6"/>
+</LinearLayout>
