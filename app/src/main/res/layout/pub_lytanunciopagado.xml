@@ -8,22 +8,22 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/pub_home_str1"/>
+        android:text="@string/pub_varstranunciopagado1"/>
     <TextView
-        android:id="@+id/txt_pubCodGenerado"
+        android:id="@+id/pub_aptxtcodgenerado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="{Código generado}"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/pub_home_str2"/>
+        android:text="@string/pub_varstranunciopagado2"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/str_home"/>
     <Button
-        android:id="@+id/btn_gaVolverH01"
+        android:id="@+id/pub_apbtnvolver"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/str_btn_volver_inicio"/>

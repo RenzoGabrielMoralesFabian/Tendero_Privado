@@ -30,35 +30,6 @@
     <string name="str_btn_volver_inicio">Volver a inicio</string>
     <string name="str_btn_volver">Volver</string>
 
-    <!-- 03 MODULO GESTIÓN DE ALMACEN -->
-    <!-- ga_ingresostock -->
-    <string name="ga_varstringresostock0">Ingreso de stock</string>
-    <string name="ga_varstringresostock1">Buscar Producto</string>
-    <string name="ga_varstringresostock2">Cod. SKU</string>
-    <string name="ga_varstringresostock3">Nombre del producto</string>
-    <string name="ga_varstringresostock4">Cantidad a ingresar</string>
-    <string name="ga_varstringresostock5">Stock actual:</string>
-    <string name="ga_varstringresostock6">Registrar stock</string>
-    <!-- ga_menuproveedor -->
-    <string name="ga_varstrmenuproveedor0">Proveedor</string>
-    <string name="ga_varstrmenuproveedor1">Registrar proveedor</string>
-    <!-- ga_registrarproveedor -->
-    <string name="ga_varstrregistrarproveedor0">Registrar proveedor</string>
-    <string name="ga_varstrregistrarproveedor1">Información general</string>
-    <string name="ga_varstrregistrarproveedor2">Ingresar RFC de proveedor</string>
-    <string name="ga_varstrregistrarproveedor3">Nombre de proveedor</string>
-    <string name="ga_varstrregistrarproveedor4">Dirección</string>
-    <string name="ga_varstrregistrarproveedor5">Ciudad</string>
-    <string name="ga_varstrregistrarproveedor6">Distrito</string>
-    <string name="ga_varstrregistrarproveedor7">Contacto</string>
-    <string name="ga_varstrregistrarproveedor8">Teléfono de contacto</string>
-    <string name="ga_varstrregistrarproveedor9">Agregar proveedor</string>
-    <!-- ga_stockactualizado -->
-    <string name="ga_varstrstockactualizado0">El stock se actualizó correctamente</string>
-    <!-- GA_home_02 -->
-    <string name="ga_varstrproveedorregistrado0">El proveedor se registró correctamente</string>
-
-
     <!-- 06 MODULO PUBLICIDAD -->
     <!-- pub_menupublicidad -->
     <string name="pub_varstrmenupublicidad0">Publicidad</string>
@@ -75,34 +46,32 @@
     <string name="pub_varstrcrearanuncio6">Programar fecha de lanzamiento:</string>
     <string name="pub_varstrcrearanuncio7">Fecha de inicio</string>
     <string name="pub_varstrcrearanuncio8">Fecha de fin</string>
-    <!-- PUB_03 -->
-    <!-- pub_03_str1 = pub_02_str1 -->
-    <string name="pub_03_str1">Resumen y pago</string>
-    <string name="pub_03_str2">Resumen:</string>
-    <string name="pub_03_str3">Fecha:</string>
-    <string name="pub_03_str4">Cargo por día</string>
-    <string name="pub_03_str5">Días</string>
-    <string name="pub_03_str6">Total a pagar</string>
-    <string name="pub_03_str7">Desde</string>
-    <string name="pub_03_str8">Hasta</string>
-    <string name="pub_03_str9">Seleccione medio de pago:</string>
-    <string name="pub_03_str10">Efectivo</string>
-    <string name="pub_03_str11">Pagar</string>
-    <!-- PUB_04 -->
-    <string name="pub_04_str0">Mis anuncios</string>
-    <string name="pub_04_str1">Título:</string>
-    <string name="pub_04_str2">Publicado el:</string>
-    <string name="pub_04_str3">Días de duración:</string>
-    <string name="pub_04_str4">Nro. vistas:</string>
-    <string name="pub_04_str5">Tasa de conversión:</string>
-    <!-- PUB_05 -->
-    <!-- pub_05_str1 = pub_04_str1 -->
-    <string name="pub_05_str1">Descripción:</string>
-    <string name="pub_05_str2">Fecha de publicación:</string>
-    <string name="pub_05_str3">Monto pagado:</string>
-    <!-- PUB_home -->
-    <string name="pub_home_str1">Se ha generado el código:</string>
-    <string name="pub_home_str2">Lo puedes pagar en cualquier agente</string>
+    <!-- pub_pagaranuncio -->
+    <string name="pub_varstrpagaranuncio1">Resumen y pago</string>
+    <string name="pub_varstrpagaranuncio2">Resumen:</string>
+    <string name="pub_varstrpagaranuncio3">Fecha:</string>
+    <string name="pub_varstrpagaranuncio4">Cargo por día</string>
+    <string name="pub_varstrpagaranuncio5">Días</string>
+    <string name="pub_varstrpagaranuncio6">Total a pagar</string>
+    <string name="pub_varstrpagaranuncio7">Desde</string>
+    <string name="pub_varstrpagaranuncio8">Hasta</string>
+    <string name="pub_varstrpagaranuncio9">Seleccione medio de pago:</string>
+    <string name="pub_varstrpagaranuncio10">Efectivo</string>
+    <string name="pub_varstrpagaranuncio11">Pagar</string>
+    <!-- pub_listadomisanuncio -->
+    <string name="pub_varstrlistadomisanuncios0">Mis anuncios</string>
+    <string name="pub_varstrlistadomisanuncios1">Título:</string>
+    <string name="pub_varstrlistadomisanuncios2">Publicado el:</string>
+    <string name="pub_varstrlistadomisanuncios3">Días de duración:</string>
+    <string name="pub_varstrlistadomisanuncios4">Nro. vistas:</string>
+    <string name="pub_varstrlistadomisanuncios5">Tasa de conversión:</string>
+    <!-- pub_detalleanuncio -->
+    <string name="pub_varstrdetalleanuncio1">Descripción:</string>
+    <string name="pub_varstrdetalleanuncio2">Fecha de publicación:</string>
+    <string name="pub_varstrdetalleanuncio3">Monto pagado:</string>
+    <!-- pub_anunciopagado -->
+    <string name="pub_varstranunciopagado1">Se ha generado el código:</string>
+    <string name="pub_varstranunciopagado2">Lo puedes pagar en cualquier agente</string>
 
     <!-- 07 MODULO APRENDIZAJE -->
     <!-- AP_01 -->
@@ -128,5 +97,4 @@
     <string name="ap_05_str0">Cursos</string>
 
 
-    <!-- PRUEBA GITHUB -->
 </resources>

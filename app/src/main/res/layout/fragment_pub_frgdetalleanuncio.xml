@@ -3,20 +3,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".tendero.Inicio_sesion.ui.Mi_publicidad.pub_frg_detalles_pub"
+    tools:context=".tendero.Inicio_sesion.ui.Mi_publicidad.pub_frgdetalleanuncio"
     android:orientation="vertical">
 
     <ImageView
-        android:id="@+id/imgVw_imgMiAnuncio"
+        android:id="@+id/pub_daimgvwimgprevia"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:background="@color/grey_400"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/pub_04_str1"/>
+        android:text="@string/pub_varstrlistadomisanuncios1"/>
     <TextView
-        android:id="@+id/txt_tituloMiAnuncio"
+        android:id="@+id/pub_datxttitulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="{dato}"/>
@@ -24,9 +24,9 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/pub_05_str1"/>
+        android:text="@string/pub_varstrdetalleanuncio1"/>
     <TextView
-        android:id="@+id/txt_descMiAnuncio"
+        android:id="@+id/pub_datxtdescripcion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="{dato}"/>
@@ -34,9 +34,9 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/pub_05_str2"/>
+        android:text="@string/pub_varstrdetalleanuncio2"/>
     <TextView
-        android:id="@+id/txt_fechapubMiAnuncio"
+        android:id="@+id/pub_datxtfechapub"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="{dato}"/>
@@ -44,9 +44,9 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/pub_04_str3"/>
+        android:text="@string/pub_varstrlistadomisanuncios3"/>
     <TextView
-        android:id="@+id/txt_duracionMiAnuncio"
+        android:id="@+id/pub_datxtduracion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="{dato}"/>
@@ -54,9 +54,9 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/pub_05_str3"/>
+        android:text="@string/pub_varstrdetalleanuncio3"/>
     <TextView
-        android:id="@+id/txt_montoMiAnuncio"
+        android:id="@+id/pub_datxtmonto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="{dato}"/>
@@ -64,9 +64,9 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/pub_04_str5"/>
+        android:text="@string/pub_varstrlistadomisanuncios5"/>
     <TextView
-        android:id="@+id/txt_tasaMiAnuncio"
+        android:id="@+id/pub_datxttasa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="{dato}"/>

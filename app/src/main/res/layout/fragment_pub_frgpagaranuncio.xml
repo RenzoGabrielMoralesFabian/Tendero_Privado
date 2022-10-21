@@ -3,24 +3,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".tendero.Inicio_sesion.ui.Mi_publicidad.pub_frg_pago_pub"
+    tools:context=".tendero.Inicio_sesion.ui.Mi_publicidad.pub_frgpagaranuncio"
     android:orientation="vertical">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/pub_03_str1"/>
+        android:text="@string/pub_varstrpagaranuncio1"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/pub_03_str2"/>
+        android:text="@string/pub_varstrpagaranuncio2"/>
 
     <TextView
         android:layout_width="110dp"
         android:layout_height="wrap_content"
-        android:text="@string/pub_03_str4"/>
+        android:text="@string/pub_varstrpagaranuncio4"/>
     <TextView
-        android:id="@+id/txt_cargo_dia"
+        android:id="@+id/pub_patxtcargodia"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="{dato}"/>
@@ -28,9 +28,9 @@
     <TextView
         android:layout_width="110dp"
         android:layout_height="wrap_content"
-        android:text="@string/pub_03_str5"/>
+        android:text="@string/pub_varstrpagaranuncio5"/>
     <TextView
-        android:id="@+id/txt_dia"
+        android:id="@+id/pub_patxtdia"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="{dato}"/>
@@ -38,9 +38,9 @@
     <TextView
         android:layout_width="110dp"
         android:layout_height="wrap_content"
-        android:text="@string/pub_03_str6"/>
+        android:text="@string/pub_varstrpagaranuncio6"/>
     <TextView
-        android:id="@+id/txt_totalpago"
+        android:id="@+id/pub_patxttotalpago"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="{dato}"/>
@@ -48,14 +48,14 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/pub_03_str3"/>
+        android:text="@string/pub_varstrpagaranuncio3"/>
 
     <TextView
         android:layout_width="50dp"
         android:layout_height="wrap_content"
-        android:text="@string/pub_03_str7"/>
+        android:text="@string/pub_varstrpagaranuncio7"/>
     <TextView
-        android:id="@+id/txt_fechadesde"
+        android:id="@+id/pub_patxtfechadesde"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="{dato}"/>
@@ -63,9 +63,9 @@
     <TextView
         android:layout_width="50dp"
         android:layout_height="wrap_content"
-        android:text="@string/pub_03_str8"/>
+        android:text="@string/pub_varstrpagaranuncio8"/>
     <TextView
-        android:id="@+id/txt_fechahasta"
+        android:id="@+id/pub_patxtfechahasta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="{dato}"/>
@@ -73,23 +73,22 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/pub_03_str9"/>
+        android:text="@string/pub_varstrpagaranuncio9"/>
 
     <Button
-        android:id="@+id/btn_pagoefectivo"
+        android:id="@+id/pub_pabtnpagoefectivo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/pub_03_str10"/>
+        android:text="@string/pub_varstrpagaranuncio10"/>
 
     <Button
-        android:id="@+id/btn_cancelarpago"
+        android:id="@+id/pub_pabtncancelarpago"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/str_btn_cancelar"/>
     <Button
-        android:id="@+id/btn_pagaranuncio"
+        android:id="@+id/pub_pabtnpagaranuncio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/pub_03_str11"/>
-
+        android:text="@string/pub_varstrpagaranuncio11"/>
 </LinearLayout>

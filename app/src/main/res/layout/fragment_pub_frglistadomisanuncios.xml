@@ -3,12 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".tendero.Inicio_sesion.ui.Mi_publicidad.pub_frg_lista_pub"
+    tools:context=".tendero.Inicio_sesion.ui.Mi_publicidad.pub_frglistadomisanuncios"
     android:orientation="vertical">
 
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/pub_LMArclvMisAnuncios"
+        android:id="@+id/pub_lmarclvmisanuncios"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 </LinearLayout>
