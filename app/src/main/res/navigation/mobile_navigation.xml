@@ -25,9 +25,9 @@
 
     <fragment
         android:id="@+id/nav_mi_publicidad"
-        android:name="mx.com.encargalo.tendero.Inicio_sesion.ui.Mi_publicidad.pub_frg_menupublicidad"
+        android:name="mx.com.encargalo.tendero.Inicio_sesion.ui.Mi_publicidad.pub_frgmenupublicidad"
         android:label="@string/menu_mipublicidad"
-        tools:layout="@layout/fragment_pub_frg_menupublicidad" />
+        tools:layout="@layout/fragment_pub_frgmenupublicidad" />
 
     <fragment
         android:id="@+id/nav_mi_aprendizaje"

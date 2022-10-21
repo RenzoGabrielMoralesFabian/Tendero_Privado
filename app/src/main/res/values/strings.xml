@@ -60,21 +60,21 @@
 
 
     <!-- 06 MODULO PUBLICIDAD -->
-    <!-- PUB_01 -->
-    <string name="pub_01_str0">Publicidad</string>
-    <string name="pub_01_str1">Crea un anuncio y llega  más personas</string>
-    <string name="pub_01_str2">Crear anuncio</string>
-    <string name="pub_01_str3">Mis anuncios</string>
-    <!-- PUB_02 -->
-    <string name="pub_02_str0">Crear anuncio</string>
-    <string name="pub_02_str1">Imagen</string>
-    <string name="pub_02_str2">Seleccionar imagen</string>
-    <string name="pub_02_str3">Título del anuncio</string>
-    <string name="pub_02_str4">Texto del anuncio</string>
-    <string name="pub_02_str5">Link de redireccionamiento</string>
-    <string name="pub_02_str6">Programar fecha de lanzamiento:</string>
-    <string name="pub_02_str7">Fecha de inicio</string>
-    <string name="pub_02_str8">Fecha de fin</string>
+    <!-- pub_menupublicidad -->
+    <string name="pub_varstrmenupublicidad0">Publicidad</string>
+    <string name="pub_varstrmenupublicidad1">Crea un anuncio y llega  más personas</string>
+    <string name="pub_varstrmenupublicidad2">Crear anuncio</string>
+    <string name="pub_varstrmenupublicidad3">Mis anuncios</string>
+    <!-- pub_crearanuncio -->
+    <string name="pub_varstrcrearanuncio0">Crear anuncio</string>
+    <string name="pub_varstrcrearanuncio1">Imagen</string>
+    <string name="pub_varstrcrearanuncio2">Seleccionar imagen</string>
+    <string name="pub_varstrcrearanuncio3">Título del anuncio</string>
+    <string name="pub_varstrcrearanuncio4">Texto del anuncio</string>
+    <string name="pub_varstrcrearanuncio5">Link de redireccionamiento</string>
+    <string name="pub_varstrcrearanuncio6">Programar fecha de lanzamiento:</string>
+    <string name="pub_varstrcrearanuncio7">Fecha de inicio</string>
+    <string name="pub_varstrcrearanuncio8">Fecha de fin</string>
     <!-- PUB_03 -->
     <!-- pub_03_str1 = pub_02_str1 -->
     <string name="pub_03_str1">Resumen y pago</string>

@@ -12,10 +12,10 @@ import mx.com.encargalo.R;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link pub_frg_crear_pub#newInstance} factory method to
+ * Use the {@link pub_frgcrearanuncio#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class pub_frg_crear_pub extends Fragment {
+public class pub_frgcrearanuncio extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -26,7 +26,7 @@ public class pub_frg_crear_pub extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public pub_frg_crear_pub() {
+    public pub_frgcrearanuncio() {
         // Required empty public constructor
     }
 
@@ -39,8 +39,8 @@ public class pub_frg_crear_pub extends Fragment {
      * @return A new instance of fragment pub_frg02.
      */
     // TODO: Rename and change types and number of parameters
-    public static pub_frg_crear_pub newInstance(String param1, String param2) {
-        pub_frg_crear_pub fragment = new pub_frg_crear_pub();
+    public static pub_frgcrearanuncio newInstance(String param1, String param2) {
+        pub_frgcrearanuncio fragment = new pub_frgcrearanuncio();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -61,6 +61,6 @@ public class pub_frg_crear_pub extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_pub_frg_crear_pub, container, false);
+        return inflater.inflate(R.layout.fragment_pub_frgcrearanuncio, container, false);
     }
 }

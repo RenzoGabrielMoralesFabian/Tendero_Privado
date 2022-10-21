@@ -10,13 +10,13 @@ import android.view.ViewGroup;
 
 import mx.com.encargalo.R;
 
-public class pub_frg_menupublicidad extends Fragment {
+public class pub_frgmenupublicidad extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        return inflater.inflate(R.layout.fragment_pub_frg_menupublicidad, container, false);
+        return inflater.inflate(R.layout.fragment_pub_frgmenupublicidad, container, false);
 
     }
 }
