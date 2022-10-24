@@ -40,4 +40,46 @@
         android:name="mx.com.encargalo.tendero.Inicio_sesion.ui.Soporte.sp_frgmenusoporte"
         android:label="@string/menu_soporte"
         tools:layout="@layout/fragment_sp_frgmenusoporte" />
+
+    <fragment
+        android:id="@+id/nav_crearanuncio"
+        android:name="mx.com.encargalo.tendero.Inicio_sesion.ui.Mi_publicidad.pub_frgcrearanuncio"
+        android:label="Crear Anuncio"
+        tools:layout="@layout/fragment_pub_frgcrearanuncio" />
+    <fragment
+        android:id="@+id/nav_detalleanuncio"
+        android:name="mx.com.encargalo.tendero.Inicio_sesion.ui.Mi_publicidad.pub_frgdetalleanuncio"
+        android:label="Detalles de Anuncio"
+        tools:layout="@layout/fragment_pub_frgdetalleanuncio" />
+    <fragment
+        android:id="@+id/nav_listadomisanuncios"
+        android:name="mx.com.encargalo.tendero.Inicio_sesion.ui.Mi_publicidad.pub_frglistadomisanuncios"
+        android:label="Lista de Anuncios"
+        tools:layout="@layout/fragment_pub_frglistadomisanuncios" />
+    <fragment
+        android:id="@+id/nav_pagaranuncios"
+        android:name="mx.com.encargalo.tendero.Inicio_sesion.ui.Mi_publicidad.pub_frgpagaranuncio"
+        android:label="Pagar Anuncios"
+        tools:layout="@layout/fragment_pub_frgpagaranuncio" />
+    <fragment
+        android:id="@+id/nav_categoriaaprendizaje"
+        android:name="mx.com.encargalo.tendero.Inicio_sesion.ui.Mi_Aprendizaje.ap_frgcategoriaaprendizaje"
+        android:label="Categoria de aprendizaje"
+        tools:layout="@layout/fragment_ap_frgcategoriaaprendizaje" />
+    <fragment
+        android:id="@+id/nav_cursoscategoria"
+        android:name="mx.com.encargalo.tendero.Inicio_sesion.ui.Mi_Aprendizaje.ap_frgcursoscategoria"
+        android:label="Cursos por Categoria"
+        tools:layout="@layout/fragment_ap_frgcursoscategoria" />
+    <fragment
+        android:id="@+id/nav_eventosenvivo"
+        android:name="mx.com.encargalo.tendero.Inicio_sesion.ui.Mi_Aprendizaje.ap_frgeventosenvivo"
+        android:label="Eventos en vivo"
+        tools:layout="@layout/fragment_ap_frgeventosenvivo" />
+    <fragment
+        android:id="@+id/nav_misfavoritos"
+        android:name="mx.com.encargalo.tendero.Inicio_sesion.ui.Mi_Aprendizaje.ap_frgmisfavoritos"
+        android:label="Favoritos"
+        tools:layout="@layout/fragment_ap_frgmisfavoritos" />
+
 </navigation>
