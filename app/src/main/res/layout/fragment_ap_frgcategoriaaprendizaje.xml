@@ -16,6 +16,7 @@
         android:layout_height="wrap_content"
         android:text="@string/ap_varstrcategoriaaprendizaje2"/>
     <Button
+        android:id="@+id/ap_cabtnvermas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/ap_varstrcategoriaaprendizaje3"/>

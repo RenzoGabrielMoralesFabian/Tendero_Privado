@@ -51,7 +51,9 @@ public class MainActivity extends AppCompatActivity {
                 R.id.nav_codigopago,
                 R.id.nav_mi_aprendizaje,
                 R.id.nav_categoriaaprendizaje,
-                R.id.nav_cursoscategoria,
+                R.id.nav_cursoscategoriavender,
+                R.id.nav_cursoscategoriautoaprendizaje,
+                R.id.nav_cursoscategoriaoperacionesnegocio,
                 R.id.nav_eventosenvivo,
                 R.id.nav_misfavoritos,
                 R.id.nav_soporte)

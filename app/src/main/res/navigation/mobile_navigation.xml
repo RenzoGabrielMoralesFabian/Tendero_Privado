@@ -65,10 +65,20 @@
         android:label="Categoria de aprendizaje"
         tools:layout="@layout/fragment_ap_frgcategoriaaprendizaje" />
     <fragment
-        android:id="@+id/nav_cursoscategoria"
-        android:name="mx.com.encargalo.tendero.Inicio_sesion.ui.Mi_Aprendizaje.ap_frgcursoscategoria"
-        android:label="Cursos por Categoria"
-        tools:layout="@layout/fragment_ap_frgcursoscategoria" />
+        android:id="@+id/nav_cursoscategoriavender"
+        android:name="mx.com.encargalo.tendero.Inicio_sesion.ui.Mi_Aprendizaje.ap_frgcursoscategoriavender"
+        android:label="Cursos de vender"
+        tools:layout="@layout/fragment_ap_frgcursoscategoriavender" />
+    <fragment
+        android:id="@+id/nav_cursoscategoriautoaprendizaje"
+        android:name="mx.com.encargalo.tendero.Inicio_sesion.ui.Mi_Aprendizaje.ap_frgcursoscategoriaautoaprendizaje"
+        android:label="Cursos de autoaprendizaje"
+        tools:layout="@layout/fragment_ap_frgcursoscategoriaautoaprendizaje" />
+    <fragment
+        android:id="@+id/nav_cursoscategoriaoperacionesnegocio"
+        android:name="mx.com.encargalo.tendero.Inicio_sesion.ui.Mi_Aprendizaje.ap_frgcursoscategoriaopercionesnegocio"
+        android:label="Cursos de operaciones de negocios"
+        tools:layout="@layout/fragment_ap_frgcursoscategoriaopercionesnegocio" />
     <fragment
         android:id="@+id/nav_eventosenvivo"
         android:name="mx.com.encargalo.tendero.Inicio_sesion.ui.Mi_Aprendizaje.ap_frgeventosenvivo"

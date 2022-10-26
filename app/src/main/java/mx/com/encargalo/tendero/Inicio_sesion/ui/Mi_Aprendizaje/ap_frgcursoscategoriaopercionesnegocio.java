@@ -7,11 +7,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import mx.com.encargalo.R;
 
-public class ap_frgcursoscategoria extends Fragment {
+public class ap_frgcursoscategoriaopercionesnegocio extends Fragment {
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View vista = inflater.inflate(R.layout.fragment_ap_frgcursoscategoria, container, false);
+        View vista = inflater.inflate(R.layout.fragment_ap_frgcursoscategoriaopercionesnegocio, container, false);
 
         return vista;
     }
