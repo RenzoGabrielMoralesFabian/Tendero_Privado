@@ -11,7 +11,8 @@ public class ap_frgmisfavoritos extends Fragment {
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        View vista = inflater.inflate(R.layout.fragment_ap_frgmisfavoritos, container, false);
 
-        return inflater.inflate(R.layout.fragment_ap_frgmisfavoritos, container, false);
+        return vista;
     }
 }

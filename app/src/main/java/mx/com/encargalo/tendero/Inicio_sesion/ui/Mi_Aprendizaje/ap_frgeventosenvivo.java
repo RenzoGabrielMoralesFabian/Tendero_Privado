@@ -11,7 +11,8 @@ public class ap_frgeventosenvivo extends Fragment {
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_ap_frgeventosenvivo, container, false);
+        View vista = inflater.inflate(R.layout.fragment_ap_frgeventosenvivo, container, false);
+
+        return vista;
     }
 }

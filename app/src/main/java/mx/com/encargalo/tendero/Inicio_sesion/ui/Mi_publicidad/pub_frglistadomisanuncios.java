@@ -12,6 +12,8 @@ public class pub_frglistadomisanuncios extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        return inflater.inflate(R.layout.fragment_pub_frglistadomisanuncios, container, false);
+        View vista = inflater.inflate(R.layout.fragment_pub_frglistadomisanuncios, container, false);
+
+        return vista;
     }
 }

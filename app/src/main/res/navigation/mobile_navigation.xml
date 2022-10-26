@@ -28,19 +28,6 @@
         android:name="mx.com.encargalo.tendero.Inicio_sesion.ui.Mi_publicidad.pub_frgmenupublicidad"
         android:label="@string/menu_mipublicidad"
         tools:layout="@layout/fragment_pub_frgmenupublicidad" />
-
-    <fragment
-        android:id="@+id/nav_mi_aprendizaje"
-        android:name="mx.com.encargalo.tendero.Inicio_sesion.ui.Mi_Aprendizaje.ap_frgmenuaprendizaje"
-        android:label="@string/menu_miaprendizaje"
-        tools:layout="@layout/fragment_ap_frgmenuaprendizaje" />
-
-    <fragment
-        android:id="@+id/nav_soporte"
-        android:name="mx.com.encargalo.tendero.Inicio_sesion.ui.Soporte.sp_frgmenusoporte"
-        android:label="@string/menu_soporte"
-        tools:layout="@layout/fragment_sp_frgmenusoporte" />
-
     <fragment
         android:id="@+id/nav_crearanuncio"
         android:name="mx.com.encargalo.tendero.Inicio_sesion.ui.Mi_publicidad.pub_frgcrearanuncio"
@@ -62,6 +49,17 @@
         android:label="Pagar Anuncios"
         tools:layout="@layout/fragment_pub_frgpagaranuncio" />
     <fragment
+        android:id="@+id/nav_codigopago"
+        android:name="mx.com.encargalo.tendero.Inicio_sesion.ui.Mi_publicidad.pub_frgcodigopago"
+        android:label="Codigo de Pago"
+        tools:layout="@layout/fragment_pub_frgcodigopago" />
+
+    <fragment
+        android:id="@+id/nav_mi_aprendizaje"
+        android:name="mx.com.encargalo.tendero.Inicio_sesion.ui.Mi_Aprendizaje.ap_frgmenuaprendizaje"
+        android:label="@string/menu_miaprendizaje"
+        tools:layout="@layout/fragment_ap_frgmenuaprendizaje" />
+    <fragment
         android:id="@+id/nav_categoriaaprendizaje"
         android:name="mx.com.encargalo.tendero.Inicio_sesion.ui.Mi_Aprendizaje.ap_frgcategoriaaprendizaje"
         android:label="Categoria de aprendizaje"
@@ -81,5 +79,10 @@
         android:name="mx.com.encargalo.tendero.Inicio_sesion.ui.Mi_Aprendizaje.ap_frgmisfavoritos"
         android:label="Favoritos"
         tools:layout="@layout/fragment_ap_frgmisfavoritos" />
+    <fragment
+        android:id="@+id/nav_soporte"
+        android:name="mx.com.encargalo.tendero.Inicio_sesion.ui.Soporte.sp_frgmenusoporte"
+        android:label="@string/menu_soporte"
+        tools:layout="@layout/fragment_sp_frgmenusoporte" />
 
 </navigation>
