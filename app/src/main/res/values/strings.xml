@@ -69,9 +69,12 @@
     <string name="pub_varstrdetalleanuncio1">Descripción:</string>
     <string name="pub_varstrdetalleanuncio2">Fecha de publicación:</string>
     <string name="pub_varstrdetalleanuncio3">Monto pagado:</string>
+    <string name="pub_varstrdetalleanuncio4">Volver a Lista</string>
     <!-- pub_anunciopagado -->
     <string name="pub_varstranunciopagado1">Se ha generado el código:</string>
     <string name="pub_varstranunciopagado2">Lo puedes pagar en cualquier agente</string>
+    <!-- pub_codigopago -->
+    <string name="pub_varstrcodigopago1">Volver:</string>
 
     <!-- 07 MODULO APRENDIZAJE -->
     <!-- ap_menuaprendizaje -->

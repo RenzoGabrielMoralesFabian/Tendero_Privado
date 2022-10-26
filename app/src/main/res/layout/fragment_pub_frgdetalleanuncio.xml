@@ -70,4 +70,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="{dato}"/>
+    <Button
+        android:id="@+id/pub_pabtnvolverlista"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pub_varstrdetalleanuncio4"/>
 </LinearLayout>
