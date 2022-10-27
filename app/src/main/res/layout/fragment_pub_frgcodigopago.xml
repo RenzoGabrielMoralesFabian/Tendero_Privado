@@ -6,17 +6,48 @@
     android:orientation="vertical"
     tools:context=".tendero.Inicio_sesion.ui.Mi_publicidad.pub_frgcodigopago">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment"
-        android:layout_weight="1"/>
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="100dp">
 
-    <Button
-        android:id="@+id/pub_pabtnvolverpricipio"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="@string/pub_varstrcodigopago1" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pub_varstranunciopagado1" />
+
+        <TextView
+            android:id="@+id/pub_aptxtcodgenerado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="{Código generado}" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pub_varstranunciopagado2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_home" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:paddingLeft="120dp"
+        android:paddingTop="120dp">
+
+        <Button
+            android:id="@+id/pub_pabtnvolverpricipio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_btn_volver_inicio" />
+    </LinearLayout>
 
 </LinearLayout>
