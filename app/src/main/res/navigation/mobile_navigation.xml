@@ -62,32 +62,32 @@
     <fragment
         android:id="@+id/nav_categoriaaprendizaje"
         android:name="mx.com.encargalo.tendero.Inicio_sesion.ui.Mi_Aprendizaje.ap_frgcategoriaaprendizaje"
-        android:label="Categoria de aprendizaje"
+        android:label="@string/ap_varstrcategoriaaprendizaje0"
         tools:layout="@layout/fragment_ap_frgcategoriaaprendizaje" />
     <fragment
         android:id="@+id/nav_cursoscategoriavender"
         android:name="mx.com.encargalo.tendero.Inicio_sesion.ui.Mi_Aprendizaje.ap_frgcursoscategoriavender"
-        android:label="Cursos de vender"
+        android:label="@string/ap_varstrcategoriaaprendizaje4"
         tools:layout="@layout/fragment_ap_frgcursoscategoriavender" />
     <fragment
         android:id="@+id/nav_cursoscategoriautoaprendizaje"
         android:name="mx.com.encargalo.tendero.Inicio_sesion.ui.Mi_Aprendizaje.ap_frgcursoscategoriaautoaprendizaje"
-        android:label="Cursos de autoaprendizaje"
+        android:label="@string/ap_varstrcategoriaaprendizaje5"
         tools:layout="@layout/fragment_ap_frgcursoscategoriaautoaprendizaje" />
     <fragment
         android:id="@+id/nav_cursoscategoriaoperacionesnegocio"
         android:name="mx.com.encargalo.tendero.Inicio_sesion.ui.Mi_Aprendizaje.ap_frgcursoscategoriaopercionesnegocio"
-        android:label="Cursos de operaciones de negocios"
+        android:label="@string/ap_varstrcategoriaaprendizaje6"
         tools:layout="@layout/fragment_ap_frgcursoscategoriaopercionesnegocio" />
     <fragment
         android:id="@+id/nav_eventosenvivo"
         android:name="mx.com.encargalo.tendero.Inicio_sesion.ui.Mi_Aprendizaje.ap_frgeventosenvivo"
-        android:label="Eventos en vivo"
+        android:label="@string/ap_varstreventosenvivo0"
         tools:layout="@layout/fragment_ap_frgeventosenvivo" />
     <fragment
         android:id="@+id/nav_misfavoritos"
         android:name="mx.com.encargalo.tendero.Inicio_sesion.ui.Mi_Aprendizaje.ap_frgmisfavoritos"
-        android:label="Favoritos"
+        android:label="@string/ap_varsmisfavoritos0"
         tools:layout="@layout/fragment_ap_frgmisfavoritos" />
     <fragment
         android:id="@+id/nav_soporte"
