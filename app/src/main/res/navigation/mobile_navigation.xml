@@ -41,17 +41,17 @@
     <fragment
         android:id="@+id/nav_listadomisanuncios"
         android:name="mx.com.encargalo.tendero.Inicio_sesion.ui.Mi_publicidad.pub_frglistadomisanuncios"
-        android:label="string/pub_varstrlistadomisanuncios0"
+        android:label="@string/pub_varstrlistadomisanuncios0"
         tools:layout="@layout/fragment_pub_frglistadomisanuncios" />
     <fragment
         android:id="@+id/nav_pagaranuncios"
         android:name="mx.com.encargalo.tendero.Inicio_sesion.ui.Mi_publicidad.pub_frgpagaranuncio"
-        android:label="string/pub_varstrpagaranuncio1"
+        android:label="@string/pub_varstrpagaranuncio1"
         tools:layout="@layout/fragment_pub_frgpagaranuncio" />
     <fragment
         android:id="@+id/nav_codigopago"
         android:name="mx.com.encargalo.tendero.Inicio_sesion.ui.Mi_publicidad.pub_frgcodigopago"
-        android:label="string/pub_varstranunciopagado1"
+        android:label="@string/pub_varstranunciopagado1"
         tools:layout="@layout/fragment_pub_frgcodigopago" />
 
     <fragment
