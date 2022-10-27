@@ -31,27 +31,27 @@
     <fragment
         android:id="@+id/nav_crearanuncio"
         android:name="mx.com.encargalo.tendero.Inicio_sesion.ui.Mi_publicidad.pub_frgcrearanuncio"
-        android:label="Crear Anuncio"
+        android:label="@string/pub_varstrcrearanuncio0"
         tools:layout="@layout/fragment_pub_frgcrearanuncio" />
     <fragment
         android:id="@+id/nav_detalleanuncio"
         android:name="mx.com.encargalo.tendero.Inicio_sesion.ui.Mi_publicidad.pub_frgdetalleanuncio"
-        android:label="Detalles de Anuncio"
+        android:label="@string/pub_varstrdetalleanuncio1"
         tools:layout="@layout/fragment_pub_frgdetalleanuncio" />
     <fragment
         android:id="@+id/nav_listadomisanuncios"
         android:name="mx.com.encargalo.tendero.Inicio_sesion.ui.Mi_publicidad.pub_frglistadomisanuncios"
-        android:label="Lista de Anuncios"
+        android:label="string/pub_varstrlistadomisanuncios0"
         tools:layout="@layout/fragment_pub_frglistadomisanuncios" />
     <fragment
         android:id="@+id/nav_pagaranuncios"
         android:name="mx.com.encargalo.tendero.Inicio_sesion.ui.Mi_publicidad.pub_frgpagaranuncio"
-        android:label="Pagar Anuncios"
+        android:label="string/pub_varstrpagaranuncio1"
         tools:layout="@layout/fragment_pub_frgpagaranuncio" />
     <fragment
         android:id="@+id/nav_codigopago"
         android:name="mx.com.encargalo.tendero.Inicio_sesion.ui.Mi_publicidad.pub_frgcodigopago"
-        android:label="Codigo de Pago"
+        android:label="string/pub_varstranunciopagado1"
         tools:layout="@layout/fragment_pub_frgcodigopago" />
 
     <fragment
