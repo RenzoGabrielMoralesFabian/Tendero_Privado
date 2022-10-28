@@ -2,6 +2,7 @@ package mx.com.encargalo.tendero.Inicio_sesion.ui.Mi_publicidad;
 
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -53,6 +54,7 @@ public class pub_frglistadomisanuncios extends Fragment {
             public void onClick(View view) {
                 String titulo = listaPublicidad.get(recyclerViewPublicidad.getChildAdapterPosition(view)).getTitulo();
                 Toast.makeText(getContext(), "Selecciono: " + titulo, Toast.LENGTH_SHORT).show();
+                Navigation.findNavController(view).navigate(R.id.nav_detalleanuncio);
             }
         });
     }
