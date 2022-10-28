@@ -37,15 +37,15 @@ public class pub_frgpagaranuncio extends Fragment {
         pub_pabtnpagaranuncio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Navigation.findNavController(view).navigate(R.id.nav_codigopago);
-                showDialogoPagar();
+                Navigation.findNavController(view).navigate(R.id.nav_codigopago);
+//                showDialogoPagar();
             }
         });
         pub_pabtncancelarpago.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Navigation.findNavController(view).navigate(R.id.nav_crearanuncio);
-                showDialogoCancelar();
+                Navigation.findNavController(view).navigate(R.id.nav_crearanuncio);
+//                showDialogoCancelar();
             }
         });
 
@@ -70,6 +70,7 @@ public class pub_frgpagaranuncio extends Fragment {
             }
         });
     }
+
     private void  showDialogoCancelar(){
         final Dialog dialog = new Dialog(getContext());
         dialog.setContentView(R.layout.pub_lytmodelcancelaranuncio);
