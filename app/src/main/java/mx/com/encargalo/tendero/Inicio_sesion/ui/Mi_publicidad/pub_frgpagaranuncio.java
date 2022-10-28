@@ -1,6 +1,7 @@
 package mx.com.encargalo.tendero.Inicio_sesion.ui.Mi_publicidad;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
@@ -36,22 +37,56 @@ public class pub_frgpagaranuncio extends Fragment {
         pub_pabtnpagaranuncio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Navigation.findNavController(view).navigate(R.id.nav_codigopago);
-//                showDialogoPagar();
+                //Navigation.findNavController(view).navigate(R.id.nav_codigopago);
+                showDialogoPagar();
             }
         });
         pub_pabtncancelarpago.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Navigation.findNavController(view).navigate(R.id.nav_crearanuncio);
+                //Navigation.findNavController(view).navigate(R.id.nav_crearanuncio);
+                showDialogoCancelar();
             }
         });
 
         return vista;
     }
-    /*private void  showDialogoPagar(){
-        final Dialog dialog = new Dialog();
+    private void  showDialogoPagar(){
+        final Dialog dialog = new Dialog(getContext());
         dialog.setContentView(R.layout.pub_lytmodelpagaranuncio);
         dialog.show();
-    }*/
+        Button btnpagar = dialog.findViewById(R.id.pub_mpabtnaceptar);
+        Button btncancelar = dialog.findViewById(R.id.pub_mpabtncancelar);
+        /*btnpagar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Navigation.findNavController(view).navigate(R.id.nav_codigopago);
+            }
+        });*/
+        btncancelar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialog.dismiss();
+            }
+        });
+    }
+    private void  showDialogoCancelar(){
+        final Dialog dialog = new Dialog(getContext());
+        dialog.setContentView(R.layout.pub_lytmodelcancelaranuncio);
+        dialog.show();
+        Button btnpagar = dialog.findViewById(R.id.pub_mcabtnaceptar);
+        Button btncancelar = dialog.findViewById(R.id.pub_mcabtncancelar);
+        /*btnpagar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Navigation.findNavController(view).navigate(R.id.nav_codigopago);
+            }
+        });*/
+        btncancelar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialog.dismiss();
+            }
+        });
+    }
 }

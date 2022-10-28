@@ -67,7 +67,7 @@ public class ap_adplistadofrgmisfavoritos extends RecyclerView.Adapter<ap_adplis
         TextView titulo;
         public ViewHolder(@NonNull @NotNull View itemView) {
             super(itemView);
-            //titulo = itemView.findViewById(R.id.);
+            titulo = itemView.findViewById(R.id.ap_mftxtnombrecurso);
         }
     }
 }

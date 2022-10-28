@@ -28,7 +28,7 @@
             android:gravity="center"
             android:padding="@dimen/activity_margin">
             <Button
-                android:id="@+id/pub_mcabtnpagar"
+                android:id="@+id/pub_mcabtnaceptar"
                 android:layout_width="@dimen/btn_type02_width"
                 android:layout_height="wrap_content"
                 android:text="@string/pub_varstrmodalcancelaranuncio2"
