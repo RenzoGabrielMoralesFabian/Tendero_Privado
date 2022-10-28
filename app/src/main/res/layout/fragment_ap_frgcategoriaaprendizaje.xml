@@ -6,43 +6,59 @@
     android:layout_height="match_parent"
     tools:context=".tendero.Inicio_sesion.ui.Mi_Aprendizaje.ap_frgcategoriaaprendizaje"
     android:orientation="vertical"
-    android:padding="@dimen/activity_margin">
+    android:background="@color/grey_200">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <androidx.appcompat.widget.SearchView
-                android:id="@+id/ap_casrchvwbuscarcurso"
-                android:layout_width="220dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/activity_margin">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <androidx.appcompat.widget.SearchView
+                    android:id="@+id/ap_casrchvwbuscarcurso"
+                    android:layout_width="220dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/outline_textinputedittext"
+                    android:padding="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/outline_textinputedittext"
-                android:padding="0dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                android:text="@string/ap_varstrcategoriaaprendizaje2"
+                style="@style/txtstyle_content"
+                android:drawableRight="@drawable/ap_iconstarfull"
+                android:drawablePadding="10dp"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/ap_carclvcursosfavrecientes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:id="@+id/ap_cabtnvermas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ap_varstrcategoriaaprendizaje3"
+                    android:textAllCaps="false"
+                    android:stateListAnimator="@null"
+                    android:background="@color/grey_200"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    style="@style/txtstyle_blue"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/ap_varstrcategoriaaprendizaje2"
-            style="@style/txtstyle_content"
-            android:drawableRight="@drawable/ap_iconstarfull"
-            android:drawablePadding="10dp"/>
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            />
-        <Button
-            android:id="@+id/ap_cabtnvermas"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/ap_varstrcategoriaaprendizaje3"/>
         <View
             android:layout_width="wrap_content"
             android:layout_height="1dp"

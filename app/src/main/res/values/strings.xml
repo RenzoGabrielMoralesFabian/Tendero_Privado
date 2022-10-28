@@ -95,7 +95,8 @@
     <!-- ap_eventosenvivo -->
     <string name="ap_varstreventosenvivo0">Eventos en vivo</string>
     <string name="ap_varstreventosenvivo1">Recurso web</string>
-    <string name="ap_varstreventosenvivo2">Link</string>
+    <string name="ap_varstreventosenvivo2">Charla: </string>
+    <string name="ap_varstreventosenvivo3">Fecha, hora: </string>
     <!-- ap_cursoscategoria -->
     <string name="ap_varstrcursoscategoria0">Cursos</string>
 
