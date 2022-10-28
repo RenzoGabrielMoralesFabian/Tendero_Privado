@@ -9,7 +9,7 @@
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/blackPrimary"
+        android:background="@color/grey_600"
         android:theme="@style/AppTheme.AppBarOverlay">
 
         <androidx.appcompat.widget.Toolbar
@@ -17,7 +17,9 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="@color/blue_400"
-            app:titleTextColor="@color/blackPrimary"
+            app:titleTextColor="@color/grey_200"
+            android:outlineAmbientShadowColor="@color/grey_200"
+            android:outlineSpotShadowColor="@color/grey_200"
             app:popupTheme="@style/AppTheme.PopupOverlay" />
 
     </com.google.android.material.appbar.AppBarLayout>
