@@ -75,6 +75,14 @@
     <string name="pub_varstranunciopagado2">Lo puedes pagar en cualquier agente</string>
     <!-- pub_codigopago -->
     <string name="pub_varstrcodigopago1">Volver:</string>
+    <!-- pub_modalpagaranuncio -->
+    <string name="pub_varstrmodalpagaranuncio1">¿Seguro que desea publicar anuncio?</string>
+    <string name="pub_varstrmodalpagaranuncio2">Aceptar</string>
+    <string name="pub_varstrmodalpagaranuncio3">Cancelar</string>
+    <!-- pub_modalcancelaranuncio -->
+    <string name="pub_varstrmodalcancelaranuncio1">¿Seguro que desea cancelar anuncio?</string>
+    <string name="pub_varstrmodalcancelaranuncio2">Aceptar</string>
+    <string name="pub_varstrmodalcancelaranuncio3">Cancelar</string>
 
     <!-- 07 MODULO APRENDIZAJE -->
     <!-- ap_menuaprendizaje -->

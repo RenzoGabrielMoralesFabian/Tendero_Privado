@@ -1,19 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="3dp"
+    app:cardUseCompatPadding="true">
 
-    <Button
-        android:id="@+id/btncancelar"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="Cancelar" />
-
-    <Button
-        android:id="@+id/btnpagar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="Pagar" />
-</LinearLayout>
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="@dimen/activity_margin">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pub_varstrmodalpagaranuncio1"
+            style="@style/txtstyle_title"
+            android:layout_marginBottom="10dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:padding="@dimen/activity_margin">
+            <Button
+                android:id="@+id/pub_mpabtnpagar"
+                android:layout_width="@dimen/btn_type02_width"
+                android:layout_height="wrap_content"
+                android:text="@string/pub_varstrmodalpagaranuncio2"
+                android:textAllCaps="false"
+                android:background="@drawable/containedbutton_orange"
+                android:layout_marginRight="50dp"/>
+            <Button
+                android:id="@+id/pub_mpabtncancelar"
+                android:layout_width="@dimen/btn_type02_width"
+                android:layout_height="wrap_content"
+                android:text="@string/pub_varstrmodalpagaranuncio3"
+                android:textAllCaps="false"
+                android:background="@drawable/containedbutton_red"/>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
