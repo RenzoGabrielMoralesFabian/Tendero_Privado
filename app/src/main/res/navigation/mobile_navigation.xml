@@ -77,7 +77,7 @@
     <fragment
         android:id="@+id/nav_cursoscategoria"
         android:name="mx.com.encargalo.tendero.Inicio_sesion.ui.Mi_Aprendizaje.ap_frglistadocategoria"
-        android:label="ap_varstrcursoscategoria0"
+        android:label="@string/ap_varstrcursoscategoria0"
         tools:layout="@layout/fragment_ap_frglistadocategoria" />
     <fragment
         android:id="@+id/nav_cursoscategoriaoperacionesnegocio"
