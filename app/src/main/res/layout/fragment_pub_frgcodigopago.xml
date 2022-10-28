@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,62 +8,57 @@
     android:orientation="vertical"
     tools:context=".tendero.Inicio_sesion.ui.Mi_publicidad.pub_frgcodigopago">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
         <LinearLayout
+            android:id="@+id/linearLayout3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingTop="100dp"
+            android:layout_marginTop="84dp"
+            android:gravity="center"
             android:orientation="vertical"
-            android:gravity="center">
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
             <TextView
+                style="@style/txtstyle_h1"
                 android:layout_width="253dp"
                 android:layout_height="wrap_content"
                 android:text="@string/pub_varstranunciopagado1"
-                style="@style/txtstyle_h1"
-                android:textAlignment="center"
-                />
+                android:textAlignment="center" />
 
             <TextView
                 android:id="@+id/pub_aptxtcodgenerado"
+                style="@style/txtstyle_h1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="{Código generado}"
-                style="@style/txtstyle_h1"/>
+                android:text="{Código generado}" />
 
             <TextView
+                style="@style/txtstyle_h1"
                 android:layout_width="253dp"
                 android:layout_height="wrap_content"
                 android:text="@string/pub_varstranunciopagado2"
-                style="@style/txtstyle_h1"
-                android:textAlignment="center"/>
+                android:textAlignment="center" />
 
             <TextView
+                style="@style/txtstyle_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/str_home"
-                style="@style/txtstyle_title"
-                android:layout_marginTop="20dp"/>
+                android:layout_marginTop="20dp"
+                android:text="@string/str_home" />
         </LinearLayout>
 
+    <Button
+        android:id="@+id/pub_pabtnvolverpricipio"
+        android:layout_width="@dimen/btn_type03_width"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="110dp"
+        android:background="@drawable/containedbutton_white"
+        android:text="@string/str_btn_volver_inicio"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="400dp"
-            android:gravity="center">
-            <Button
-                android:id="@+id/pub_pabtnvolverpricipio"
-                android:layout_width="@dimen/btn_type03_width"
-                android:layout_height="wrap_content"
-                android:background="@drawable/containedbutton_white"
-                android:text="@string/str_btn_volver_inicio"
-                android:layout_marginTop="80dp"
-                android:textAllCaps="false"/>
-        </LinearLayout>
-    </LinearLayout>
-
-</ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
