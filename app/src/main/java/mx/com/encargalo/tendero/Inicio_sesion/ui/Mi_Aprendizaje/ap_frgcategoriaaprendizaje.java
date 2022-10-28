@@ -30,21 +30,21 @@ public class ap_frgcategoriaaprendizaje extends Fragment {
         ap_cabtncursosvender.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Navigation.findNavController(view).navigate(R.id.nav_cursoscategoriavender);
+                Navigation.findNavController(view).navigate(R.id.nav_cursoscategoria);
             }
         });
         ap_cabtncursosautoaprendizaje=vista.findViewById(R.id.ap_cabtncursosautoaprendizaje);
         ap_cabtncursosautoaprendizaje.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Navigation.findNavController(view).navigate(R.id.nav_cursoscategoriautoaprendizaje);
+                Navigation.findNavController(view).navigate(R.id.nav_cursoscategoria);
             }
         });
         ap_cabtncursosoperiones=vista.findViewById(R.id.ap_cabtncursosoperiones);
         ap_cabtncursosoperiones.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Navigation.findNavController(view).navigate(R.id.nav_cursoscategoriaoperacionesnegocio);
+                Navigation.findNavController(view).navigate(R.id.nav_cursoscategoria);
             }
         });
         return vista;
