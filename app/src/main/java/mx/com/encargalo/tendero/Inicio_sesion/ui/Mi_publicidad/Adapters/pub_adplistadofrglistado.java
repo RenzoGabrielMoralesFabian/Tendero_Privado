@@ -46,10 +46,16 @@ public class pub_adplistadofrglistado extends RecyclerView.Adapter<pub_adplistad
     @Override
     public void onBindViewHolder(@NonNull @NotNull pub_adplistadofrglistado.ViewHolder holder, int position) {
         String titulo = model.get(position).getTitulo();
-        String descripcion = model.get(position).getDescripcion();
+        String fecha = model.get(position).getFecha();
+        String duracion = model.get(position).getDuracion();
+        String vistas = model.get(position).getVistas();
+        String conversion = model.get(position).getConversion();
         int imagen = model.get(position).getImagenid();
         holder.titulo.setText(titulo);
-        holder.descripcion.setText(descripcion);
+        holder.fecha.setText(fecha);
+        holder.duracion.setText(duracion);
+        holder.vistas.setText(vistas);
+        holder.conversion.setText(conversion);
         holder.imagen.setImageResource(imagen);
 
     }
@@ -67,14 +73,17 @@ public class pub_adplistadofrglistado extends RecyclerView.Adapter<pub_adplistad
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder{
-        TextView titulo, descripcion;
+        TextView titulo, fecha, duracion, vistas, conversion;
         ImageView imagen;
 
         public ViewHolder(@NonNull @NotNull View itemView) {
             super(itemView);
-            titulo = itemView.findViewById(R.id.pub_ltxttitulo);
-            descripcion = itemView.findViewById(R.id.pub_ltxtdescripcion);
-            imagen = itemView.findViewById(R.id.pub_limgvwimgprevia);
+            titulo = itemView.findViewById(R.id.pub_lmatxttitulo);
+            fecha = itemView.findViewById(R.id.pub_lmatxtfechapub);
+            duracion = itemView.findViewById(R.id.pub_lmatxtduracion);
+            vistas = itemView.findViewById(R.id.pub_lmatxtnrovistas);
+            conversion = itemView.findViewById(R.id.pub_lmatxttasaconv);
+            imagen = itemView.findViewById(R.id.pub_lmaimgvwimgprevia);
         }
     }
 }
