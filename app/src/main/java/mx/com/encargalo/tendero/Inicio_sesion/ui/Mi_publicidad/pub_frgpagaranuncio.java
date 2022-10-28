@@ -1,7 +1,6 @@
 package mx.com.encargalo.tendero.Inicio_sesion.ui.Mi_publicidad;
 
 import android.app.Dialog;
-import android.content.Intent;
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
@@ -60,7 +59,8 @@ public class pub_frgpagaranuncio extends Fragment {
         /*btnpagar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Navigation.findNavController(view).navigate(R.id.nav_codigopago);
+                Intent i =new Intent(getContext(), SplashPrueba.class);
+                startActivity(i);
             }
         });*/
         btncancelar.setOnClickListener(new View.OnClickListener() {
