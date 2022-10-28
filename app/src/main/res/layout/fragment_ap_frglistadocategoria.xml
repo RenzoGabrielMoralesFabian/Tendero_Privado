@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragment_ap_frglistadocategoria"
+    tools:context=".tendero.Inicio_sesion.ui.Mi_Aprendizaje.ap_frglistadocategoria"
     android:padding="@dimen/activity_margin">
 
     <!-- TODO: Update blank fragment layout -->
