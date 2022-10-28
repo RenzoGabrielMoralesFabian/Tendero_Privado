@@ -6,13 +6,15 @@
     android:layout_height="match_parent"
     tools:context=".tendero.Inicio_sesion.ui.Mi_publicidad.pub_frgcrearanuncio"
     android:orientation="vertical"
-    android:background="@color/whitePrimary">
+    android:background="@color/whitePrimary"
+    android:padding="@dimen/activity_margin">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_margin="@dimen/activity_margin">
+        android:background="@color/whitePrimary"
+        >
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
