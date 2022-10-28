@@ -181,29 +181,29 @@
                 android:drawableLeft="@drawable/pub_iconcurrencydollar"
                 android:background="@drawable/outlinedbutton_grey"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <Button
+                android:id="@+id/pub_pabtncancelarpago"
+                android:layout_width="@dimen/btn_type03_width"
+                android:layout_height="wrap_content"
+                android:text="@string/str_btn_cancelar"
+                android:background="@drawable/containedbutton_red"
+                android:layout_marginRight="50dp"
+                style="@style/txtstyle_white"
+                android:textAllCaps="false"/>
+            <Button
+                android:id="@+id/pub_pabtnpagaranuncio"
+                android:layout_width="@dimen/btn_type03_width"
+                android:layout_height="wrap_content"
+                android:text="@string/pub_varstrpagaranuncio11"
+                android:background="@drawable/containedbutton_orange"
+                style="@style/txtstyle_content"
+                android:textAllCaps="false"/>
+        </LinearLayout>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <Button
-            android:id="@+id/pub_pabtncancelarpago"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/str_btn_cancelar"/>
-        <Button
-            android:id="@+id/pub_pabtnpagaranuncio"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/pub_varstrpagaranuncio11"/>
     </LinearLayout>
 </ScrollView>
