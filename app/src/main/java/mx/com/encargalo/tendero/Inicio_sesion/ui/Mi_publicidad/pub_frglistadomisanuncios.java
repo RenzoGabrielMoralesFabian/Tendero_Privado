@@ -39,9 +39,9 @@ public class pub_frglistadomisanuncios extends Fragment {
     }
 
     public void cargarLista() {
-        listaPublicidad.add(new Publicidad("Publicidad 1","Descripción de la publicidad",R.drawable.ic_launcher_background));
-        listaPublicidad.add(new Publicidad("Publicidad 2","Descripción de la publicidad",R.drawable.ic_launcher_background));
-        listaPublicidad.add(new Publicidad("Publicidad 3","Descripción de la publicidad",R.drawable.ic_launcher_background));
+        listaPublicidad.add(new Publicidad("Publicidad 1","18/09/2022","30","100","59%",R.drawable.ic_launcher_background));
+        listaPublicidad.add(new Publicidad("Publicidad 2","20/10/2022","60","50","14%",R.drawable.ic_launcher_background));
+        listaPublicidad.add(new Publicidad("Publicidad 3","01/06/2022","90","210","28%",R.drawable.ic_launcher_background));
     }
 
     private void mostrarData() {
