@@ -17,7 +17,7 @@
         android:paddingTop="15dp"
         android:background="@drawable/outlinedbutton_white">
         <TextView
-            android:id="@+id/ap_mftxtnombrecurso"
+            android:id="@+id/ap_catxtnombrecurso"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="{nombre del curso}"
@@ -26,7 +26,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
         <ImageButton
-            android:id="@+id/ap_mfbtnquitfavorito"
+            android:id="@+id/ap_cabtnquitfavorito"
             android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
