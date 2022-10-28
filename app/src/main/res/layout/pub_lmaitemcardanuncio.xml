@@ -41,13 +41,6 @@
             android:layout_marginLeft="10dp"
             android:layout_marginStart="10dp">
         </TextView>
-
-        <Button
-            android:layout_width="40dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_marginEnd="10dp"
-            android:background="@drawable/ic_launcher_background"></Button>
     </RelativeLayout>
 
 </androidx.cardview.widget.CardView>
