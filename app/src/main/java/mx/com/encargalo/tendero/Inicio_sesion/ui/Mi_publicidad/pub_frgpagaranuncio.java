@@ -54,13 +54,14 @@ public class pub_frgpagaranuncio extends Fragment {
         dialog.show();
         Button btnpagar = dialog.findViewById(R.id.pub_mpabtnaceptar);
         Button btncancelar = dialog.findViewById(R.id.pub_mpabtncancelar);
-        /*btnpagar.setOnClickListener(new View.OnClickListener() {
+        btnpagar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i =new Intent(getContext(), SplashPrueba.class);
-                startActivity(i);
+                Navigation.findNavController(view).navigate(R.id.nav_crearanuncio);
+                /*Intent i =new Intent(getContext(), SplashPrueba.class);
+                startActivity(i);*/
             }
-        });*/
+        });
         btncancelar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
