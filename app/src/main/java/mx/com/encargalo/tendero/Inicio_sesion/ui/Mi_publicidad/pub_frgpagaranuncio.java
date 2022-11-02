@@ -18,13 +18,6 @@ public class pub_frgpagaranuncio extends Fragment {
     Button pub_pabtncancelarpago;
     Button pub_pabtnpagaranuncio;
 
-//    OnDestruir mCallback;
-
-    /*public interface OnDestruir {
-        public void onDestruirFragmento(Fragment miFragmento);
-        // Puedes agregar más si necesitas
-    }*/
-
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
@@ -45,16 +38,15 @@ public class pub_frgpagaranuncio extends Fragment {
         pub_pabtnpagaranuncio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Navigation.findNavController(view).navigate(R.id.nav_codigopago);
-//                showDialogoPagar();
-//                showDialogoPagar2();
+                View auxview = view;
+                showDialogoPagar(auxview);
             }
         });
         pub_pabtncancelarpago.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Navigation.findNavController(view).navigate(R.id.nav_crearanuncio);
-//                showDialogoCancelar();
+                View auxview = view;
+                showDialogoCancelar(auxview);
             }
         });
 
@@ -64,39 +56,11 @@ public class pub_frgpagaranuncio extends Fragment {
 
 
     /**
-     * INTENTOS DE HACER FUCIONAR EL DIALOG (IGNORAR)
-     *
+     * Dialog
      */
 
 
-    private void showDialogoPagar2() {
-        new AlertDialog.Builder(getContext())
-                .setTitle("Pregunta")
-                .setMessage("mensaje")
-                .setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                        // Crea el nuevo fragmento y la transacción.
-                        Fragment nuevoFragmento = new Fragment();
-                        FragmentTransaction transaction = getFragmentManager().beginTransaction();
-
-                        transaction.replace(R.id.nav_codigopago, nuevoFragmento);
-                        transaction.addToBackStack(null);
-
-                        // Commit a la transacción
-                        transaction.commit();
-//                        Fragment.this.mCallback.onDestruirFragmento(this);
-                    }
-                })
-                .setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                        // User cancelled the dialog
-                    }
-                }).show();
-
-
-    }
-
-    private void  showDialogoPagar(){
+    private void  showDialogoPagar(View auxview){
         final Dialog dialog = new Dialog(getContext());
         dialog.setContentView(R.layout.pub_lytmodelpagaranuncio);
         dialog.show();
@@ -105,17 +69,8 @@ public class pub_frgpagaranuncio extends Fragment {
         btnpagar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Fragment nuevoFragmento = new Fragment();
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-
-                transaction.replace(R.id.nav_crearanuncio, nuevoFragmento);
-                transaction.addToBackStack(null);
-
-                // Commit a la transacción
-                transaction.commit();
-//                Navigation.findNavController(view).navigate(R.id.nav_codigopago);
-                /*Intent i =new Intent(getContext(), SplashPrueba.class);
-                startActivity(i);*/
+                Navigation.findNavController(auxview).navigate(R.id.nav_codigopago);
+                dialog.dismiss();
             }
         });
         btncancelar.setOnClickListener(new View.OnClickListener() {
@@ -126,18 +81,19 @@ public class pub_frgpagaranuncio extends Fragment {
         });
     }
 
-    private void  showDialogoCancelar(){
+    private void  showDialogoCancelar(View auxview){
         final Dialog dialog = new Dialog(getContext());
         dialog.setContentView(R.layout.pub_lytmodelcancelaranuncio);
         dialog.show();
         Button btnpagar = dialog.findViewById(R.id.pub_mcabtnaceptar);
         Button btncancelar = dialog.findViewById(R.id.pub_mcabtncancelar);
-        /*btnpagar.setOnClickListener(new View.OnClickListener() {
+        btnpagar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Navigation.findNavController(view).navigate(R.id.nav_codigopago);
+                Navigation.findNavController(auxview).navigate(R.id.nav_crearanuncio);
+                dialog.dismiss();
             }
-        });*/
+        });
         btncancelar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
