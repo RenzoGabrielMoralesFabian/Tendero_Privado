@@ -61,6 +61,14 @@ public class pub_frgpagaranuncio extends Fragment {
         return vista;
     }
 
+
+
+    /**
+     * INTENTOS DE HACER FUCIONAR EL DIALOG (IGNORAR)
+     *
+     */
+
+
     private void showDialogoPagar2() {
         new AlertDialog.Builder(getContext())
                 .setTitle("Pregunta")
