@@ -1,8 +1,11 @@
 package mx.com.encargalo.tendero.Inicio_sesion.ui.Mi_publicidad;
 
+import android.app.AlertDialog;
 import android.app.Dialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.navigation.Navigation;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,6 +17,14 @@ public class pub_frgpagaranuncio extends Fragment {
     Button pub_pabtnpagoefectivo;
     Button pub_pabtncancelarpago;
     Button pub_pabtnpagaranuncio;
+
+//    OnDestruir mCallback;
+
+    /*public interface OnDestruir {
+        public void onDestruirFragmento(Fragment miFragmento);
+        // Puedes agregar más si necesitas
+    }*/
+
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
@@ -36,6 +47,7 @@ public class pub_frgpagaranuncio extends Fragment {
             public void onClick(View view) {
                 Navigation.findNavController(view).navigate(R.id.nav_codigopago);
 //                showDialogoPagar();
+//                showDialogoPagar2();
             }
         });
         pub_pabtncancelarpago.setOnClickListener(new View.OnClickListener() {
@@ -48,6 +60,34 @@ public class pub_frgpagaranuncio extends Fragment {
 
         return vista;
     }
+
+    private void showDialogoPagar2() {
+        new AlertDialog.Builder(getContext())
+                .setTitle("Pregunta")
+                .setMessage("mensaje")
+                .setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        // Crea el nuevo fragmento y la transacción.
+                        Fragment nuevoFragmento = new Fragment();
+                        FragmentTransaction transaction = getFragmentManager().beginTransaction();
+
+                        transaction.replace(R.id.nav_codigopago, nuevoFragmento);
+                        transaction.addToBackStack(null);
+
+                        // Commit a la transacción
+                        transaction.commit();
+//                        Fragment.this.mCallback.onDestruirFragmento(this);
+                    }
+                })
+                .setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        // User cancelled the dialog
+                    }
+                }).show();
+
+
+    }
+
     private void  showDialogoPagar(){
         final Dialog dialog = new Dialog(getContext());
         dialog.setContentView(R.layout.pub_lytmodelpagaranuncio);
@@ -57,7 +97,15 @@ public class pub_frgpagaranuncio extends Fragment {
         btnpagar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Navigation.findNavController(view).navigate(R.id.nav_crearanuncio);
+                Fragment nuevoFragmento = new Fragment();
+                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+
+                transaction.replace(R.id.nav_crearanuncio, nuevoFragmento);
+                transaction.addToBackStack(null);
+
+                // Commit a la transacción
+                transaction.commit();
+//                Navigation.findNavController(view).navigate(R.id.nav_codigopago);
                 /*Intent i =new Intent(getContext(), SplashPrueba.class);
                 startActivity(i);*/
             }
