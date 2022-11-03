@@ -1,5 +1,6 @@
 package mx.com.encargalo.tendero.Inicio_sesion;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
@@ -17,6 +18,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import mx.com.encargalo.R;
+import mx.com.encargalo.tendero.UTIL.DATOS;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -30,7 +32,14 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
-        //
+
+        //TEMPORAL
+        SharedPreferences sharedPreferences =
+                getSharedPreferences(DATOS.SHAREDPREFERENCES, MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString(DATOS.VARGOB_ID_TENDERO, "1");
+        editor.apply();
+
         mAppBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.nav_mi_tienda,
                 R.id.nav_mis_productos,

@@ -64,10 +64,10 @@
             android:text="@string/pub_varstrcrearanuncio3"
             style="@style/txtstyle_content"/>
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/pub_caedttituloanuncio"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/pub_caedttituloanuncio"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/outline_textinputedittext"
@@ -81,10 +81,10 @@
             style="@style/txtstyle_content"
             android:layout_marginTop="10dp"/>
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/pub_caedttextoanuncio"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/pub_caedttextoanuncio"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/outline_textinputedittext"
@@ -98,10 +98,10 @@
             style="@style/txtstyle_content"
             android:layout_marginTop="10dp"/>
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/pub_caedtlinkanuncio"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/pub_caedtlinkanuncio"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/outline_textinputedittext"
@@ -144,14 +144,14 @@
                     android:layout_height="wrap_content"
                     android:visibility="gone" />
                 <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/pub_caedtfechainitanuncio"
                     android:layout_width="140dp"
                     android:layout_height="match_parent">
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:layout_width="match_parent"
+                    <TextView
+                        android:id="@+id/pub_caedtfechainitanuncio"
+                        android:layout_width="140dp"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/outline_textinputedittext"
-                        android:inputType="date" />
+                        android:textAlignment="center"
+                        android:background="@drawable/outline_textinputedittext"/>
                 </com.google.android.material.textfield.TextInputLayout>
             </LinearLayout>
 
@@ -178,15 +178,15 @@
                     android:visibility="gone" />
 
                 <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/pub_caedtfechafinanuncio"
                     android:layout_width="140dp"
                     android:layout_height="match_parent">
 
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:layout_width="match_parent"
+                    <TextView
+                        android:id="@+id/pub_caedtfechafinanuncio"
+                        android:layout_width="140dp"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/outline_textinputedittext"
-                        android:inputType="date" />
+                        android:textAlignment="center"
+                        android:background="@drawable/outline_textinputedittext"/>
                 </com.google.android.material.textfield.TextInputLayout>
             </LinearLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
