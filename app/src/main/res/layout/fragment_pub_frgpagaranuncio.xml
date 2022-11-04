@@ -179,7 +179,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 android:textAllCaps="false"
                 style="@style/txtstyle_content"
-                android:drawableLeft="@drawable/pub_iconcurrencydollar"
+                android:drawableLeft="@drawable/pub_paypal"
                 android:background="@drawable/outlinedbutton_grey"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
         <LinearLayout

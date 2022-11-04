@@ -56,7 +56,7 @@
     <string name="pub_varstrpagaranuncio7">Desde</string>
     <string name="pub_varstrpagaranuncio8">Hasta</string>
     <string name="pub_varstrpagaranuncio9">Seleccione medio de pago:</string>
-    <string name="pub_varstrpagaranuncio10">Efectivo</string>
+    <string name="pub_varstrpagaranuncio10">Paypal</string>
     <string name="pub_varstrpagaranuncio11">Pagar</string>
     <!-- pub_listadomisanuncio -->
     <string name="pub_varstrlistadomisanuncios0">Mis anuncios</string>
