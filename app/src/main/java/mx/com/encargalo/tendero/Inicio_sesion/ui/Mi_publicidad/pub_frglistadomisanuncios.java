@@ -16,41 +16,41 @@ import mx.com.encargalo.tendero.Inicio_sesion.ui.Mi_publicidad.Entidades.Publici
 
 public class pub_frglistadomisanuncios extends Fragment {
 
-    pub_adplistadofrglistado adplistado;
-    RecyclerView recyclerViewPublicidad;
-    ArrayList<Publicidad> listaPublicidad;
+    pub_adplistadofrglistado pub_adplista;
+    RecyclerView pub_rclvpublicidad;
+    ArrayList<Publicidad> pub_listapublicidad;
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
         View vista = inflater.inflate(R.layout.fragment_pub_frglistadomisanuncios, container, false);
-        recyclerViewPublicidad = vista.findViewById(R.id.pub_lmarclvmisanuncios);
-        listaPublicidad = new ArrayList<>();
+        pub_rclvpublicidad = vista.findViewById(R.id.pub_lmarclvmisanuncios);
+        pub_listapublicidad = new ArrayList<>();
 
         //cargar la lista
-        cargarLista();
+        pub_cargarLista();
         //mostrar datos
-        mostrarData();
+        pub_mostrarData();
 
         return vista;
     }
 
-    public void cargarLista() {
-        listaPublicidad.add(new Publicidad("Publicidad 1","18/09/2022","30","100","59%",R.drawable.ic_launcher_background));
-        listaPublicidad.add(new Publicidad("Publicidad 2","20/10/2022","60","50","14%",R.drawable.ic_launcher_background));
-        listaPublicidad.add(new Publicidad("Publicidad 3","01/06/2022","90","210","28%",R.drawable.ic_launcher_background));
+    public void pub_cargarLista() {
+        pub_listapublicidad.add(new Publicidad("Publicidad 1","18/09/2022","30","100","59%",R.drawable.ic_launcher_background));
+        pub_listapublicidad.add(new Publicidad("Publicidad 2","20/10/2022","60","50","14%",R.drawable.ic_launcher_background));
+        pub_listapublicidad.add(new Publicidad("Publicidad 3","01/06/2022","90","210","28%",R.drawable.ic_launcher_background));
     }
 
-    private void mostrarData() {
-        recyclerViewPublicidad.setLayoutManager(new LinearLayoutManager(getContext()));
-        adplistado = new pub_adplistadofrglistado(getContext(), listaPublicidad);
-        recyclerViewPublicidad.setAdapter(adplistado);
+    private void pub_mostrarData() {
+        pub_rclvpublicidad.setLayoutManager(new LinearLayoutManager(getContext()));
+        pub_adplista = new pub_adplistadofrglistado(getContext(), pub_listapublicidad);
+        pub_rclvpublicidad.setAdapter(pub_adplista);
 
-        adplistado.setOnClickListener(new View.OnClickListener() {
+        pub_adplista.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String titulo = listaPublicidad.get(recyclerViewPublicidad.getChildAdapterPosition(view)).getTitulo();
-                Toast.makeText(getContext(), "Selecciono: " + titulo, Toast.LENGTH_SHORT).show();
+                String pub_strtitulo = pub_listapublicidad.get(pub_rclvpublicidad.getChildAdapterPosition(view)).getPub_strtitulo();
+                Toast.makeText(getContext(), "Selecciono: " + pub_strtitulo, Toast.LENGTH_SHORT).show();
                 Navigation.findNavController(view).navigate(R.id.nav_detalleanuncio);
             }
         });

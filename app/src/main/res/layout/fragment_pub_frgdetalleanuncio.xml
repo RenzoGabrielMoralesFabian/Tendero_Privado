@@ -42,12 +42,13 @@
                     android:layout_height="wrap_content"
                     android:text="@string/pub_varstrlistadomisanuncios1"
                     style="@style/txtstyle_content_bold"/>
+
                 <TextView
                     android:id="@+id/pub_datxttitulo"
+                    style="@style/txtstyle_content"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="{dato}"
-                    style="@style/txtstyle_content"/>
+                    android:layout_height="match_parent"
+                    android:text="Publicidad 1" />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -63,7 +64,7 @@
                     android:id="@+id/pub_datxtdescripcion"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="{dato}"
+                    android:text="Publicidad sobre productos en venta"
                     style="@style/txtstyle_content"/>
             </LinearLayout>
             <LinearLayout
@@ -80,7 +81,7 @@
                     android:id="@+id/pub_datxtfechapub"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="{dato}"
+                    android:text="18/09/2022"
                     style="@style/txtstyle_content"/>
             </LinearLayout>
             <LinearLayout
@@ -97,7 +98,7 @@
                     android:id="@+id/pub_datxtduracion"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="{dato}"
+                    android:text="30"
                     style="@style/txtstyle_content"/>
             </LinearLayout>
             <LinearLayout
@@ -114,7 +115,7 @@
                     android:id="@+id/pub_datxtmonto"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="{dato}"
+                    android:text="$30"
                     style="@style/txtstyle_content"/>
             </LinearLayout>
             <LinearLayout
@@ -127,12 +128,13 @@
                     android:layout_height="wrap_content"
                     android:text="@string/pub_varstrlistadomisanuncios5"
                     style="@style/txtstyle_content_bold"/>
+
                 <TextView
                     android:id="@+id/pub_datxttasa"
+                    style="@style/txtstyle_content"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="{dato}"
-                    style="@style/txtstyle_content"/>
+                    android:layout_height="match_parent"
+                    android:text="59%" />
             </LinearLayout>
         </LinearLayout>
 

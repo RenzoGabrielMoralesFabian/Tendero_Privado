@@ -32,7 +32,7 @@
                 style="@style/txtstyle_h1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="{Código generado}" />
+                android:text="J782DF4J" />
 
             <TextView
                 style="@style/txtstyle_h1"

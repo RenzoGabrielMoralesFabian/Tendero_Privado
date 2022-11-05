@@ -19,71 +19,71 @@ import mx.com.encargalo.tendero.Inicio_sesion.ui.Mi_publicidad.Entidades.Publici
 
 public class pub_adplistadofrglistado extends RecyclerView.Adapter<pub_adplistadofrglistado.ViewHolder> implements View.OnClickListener{
 
-    LayoutInflater inflater;
-    ArrayList<Publicidad> model;
+    LayoutInflater pub_inflater;
+    ArrayList<Publicidad> pub_model;
 
     //listener
-    private View.OnClickListener listener;
+    private View.OnClickListener pub_listener;
 
     public pub_adplistadofrglistado(Context context, ArrayList<Publicidad> model){
-        this.inflater=LayoutInflater.from(context);
-        this.model=model;
+        this.pub_inflater =LayoutInflater.from(context);
+        this.pub_model =model;
     }
 
     @NonNull
     @NotNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull @NotNull ViewGroup parent, int viewType) {
-        View view = inflater.inflate(R.layout.pub_lmaitemcardanuncio, parent, false);
+        View view = pub_inflater.inflate(R.layout.pub_lmaitemcardanuncio, parent, false);
         view.setOnClickListener(this);
         return new ViewHolder(view);
     }
 
     public void setOnClickListener(View.OnClickListener listener){
-        this.listener = listener;
+        this.pub_listener = listener;
     }
 
     @Override
     public void onBindViewHolder(@NonNull @NotNull pub_adplistadofrglistado.ViewHolder holder, int position) {
-        String titulo = model.get(position).getTitulo();
-        String fecha = model.get(position).getFecha();
-        String duracion = model.get(position).getDuracion();
-        String vistas = model.get(position).getVistas();
-        String conversion = model.get(position).getConversion();
-        int imagen = model.get(position).getImagenid();
-        holder.titulo.setText(titulo);
-        holder.fecha.setText(fecha);
-        holder.duracion.setText(duracion);
-        holder.vistas.setText(vistas);
-        holder.conversion.setText(conversion);
-        holder.imagen.setImageResource(imagen);
+        String pub_strtitulo = pub_model.get(position).getPub_strtitulo();
+        String pub_strfecha = pub_model.get(position).getPub_strfecha();
+        String pu_strduracion = pub_model.get(position).getPub_strduracion();
+        String pub_strvistas = pub_model.get(position).getPub_strvistas();
+        String pub_strconversion = pub_model.get(position).getPub_strconversion();
+        int imagen = pub_model.get(position).getPub_intimagenid();
+        holder.pub_txttitulo.setText(pub_strtitulo);
+        holder.pub_txtfecha.setText(pub_strfecha);
+        holder.pub_txtduracion.setText(pu_strduracion);
+        holder.pub_txtvistas.setText(pub_strvistas);
+        holder.pub_txtconversion.setText(pub_strconversion);
+        holder.pub_imgvwimagen.setImageResource(imagen);
 
     }
 
     @Override
     public int getItemCount() {
-        return model.size();
+        return pub_model.size();
     }
 
     @Override
     public void onClick(View view) {
-        if(listener!=null){
-            listener.onClick(view);
+        if(pub_listener !=null){
+            pub_listener.onClick(view);
         }
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder{
-        TextView titulo, fecha, duracion, vistas, conversion;
-        ImageView imagen;
+        TextView pub_txttitulo, pub_txtfecha, pub_txtduracion, pub_txtvistas, pub_txtconversion;
+        ImageView pub_imgvwimagen;
 
         public ViewHolder(@NonNull @NotNull View itemView) {
             super(itemView);
-            titulo = itemView.findViewById(R.id.pub_lmatxttitulo);
-            fecha = itemView.findViewById(R.id.pub_lmatxtfechapub);
-            duracion = itemView.findViewById(R.id.pub_lmatxtduracion);
-            vistas = itemView.findViewById(R.id.pub_lmatxtnrovistas);
-            conversion = itemView.findViewById(R.id.pub_lmatxttasaconv);
-            imagen = itemView.findViewById(R.id.pub_lmaimgvwimgprevia);
+            pub_txttitulo = itemView.findViewById(R.id.pub_lmatxttitulo);
+            pub_txtfecha = itemView.findViewById(R.id.pub_lmatxtfechapub);
+            pub_txtduracion = itemView.findViewById(R.id.pub_lmatxtduracion);
+            pub_txtvistas = itemView.findViewById(R.id.pub_lmatxtnrovistas);
+            pub_txtconversion = itemView.findViewById(R.id.pub_lmatxttasaconv);
+            pub_imgvwimagen = itemView.findViewById(R.id.pub_lmaimgvwimgprevia);
         }
     }
 }
