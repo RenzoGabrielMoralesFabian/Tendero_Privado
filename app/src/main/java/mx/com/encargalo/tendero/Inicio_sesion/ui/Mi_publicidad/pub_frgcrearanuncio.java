@@ -13,7 +13,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
-
 import android.provider.MediaStore;
 import android.util.Base64;
 import android.view.LayoutInflater;
@@ -26,16 +25,12 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.theartofdev.edmodo.cropper.CropImage;
 import com.theartofdev.edmodo.cropper.CropImageView;
-
 import java.io.ByteArrayOutputStream;
 import java.util.Calendar;
-
 import mx.com.encargalo.R;
 import mx.com.encargalo.tendero.UTIL.DATOS;
-
 import static android.app.Activity.RESULT_OK;
 import static android.content.Context.MODE_PRIVATE;
 
@@ -43,13 +38,10 @@ public class pub_frgcrearanuncio extends Fragment {
     Button pub_cabtncontinuar, pub_cabtnseleccionarimg;
     ImageView pub_caimgvwpubcargada;
     EditText pub_caedttituloanuncio, pub_caedttextoanuncio, pub_caedtlinkanuncio;
-
     TextView pub_caedtfechainitanuncio, pub_caedtfechafinanuncio;
     CheckBox pub_cachkbaceptarterminos;
-
     DatePickerDialog.OnDateSetListener setListener1, setListener2;
     Calendar calendar;
-
     Dialog dialog;
 
     int TOMAR_FOTO = 100;
