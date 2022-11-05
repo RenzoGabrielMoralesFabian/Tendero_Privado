@@ -84,7 +84,7 @@ public class ap_frgcategoriaaprendizaje extends Fragment {
         ap_adpultimos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String titulo = ap_listaultimos.get(ap_rclvultimos.getChildAdapterPosition(view)).getTitulo();
+                String titulo = ap_listaultimos.get(ap_rclvultimos.getChildAdapterPosition(view)).getAp_strtitulo();
                 Toast.makeText(getContext(), "Seleccionó: " + titulo, Toast.LENGTH_SHORT).show();
             }
         });

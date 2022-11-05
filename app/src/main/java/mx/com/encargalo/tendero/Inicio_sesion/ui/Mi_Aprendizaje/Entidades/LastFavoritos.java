@@ -1,20 +1,20 @@
 package mx.com.encargalo.tendero.Inicio_sesion.ui.Mi_Aprendizaje.Entidades;
 
 public class LastFavoritos {
-    String titulo;
+    String ap_strtitulo;
 
     public LastFavoritos() {
     }
 
     public LastFavoritos(String titulo) {
-        this.titulo = titulo;
+        this.ap_strtitulo = titulo;
     }
 
-    public String getTitulo() {
-        return titulo;
+    public String getAp_strtitulo() {
+        return ap_strtitulo;
     }
 
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
+    public void setAp_strtitulo(String ap_strtitulo) {
+        this.ap_strtitulo = ap_strtitulo;
     }
 }

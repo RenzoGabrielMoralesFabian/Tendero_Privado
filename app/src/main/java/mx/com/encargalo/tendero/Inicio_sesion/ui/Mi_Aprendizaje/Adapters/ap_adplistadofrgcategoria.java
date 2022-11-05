@@ -15,48 +15,47 @@ import java.util.ArrayList;
 
 import mx.com.encargalo.R;
 import mx.com.encargalo.tendero.Inicio_sesion.ui.Mi_Aprendizaje.Entidades.Curso;
-import mx.com.encargalo.tendero.Inicio_sesion.ui.Mi_Aprendizaje.Entidades.EventoEnVivo;
 
 public class ap_adplistadofrgcategoria extends RecyclerView.Adapter<ap_adplistadofrgcategoria.ViewHolder> implements View.OnClickListener {
 
-    LayoutInflater inflater;
-    ArrayList<Curso> model;
+    LayoutInflater ap_inflater;
+    ArrayList<Curso> ap_model;
 
-    private View.OnClickListener listener;
+    private View.OnClickListener ap_listener;
 
     public ap_adplistadofrgcategoria(Context context, ArrayList<Curso>model){
-        this.inflater = LayoutInflater.from(context);
-        this.model = model;
+        this.ap_inflater = LayoutInflater.from(context);
+        this.ap_model = model;
     }
 
     @NonNull
     @NotNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull @NotNull ViewGroup parent, int viewType) {
-        View view = inflater.inflate(R.layout.ap_ccitemcardcurso, parent, false);
+        View view = ap_inflater.inflate(R.layout.ap_ccitemcardcurso, parent, false);
         view.setOnClickListener(this);
         return new ViewHolder(view);
     }
 
     public void setOnClickListener(View.OnClickListener listener){
-        this.listener = listener;
+        this.ap_listener = listener;
     }
 
     @Override
     public void onBindViewHolder(@NonNull @NotNull ap_adplistadofrgcategoria.ViewHolder holder, int position) {
-        String ap_varlocnombrecurso = model.get(position).getAp_varstrnombrecurso();
+        String ap_varlocnombrecurso = ap_model.get(position).getAp_varstrnombrecurso();
         holder.ap_varlocnombrecurso.setText(ap_varlocnombrecurso);
     }
 
     @Override
     public int getItemCount() {
-        return model.size();
+        return ap_model.size();
     }
 
     @Override
     public void onClick(View view) {
-        if(listener!=null){
-            listener.onClick(view);
+        if(ap_listener !=null){
+            ap_listener.onClick(view);
         }
     }
 

@@ -46,7 +46,7 @@ public class ap_frgmisfavoritos extends Fragment {
         ap_adpfavoritos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String titulo = ap_listafavoritos.get(ap_rclvfavoritos.getChildAdapterPosition(view)).getTitulo();
+                String titulo = ap_listafavoritos.get(ap_rclvfavoritos.getChildAdapterPosition(view)).getAp_strtitulo();
                 Toast.makeText(getContext(), "Seleccionó: " + titulo, Toast.LENGTH_SHORT).show();
             }
         });

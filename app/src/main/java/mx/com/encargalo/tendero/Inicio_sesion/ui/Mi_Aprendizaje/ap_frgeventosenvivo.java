@@ -45,7 +45,7 @@ public class ap_frgeventosenvivo extends Fragment {
         ap_adpeventosenvivo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String charla = ap_listaeventoenvivo.get(ap_rclvevento.getChildAdapterPosition(view)).getCharla();
+                String charla = ap_listaeventoenvivo.get(ap_rclvevento.getChildAdapterPosition(view)).getAp_strcharla();
                 Toast.makeText(getContext(), "Seleccionó: " + charla, Toast.LENGTH_SHORT).show();
             }
         });

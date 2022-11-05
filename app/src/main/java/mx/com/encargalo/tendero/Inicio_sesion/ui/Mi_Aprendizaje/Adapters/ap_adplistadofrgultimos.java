@@ -18,45 +18,45 @@ import mx.com.encargalo.tendero.Inicio_sesion.ui.Mi_Aprendizaje.Entidades.LastFa
 
 public class ap_adplistadofrgultimos extends RecyclerView.Adapter<ap_adplistadofrgultimos.ViewHolder> implements View.OnClickListener {
 
-    LayoutInflater inflater;
-    ArrayList<LastFavoritos> model;
+    LayoutInflater ap_inflater;
+    ArrayList<LastFavoritos> ap_model;
 
-    private View.OnClickListener listener;
+    private View.OnClickListener ap_listener;
 
     public ap_adplistadofrgultimos(Context context, ArrayList<LastFavoritos> model){
-        this.inflater=LayoutInflater.from(context);
-        this.model=model;
+        this.ap_inflater =LayoutInflater.from(context);
+        this.ap_model =model;
     }
 
     @NonNull
     @NotNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull @NotNull ViewGroup parent, int viewType) {
-        View view = inflater.inflate(R.layout.ap_mfitemcardultimos, parent, false);
+        View view = ap_inflater.inflate(R.layout.ap_mfitemcardultimos, parent, false);
         view.setOnClickListener(this);
         return new ap_adplistadofrgultimos.ViewHolder(view);
     }
 
     public void setOnClickListener(View.OnClickListener listener){
-        this.listener = listener;
+        this.ap_listener = listener;
     }
 
     @Override
     public void onBindViewHolder(@NonNull @NotNull ap_adplistadofrgultimos.ViewHolder holder, int position) {
-        String titulo = model.get(position).getTitulo();
+        String titulo = ap_model.get(position).getAp_strtitulo();
         holder.titulo.setText(titulo);
 
     }
 
     @Override
     public int getItemCount() {
-        return model.size();
+        return ap_model.size();
     }
 
     @Override
     public void onClick(View view) {
-        if(listener!=null){
-            listener.onClick(view);
+        if(ap_listener !=null){
+            ap_listener.onClick(view);
         }
     }
 
