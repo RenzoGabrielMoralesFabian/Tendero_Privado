@@ -38,15 +38,15 @@ public class pub_frgpagaranuncio extends Fragment {
         pub_pabtnpagaranuncio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                View auxview = view;
-                showDialogoPagar(auxview);
+                View pub_pavwauxview = view;
+                showDialogoPagar(pub_pavwauxview);
             }
         });
         pub_pabtncancelarpago.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                View auxview = view;
-                showDialogoCancelar(auxview);
+                View pub_pavwauxview = view;
+                showDialogoCancelar(pub_pavwauxview);
             }
         });
 
@@ -64,16 +64,16 @@ public class pub_frgpagaranuncio extends Fragment {
         final Dialog dialog = new Dialog(getContext());
         dialog.setContentView(R.layout.pub_lytmodelpagaranuncio);
         dialog.show();
-        Button btnpagar = dialog.findViewById(R.id.pub_mpabtnaceptar);
-        Button btncancelar = dialog.findViewById(R.id.pub_mpabtncancelar);
-        btnpagar.setOnClickListener(new View.OnClickListener() {
+        Button pub_pabtnaceptar = dialog.findViewById(R.id.pub_mpabtnaceptar);
+        Button pub_pabtncancelar = dialog.findViewById(R.id.pub_mpabtncancelar);
+        pub_pabtnaceptar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Navigation.findNavController(auxview).navigate(R.id.nav_codigopago);
                 dialog.dismiss();
             }
         });
-        btncancelar.setOnClickListener(new View.OnClickListener() {
+        pub_pabtncancelar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 dialog.dismiss();
@@ -85,16 +85,16 @@ public class pub_frgpagaranuncio extends Fragment {
         final Dialog dialog = new Dialog(getContext());
         dialog.setContentView(R.layout.pub_lytmodelcancelaranuncio);
         dialog.show();
-        Button btnpagar = dialog.findViewById(R.id.pub_mcabtnaceptar);
-        Button btncancelar = dialog.findViewById(R.id.pub_mcabtncancelar);
-        btnpagar.setOnClickListener(new View.OnClickListener() {
+        Button pub_pabtnaceptar = dialog.findViewById(R.id.pub_mcabtnaceptar);
+        Button pub_pabtncancelar = dialog.findViewById(R.id.pub_mcabtncancelar);
+        pub_pabtnaceptar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Navigation.findNavController(auxview).navigate(R.id.nav_crearanuncio);
                 dialog.dismiss();
             }
         });
-        btncancelar.setOnClickListener(new View.OnClickListener() {
+        pub_pabtncancelar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 dialog.dismiss();
