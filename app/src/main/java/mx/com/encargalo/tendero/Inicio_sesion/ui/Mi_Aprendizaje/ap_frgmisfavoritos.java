@@ -15,38 +15,38 @@ import mx.com.encargalo.tendero.Inicio_sesion.ui.Mi_Aprendizaje.Entidades.Favori
 
 public class ap_frgmisfavoritos extends Fragment {
 
-    ap_adplistadofrgmisfavoritos adpfavoritos;
-    RecyclerView recyclerViewFavoritos;
-    ArrayList<Favorito> listaFavoritos;
+    ap_adplistadofrgmisfavoritos ap_adpfavoritos;
+    RecyclerView ap_rclvfavoritos;
+    ArrayList<Favorito> ap_listafavoritos;
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View vista = inflater.inflate(R.layout.fragment_ap_frgmisfavoritos, container, false);
-        recyclerViewFavoritos = vista.findViewById(R.id.ap_mfrclvmisfavoritos);
-        listaFavoritos = new ArrayList<>();
+        ap_rclvfavoritos = vista.findViewById(R.id.ap_mfrclvmisfavoritos);
+        ap_listafavoritos = new ArrayList<>();
 
-        cargarLista();
+        ap_cargarLista();
 
-        mostrarData();
+        ap_mostrarData();
 
         return vista;
     }
 
-    private void cargarLista() {
-        listaFavoritos.add(new Favorito("Favorito 1"));
-        listaFavoritos.add(new Favorito("Favorito 2"));
-        listaFavoritos.add(new Favorito("Favorito 3"));
+    private void ap_cargarLista() {
+        ap_listafavoritos.add(new Favorito("Favorito 1"));
+        ap_listafavoritos.add(new Favorito("Favorito 2"));
+        ap_listafavoritos.add(new Favorito("Favorito 3"));
     }
 
-    private void mostrarData() {
-        recyclerViewFavoritos.setLayoutManager(new LinearLayoutManager(getContext()));
-        adpfavoritos = new ap_adplistadofrgmisfavoritos(getContext(),listaFavoritos);
-        recyclerViewFavoritos.setAdapter(adpfavoritos);
+    private void ap_mostrarData() {
+        ap_rclvfavoritos.setLayoutManager(new LinearLayoutManager(getContext()));
+        ap_adpfavoritos = new ap_adplistadofrgmisfavoritos(getContext(), ap_listafavoritos);
+        ap_rclvfavoritos.setAdapter(ap_adpfavoritos);
 
-        adpfavoritos.setOnClickListener(new View.OnClickListener() {
+        ap_adpfavoritos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String titulo = listaFavoritos.get(recyclerViewFavoritos.getChildAdapterPosition(view)).getTitulo();
+                String titulo = ap_listafavoritos.get(ap_rclvfavoritos.getChildAdapterPosition(view)).getTitulo();
                 Toast.makeText(getContext(), "Seleccionó: " + titulo, Toast.LENGTH_SHORT).show();
             }
         });

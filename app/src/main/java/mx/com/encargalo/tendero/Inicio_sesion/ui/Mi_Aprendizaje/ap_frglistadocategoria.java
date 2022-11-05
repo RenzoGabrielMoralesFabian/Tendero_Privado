@@ -15,38 +15,38 @@ import mx.com.encargalo.tendero.Inicio_sesion.ui.Mi_Aprendizaje.Entidades.Curso;
 
 public class ap_frglistadocategoria extends Fragment {
 
-    ap_adplistadofrgcategoria adpcategoria;
-    RecyclerView recyclerViewCategoria;
-    ArrayList<Curso> listaCategoria;
+    ap_adplistadofrgcategoria ap_adpcategoria;
+    RecyclerView ap_rclvcategoria;
+    ArrayList<Curso> ap_listacategoria;
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View vista = inflater.inflate(R.layout.fragment_ap_frglistadocategoria, container, false);
-        recyclerViewCategoria = vista.findViewById(R.id.ap_ccrclvlistadocurso);
-        listaCategoria = new ArrayList<>();
+        ap_rclvcategoria = vista.findViewById(R.id.ap_ccrclvlistadocurso);
+        ap_listacategoria = new ArrayList<>();
 
-        cargaLista();
+        ap_cargaLista();
 
-        mostrarData();
+        ap_mostrarData();
 
         return vista;
     }
 
-    private void cargaLista() {
-        listaCategoria.add(new Curso("Estrategias de ventas web"));
-        listaCategoria.add(new Curso("Manejo de clientes dificiles"));
-        listaCategoria.add(new Curso("20 formas de vender y no morir en el intento"));
+    private void ap_cargaLista() {
+        ap_listacategoria.add(new Curso("Estrategias de ventas web"));
+        ap_listacategoria.add(new Curso("Manejo de clientes dificiles"));
+        ap_listacategoria.add(new Curso("20 formas de vender y no morir en el intento"));
     }
 
-    private void mostrarData() {
-        recyclerViewCategoria.setLayoutManager(new LinearLayoutManager(getContext()));
-        adpcategoria = new ap_adplistadofrgcategoria(getContext(), listaCategoria);
-        recyclerViewCategoria.setAdapter(adpcategoria);
+    private void ap_mostrarData() {
+        ap_rclvcategoria.setLayoutManager(new LinearLayoutManager(getContext()));
+        ap_adpcategoria = new ap_adplistadofrgcategoria(getContext(), ap_listacategoria);
+        ap_rclvcategoria.setAdapter(ap_adpcategoria);
 
-        adpcategoria.setOnClickListener(new View.OnClickListener() {
+        ap_adpcategoria.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String ap_varlocnombrecurso = listaCategoria.get(recyclerViewCategoria.getChildAdapterPosition(view)).getAp_varstrnombrecurso();
+                String ap_varlocnombrecurso = ap_listacategoria.get(ap_rclvcategoria.getChildAdapterPosition(view)).getAp_varstrnombrecurso();
                 Toast.makeText(getContext(), "Seleccionó: " + ap_varlocnombrecurso, Toast.LENGTH_SHORT).show();
             }
         });
