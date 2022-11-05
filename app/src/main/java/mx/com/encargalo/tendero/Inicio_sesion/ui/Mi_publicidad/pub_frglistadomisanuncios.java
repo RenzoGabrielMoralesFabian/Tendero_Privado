@@ -49,7 +49,7 @@ public class pub_frglistadomisanuncios extends Fragment {
         pub_adplista.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String pub_strtitulo = pub_listapublicidad.get(pub_rclvpublicidad.getChildAdapterPosition(view)).getTitulo();
+                String pub_strtitulo = pub_listapublicidad.get(pub_rclvpublicidad.getChildAdapterPosition(view)).getPub_strtitulo();
                 Toast.makeText(getContext(), "Selecciono: " + pub_strtitulo, Toast.LENGTH_SHORT).show();
                 Navigation.findNavController(view).navigate(R.id.nav_detalleanuncio);
             }
