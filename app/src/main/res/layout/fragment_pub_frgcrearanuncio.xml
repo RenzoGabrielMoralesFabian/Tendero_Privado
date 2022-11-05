@@ -145,14 +145,16 @@
                     android:visibility="gone" />
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="140dp"
-                    android:layout_height="match_parent">
+                    android:layout_height="wrap_content">
                     <TextView
                         android:id="@+id/pub_caedtfechainitanuncio"
                         android:layout_width="140dp"
                         android:layout_height="wrap_content"
                         android:textAlignment="center"
-                        android:background="@drawable/outline_textinputedittext"/>
+                        android:background="@drawable/outline_textinputedittext"
+                        android:drawableRight="@drawable/pub_iconcalendario_1"/>
                 </com.google.android.material.textfield.TextInputLayout>
+
             </LinearLayout>
 
             <LinearLayout
@@ -186,7 +188,8 @@
                         android:layout_width="140dp"
                         android:layout_height="wrap_content"
                         android:textAlignment="center"
-                        android:background="@drawable/outline_textinputedittext"/>
+                        android:background="@drawable/outline_textinputedittext"
+                        android:drawableRight="@drawable/pub_iconcalendario_1"/>
                 </com.google.android.material.textfield.TextInputLayout>
             </LinearLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -201,12 +204,37 @@
                 android:id="@+id/pub_cachkbaceptarterminos"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
-            <TextView
+            <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="@string/str_terminos_politicas"
-                android:textAlignment="center"
-                style="@style/txtstyle_content"/>
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="@string/str_al_continuar"
+                        android:textAlignment="center"
+                        style="@style/txtstyle_content"/>
+                    <TextView
+                        android:id="@+id/pub_varstrterminos"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="@string/str_terminos"
+                        android:textAlignment="center"
+                        style="@style/txtstyle_blue"/>
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/pub_varstrpoliticas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/str_politicas"
+                    android:textAlignment="center"
+                    style="@style/txtstyle_blue"/>
+            </LinearLayout>
         </LinearLayout>
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
