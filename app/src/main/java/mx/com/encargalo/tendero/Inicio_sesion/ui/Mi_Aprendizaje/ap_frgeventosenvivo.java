@@ -2,6 +2,7 @@ package mx.com.encargalo.tendero.Inicio_sesion.ui.Mi_Aprendizaje;
 
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -26,7 +27,7 @@ import mx.com.encargalo.tendero.Inicio_sesion.ui.Mi_Aprendizaje.Entidades.Evento
 
 public class ap_frgeventosenvivo extends Fragment {
 
-    ap_adplistadofrgeventosenvivo ap_adpeventosenvivo;
+
     RecyclerView ap_rclvevento;
     ArrayList<EventoEnVivo> ap_listaeventoenvivo;
 
@@ -38,6 +39,8 @@ public class ap_frgeventosenvivo extends Fragment {
                              Bundle savedInstanceState) {
         View vista = inflater.inflate(R.layout.fragment_ap_frgeventosenvivo, container, false);
         ap_rclvevento =vista.findViewById(R.id.ap_eevrclveventos);
+        ap_rclvevento.setLayoutManager(new LinearLayoutManager(this.getContext()));
+        ap_rclvevento.setHasFixedSize(true);
         ap_listaeventoenvivo = new ArrayList<>();
 
         requestQueue = Volley.newRequestQueue(getContext());
@@ -72,7 +75,8 @@ public class ap_frgeventosenvivo extends Fragment {
                                 ap_listaeventoenvivo.add(eventoEnVivo);
 
                             }
-                            ap_adpeventosenvivo = new ap_adplistadofrgeventosenvivo(getContext(), ap_listaeventoenvivo);
+                            ap_adplistadofrgeventosenvivo ap_adpeventosenvivo = new ap_adplistadofrgeventosenvivo(getContext(),ap_listaeventoenvivo);
+                            ap_rclvevento.setAdapter(ap_adpeventosenvivo);
                         } catch (Exception e) {
                             e.printStackTrace();
                         }
