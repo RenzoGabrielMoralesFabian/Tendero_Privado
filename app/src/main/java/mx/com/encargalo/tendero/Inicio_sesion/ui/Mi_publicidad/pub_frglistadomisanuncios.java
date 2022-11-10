@@ -70,6 +70,7 @@ public class pub_frglistadomisanuncios extends Fragment {
                                 publicidad.setPub_strfecha(jsonObject.optString("pubFechaInicio"));
                                 publicidad.setPub_strduracion(jsonObject.optString("fecha_Dias"));
                                 publicidad.setPub_strvistas(jsonObject.optString("pubCantVistas"));
+                                publicidad.setPub_intimagenid(jsonObject.optString("pubImagen"));
                                 pub_listapublicidad.add(publicidad);
 
                             }

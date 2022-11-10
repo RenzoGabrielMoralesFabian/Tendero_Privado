@@ -6,11 +6,11 @@ public class Publicidad {
     private String pub_strduracion;
     private String pub_strvistas;
     private String pub_strconversion;
-    private int pub_intimagenid;
+    private String pub_intimagenid;
 
     public Publicidad() {}
 
-    public Publicidad(String titulo, String fecha, String duracion, String vistas, String conversion, int imagenid) {
+    public Publicidad(String titulo, String fecha, String duracion, String vistas, String conversion, String imagenid) {
         this.pub_strtitulo = titulo;
         this.pub_strfecha = fecha;
         this.pub_strduracion = duracion;
@@ -59,11 +59,11 @@ public class Publicidad {
         this.pub_strconversion = pub_strconversion;
     }
 
-    public int getPub_intimagenid() {
+    public String getPub_intimagenid() {
         return pub_intimagenid;
     }
 
-    public void setPub_intimagenid(int pub_intimagenid) {
+    public void setPub_intimagenid(String pub_intimagenid) {
         this.pub_intimagenid = pub_intimagenid;
     }
 }
