@@ -31,38 +31,35 @@ public class pub_frglistadomisanuncios extends Fragment {
     RecyclerView pub_rclvpublicidad;
     ArrayList<Publicidad> pub_listapublicidad;
 
-    /*Publicidad publicidad;
+    Publicidad publicidad;
     RequestQueue requestQueue;
-    JsonObjectRequest request;*/
+    JsonObjectRequest request;
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
         View vista = inflater.inflate(R.layout.fragment_pub_frglistadomisanuncios, container, false);
         pub_rclvpublicidad = vista.findViewById(R.id.pub_lmarclvmisanuncios);
+        pub_rclvpublicidad.setLayoutManager(new LinearLayoutManager(this.getContext()));
+        pub_rclvpublicidad.setHasFixedSize(true);
         pub_listapublicidad = new ArrayList<>();
 
-//        requestQueue = Volley.newRequestQueue(getContext());
+        requestQueue = Volley.newRequestQueue(getContext());
 
-//        parseJSON();
-
-        //cargar la lista
-        pub_cargarLista();
-        //mostrar datos
-        pub_mostrarData();
+        parseJSON();
 
         return vista;
     }
 
-    /*private void parseJSON() {
-        String URL = "";
+    private void parseJSON() {
+        String URL = "http://129.151.103.228/Encargalo/APIS/TenderoApp/c_mostrar_detalle_publicidad.php?id_Tienda=1";
 
         request = new JsonObjectRequest(Request.Method.GET, URL, null,
                 new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
                         publicidad = null;
-                        JSONArray json=response.optJSONArray("consulta"); ///--------------------///--------------------///--------------------
+                        JSONArray json=response.optJSONArray("D_publicidad"); ///--------------------///--------------------///--------------------
                         try {
                             pub_listapublicidad.clear();
                             for (int i = 0; i<json.length();i++){
@@ -70,10 +67,22 @@ public class pub_frglistadomisanuncios extends Fragment {
                                 JSONObject jsonObject=null;
                                 jsonObject=json.getJSONObject(i);
                                 publicidad.setPub_strtitulo(jsonObject.optString("pubTitulo"));
+                                publicidad.setPub_strfecha(jsonObject.optString("pubFechaInicio"));
+                                publicidad.setPub_strduracion(jsonObject.optString("fecha_Dias"));
+                                publicidad.setPub_strvistas(jsonObject.optString("pubCantVistas"));
                                 pub_listapublicidad.add(publicidad);
 
                             }
                             pub_adplista = new pub_adplistadofrglistado(getContext(), pub_listapublicidad);
+                            pub_rclvpublicidad.setAdapter(pub_adplista);
+                            pub_adplista.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View view) {
+                                    String pub_strtitulo = pub_listapublicidad.get(pub_rclvpublicidad.getChildAdapterPosition(view)).getPub_strtitulo();
+                                    Toast.makeText(getContext(), "Selecciono: " + pub_strtitulo, Toast.LENGTH_SHORT).show();
+                                    Navigation.findNavController(view).navigate(R.id.nav_detalleanuncio);
+                                }
+                            });
                         } catch (Exception e) {
                             e.printStackTrace();
                         }
@@ -88,26 +97,5 @@ public class pub_frglistadomisanuncios extends Fragment {
         });
         requestQueue.add(request);
 
-    }*/
-
-    public void pub_cargarLista() {
-        pub_listapublicidad.add(new Publicidad("Publicidad 1","18/09/2022","30","100","59%",R.drawable.ic_launcher_background));
-        pub_listapublicidad.add(new Publicidad("Publicidad 2","20/10/2022","60","50","14%",R.drawable.ic_launcher_background));
-        pub_listapublicidad.add(new Publicidad("Publicidad 3","01/06/2022","90","210","28%",R.drawable.ic_launcher_background));
-    }
-
-    private void pub_mostrarData() {
-        pub_rclvpublicidad.setLayoutManager(new LinearLayoutManager(getContext()));
-        pub_adplista = new pub_adplistadofrglistado(getContext(), pub_listapublicidad);
-        pub_rclvpublicidad.setAdapter(pub_adplista);
-
-        pub_adplista.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String pub_strtitulo = pub_listapublicidad.get(pub_rclvpublicidad.getChildAdapterPosition(view)).getPub_strtitulo();
-                Toast.makeText(getContext(), "Selecciono: " + pub_strtitulo, Toast.LENGTH_SHORT).show();
-                Navigation.findNavController(view).navigate(R.id.nav_detalleanuncio);
-            }
-        });
     }
 }
