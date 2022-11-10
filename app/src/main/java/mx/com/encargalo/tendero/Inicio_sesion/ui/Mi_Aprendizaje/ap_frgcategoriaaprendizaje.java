@@ -10,9 +10,22 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Toast;
+
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+
 import java.util.ArrayList;
 import mx.com.encargalo.R;
+import mx.com.encargalo.tendero.Inicio_sesion.ui.Mi_Aprendizaje.Adapters.ap_adplistadofrgmisfavoritos;
 import mx.com.encargalo.tendero.Inicio_sesion.ui.Mi_Aprendizaje.Adapters.ap_adplistadofrgultimos;
+import mx.com.encargalo.tendero.Inicio_sesion.ui.Mi_Aprendizaje.Entidades.Favorito;
 import mx.com.encargalo.tendero.Inicio_sesion.ui.Mi_Aprendizaje.Entidades.LastFavoritos;
 
 public class ap_frgcategoriaaprendizaje extends Fragment {
@@ -25,6 +38,10 @@ public class ap_frgcategoriaaprendizaje extends Fragment {
     RecyclerView ap_rclvultimos;
     ArrayList<LastFavoritos> ap_listaultimos;
 
+    LastFavoritos lastFavoritos;
+    RequestQueue requestQueue;
+    JsonObjectRequest request;
+
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View vista = inflater.inflate(R.layout.fragment_ap_frgcategoriaaprendizaje, container, false);
@@ -32,11 +49,13 @@ public class ap_frgcategoriaaprendizaje extends Fragment {
         //Recycler
 
         ap_rclvultimos =vista.findViewById(R.id.ap_carclvcursosfavrecientes);
+        ap_rclvultimos.setLayoutManager(new LinearLayoutManager(this.getContext()));
+        ap_rclvultimos.setHasFixedSize(true);
         ap_listaultimos = new ArrayList<>();
 
-        ap_cargaLista();
+        requestQueue = Volley.newRequestQueue(getContext());
 
-        ap_mostrarData();
+        parseJSON();
 
 
         ap_cabtnvermas=vista.findViewById(R.id.ap_cabtnvermas);
@@ -70,23 +89,47 @@ public class ap_frgcategoriaaprendizaje extends Fragment {
         return vista;
     }
 
-    private void ap_cargaLista() {
-        ap_listaultimos.add(new LastFavoritos("Favorito 1"));
-        ap_listaultimos.add(new LastFavoritos("Favorito 2"));
-        ap_listaultimos.add(new LastFavoritos("Favorito 3"));
-    }
+    private void parseJSON() {
+        String URL = "http://129.151.103.228/Encargalo/APIS/TenderoApp/c_listar_ultimos_favoritos_aprendizaje.php";
 
-    private void ap_mostrarData() {
-        ap_rclvultimos.setLayoutManager(new LinearLayoutManager(getContext()));
-        ap_adpultimos = new ap_adplistadofrgultimos(getContext(), ap_listaultimos);
-        ap_rclvultimos.setAdapter(ap_adpultimos);
+        request = new JsonObjectRequest(Request.Method.GET, URL, null,
+                new Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject response) {
+                        lastFavoritos = null;
+                        JSONArray json=response.optJSONArray("consulta"); ///--------------------///--------------------///--------------------
+                        try {
+                            ap_listaultimos.clear();
+                            for (int i = 0; i<json.length();i++){
+                                lastFavoritos=new LastFavoritos();
+                                JSONObject jsonObject=null;
+                                jsonObject=json.getJSONObject(i);
+                                lastFavoritos.setAp_strtitulo(jsonObject.optString("idAprendizaje"));
+                                ap_listaultimos.add(lastFavoritos);
 
-        ap_adpultimos.setOnClickListener(new View.OnClickListener() {
+                            }
+                            ap_adpultimos = new ap_adplistadofrgultimos(getContext(), ap_listaultimos);
+                            ap_rclvultimos.setAdapter(ap_adpultimos);
+                            ap_adpultimos.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View view) {
+                                    String titulo = ap_listaultimos.get(ap_rclvultimos.getChildAdapterPosition(view)).getAp_strtitulo();
+                                    Toast.makeText(getContext(), "Seleccionó: " + titulo, Toast.LENGTH_SHORT).show();
+                                }
+                            });
+
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+
+                    }
+                }, new Response.ErrorListener() {
             @Override
-            public void onClick(View view) {
-                String titulo = ap_listaultimos.get(ap_rclvultimos.getChildAdapterPosition(view)).getAp_strtitulo();
-                Toast.makeText(getContext(), "Seleccionó: " + titulo, Toast.LENGTH_SHORT).show();
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(getContext(), "Error al consultar"+ error.toString(), Toast.LENGTH_SHORT).show();
+
             }
         });
+        requestQueue.add(request);
     }
 }

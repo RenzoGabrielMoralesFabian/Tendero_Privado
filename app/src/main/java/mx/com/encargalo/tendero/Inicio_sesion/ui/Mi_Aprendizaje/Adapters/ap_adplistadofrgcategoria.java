@@ -44,7 +44,7 @@ public class ap_adplistadofrgcategoria extends RecyclerView.Adapter<ap_adplistad
     @Override
     public void onBindViewHolder(@NonNull @NotNull ap_adplistadofrgcategoria.ViewHolder holder, int position) {
         String ap_varlocnombrecurso = ap_model.get(position).getAp_varstrnombrecurso();
-        holder.ap_varlocnombrecurso.setText(ap_varlocnombrecurso);
+        holder.ap_varlocnombrecurso.setText(String.valueOf(ap_varlocnombrecurso));
     }
 
     @Override

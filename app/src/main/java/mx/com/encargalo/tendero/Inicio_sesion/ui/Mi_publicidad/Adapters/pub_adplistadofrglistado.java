@@ -51,13 +51,12 @@ public class pub_adplistadofrglistado extends RecyclerView.Adapter<pub_adplistad
         String pub_strvistas = pub_model.get(position).getPub_strvistas();
         String pub_strconversion = pub_model.get(position).getPub_strconversion();
         int imagen = pub_model.get(position).getPub_intimagenid();
-        holder.pub_txttitulo.setText(pub_strtitulo);
-        holder.pub_txtfecha.setText(pub_strfecha);
-        holder.pub_txtduracion.setText(pu_strduracion);
-        holder.pub_txtvistas.setText(pub_strvistas);
-        holder.pub_txtconversion.setText(pub_strconversion);
+        holder.pub_txttitulo.setText(String.valueOf(pub_strtitulo));
+        holder.pub_txtfecha.setText(String.valueOf(pub_strfecha));
+        holder.pub_txtduracion.setText(String.valueOf(pu_strduracion));
+        holder.pub_txtvistas.setText(String.valueOf(pub_strvistas));
+        holder.pub_txtconversion.setText(String.valueOf(pub_strconversion));
         holder.pub_imgvwimagen.setImageResource(imagen);
-
     }
 
     @Override
