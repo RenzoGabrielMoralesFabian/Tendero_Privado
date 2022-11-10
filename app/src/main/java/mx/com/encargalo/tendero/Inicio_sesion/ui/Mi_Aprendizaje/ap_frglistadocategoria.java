@@ -67,7 +67,7 @@ public class ap_frglistadocategoria extends Fragment {
                                 curso=new Curso();
                                 JSONObject jsonObject=null;
                                 jsonObject=json.getJSONObject(i);
-                                curso.setAp_varstrnombrecurso(jsonObject.optString("apreCategoriaRecurso"));
+                                curso.setAp_varstrnombrecurso(jsonObject.optString("apreDescripcionRecurso"));
                                 ap_listacategoria.add(curso);
 
                             }

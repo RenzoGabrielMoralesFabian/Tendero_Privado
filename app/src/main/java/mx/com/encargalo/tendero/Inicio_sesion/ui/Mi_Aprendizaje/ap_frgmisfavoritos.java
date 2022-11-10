@@ -53,7 +53,7 @@ public class ap_frgmisfavoritos extends Fragment {
     }
 
     private void parseJSON() {
-        String URL = "http://129.151.103.228/Encargalo/APIS/TenderoApp/c_listar_favoritos_aprendizaje.php";
+        String URL = "http://129.151.103.228/Encargalo/APIS/TenderoApp/c_listar_favoritos_aprendizaje.php?id_DocumentoPersona=11111119";
 
         request = new JsonObjectRequest(Request.Method.GET, URL, null,
                 new Response.Listener<JSONObject>() {
@@ -67,7 +67,7 @@ public class ap_frgmisfavoritos extends Fragment {
                                 favorito=new Favorito();
                                 JSONObject jsonObject=null;
                                 jsonObject=json.getJSONObject(i);
-                                favorito.setAp_strtitulo(jsonObject.optString("idAprendizaje"));
+                                favorito.setAp_strtitulo(jsonObject.optString("apreDescripcionRecurso"));
                                 ap_listafavoritos.add(favorito);
 
                             }
