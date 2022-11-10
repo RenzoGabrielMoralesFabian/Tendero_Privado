@@ -125,7 +125,7 @@ public class pub_frgpagaranuncio extends Fragment {
                             @Override
                             public void onResponse(String response) {
                                 Toast.makeText(getContext(), "Publicación registrada", Toast.LENGTH_LONG).show();
-                                Navigation.findNavController(auxview).navigate(R.id.nav_crearanuncio);
+                                Navigation.findNavController(auxview).navigate(R.id.nav_codigopago);
                             }
                         }, new Response.ErrorListener() {
                     @Override
