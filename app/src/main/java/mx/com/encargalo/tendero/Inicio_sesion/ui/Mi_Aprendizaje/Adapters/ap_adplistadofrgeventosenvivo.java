@@ -69,7 +69,7 @@ public class ap_adplistadofrgeventosenvivo extends RecyclerView.Adapter<ap_adpli
 
         public ViewHolder(@NonNull @NotNull View itemView) {
             super(itemView);
-            titulo = itemView.findViewById(R.id.textView3);
+            titulo = itemView.findViewById(R.id.ap_strtitulocurso);
             charla = itemView.findViewById(R.id.ap_eevtxtnombreevento);
             fecha = itemView.findViewById(R.id.ap_eevtxtfechahora);
         }
