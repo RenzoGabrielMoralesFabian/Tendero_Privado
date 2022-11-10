@@ -44,7 +44,7 @@ public class ap_adplistadofrgmisfavoritos extends RecyclerView.Adapter<ap_adplis
     @Override
     public void onBindViewHolder(@NonNull @NotNull ap_adplistadofrgmisfavoritos.ViewHolder holder, int position) {
         String titulo = ap_model.get(position).getAp_strtitulo();
-        holder.titulo.setText(titulo);
+        holder.titulo.setText(String.valueOf(titulo));
 
     }
 
