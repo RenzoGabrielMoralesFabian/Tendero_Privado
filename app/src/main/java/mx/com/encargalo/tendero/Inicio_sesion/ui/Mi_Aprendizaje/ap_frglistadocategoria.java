@@ -53,14 +53,14 @@ public class ap_frglistadocategoria extends Fragment {
 
     private void parseJSON() {
 
-        String URL = "http://129.151.103.228/Encargalo/APIS/TenderoApp/c_consultar_categoria_aprendizaje.php";
+        String URL = "http://129.151.103.228/Encargalo/APIS/TenderoApp/c_consultar_materiales_por_categoria_aprendizaje.php";
 
         request = new JsonObjectRequest(Request.Method.GET, URL, null,
                 new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
                         curso = null;
-                        JSONArray json=response.optJSONArray("categrias"); ///--------------------///--------------------///--------------------
+                        JSONArray json=response.optJSONArray("matCategoria"); ///--------------------///--------------------///--------------------
                         try {
                             ap_listacategoria.clear();
                             for (int i = 0; i<json.length();i++){
