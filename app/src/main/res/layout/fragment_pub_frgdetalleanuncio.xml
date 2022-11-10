@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     tools:context=".tendero.Inicio_sesion.ui.Mi_publicidad.pub_frgdetalleanuncio"
     android:orientation="vertical"
-    android:background="@color/grey_200">
+    android:background="@color/grey">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -30,7 +30,7 @@
                     android:id="@+id/pub_daimgvwimgprevia"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@color/grey_400"/>
+                    android:background="@color/grey_dark"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -41,11 +41,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/pub_varstrlistadomisanuncios1"
-                    style="@style/txtstyle_content_bold"/>
+                    android:layout_marginRight="5dp"
+                    style="@style/Subtitle_2"/>
 
                 <TextView
                     android:id="@+id/pub_datxttitulo"
-                    style="@style/txtstyle_content"
+                    style="@style/Body_2"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:text="Publicidad 1" />
@@ -59,13 +60,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/pub_varstrdetalleanuncio1"
-                    style="@style/txtstyle_content_bold"/>
+                    android:layout_marginRight="5dp"
+                    style="@style/Subtitle_2"/>
                 <TextView
                     android:id="@+id/pub_datxtdescripcion"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Publicidad sobre productos en venta"
-                    style="@style/txtstyle_content"/>
+                    style="@style/Body_2"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -76,13 +78,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/pub_varstrdetalleanuncio2"
-                    style="@style/txtstyle_content_bold"/>
+                    android:layout_marginRight="5dp"
+                    style="@style/Subtitle_2"/>
                 <TextView
                     android:id="@+id/pub_datxtfechapub"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="18/09/2022"
-                    style="@style/txtstyle_content"/>
+                    style="@style/Body_2"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -93,13 +96,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/pub_varstrlistadomisanuncios3"
-                    style="@style/txtstyle_content_bold"/>
+                    android:layout_marginRight="5dp"
+                    style="@style/Subtitle_2"/>
                 <TextView
                     android:id="@+id/pub_datxtduracion"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="30"
-                    style="@style/txtstyle_content"/>
+                    style="@style/Body_2"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -110,13 +114,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/pub_varstrdetalleanuncio3"
-                    style="@style/txtstyle_content_bold"/>
+                    android:layout_marginRight="5dp"
+                    style="@style/Subtitle_2"/>
                 <TextView
                     android:id="@+id/pub_datxtmonto"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="$30"
-                    style="@style/txtstyle_content"/>
+                    style="@style/Body_2"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -127,11 +132,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/pub_varstrlistadomisanuncios5"
-                    style="@style/txtstyle_content_bold"/>
+                    android:layout_marginRight="5dp"
+                    style="@style/Subtitle_2"/>
 
                 <TextView
                     android:id="@+id/pub_datxttasa"
-                    style="@style/txtstyle_content"
+                    style="@style/Body_2"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:text="59%" />
@@ -140,13 +146,11 @@
 
         <Button
             android:id="@+id/pub_pabtnvolverlista"
-            android:layout_width="@dimen/btn_type03_width"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/pub_varstrdetalleanuncio4"
             android:layout_marginTop="50dp"
-            android:background="@drawable/containedbutton_cyan"
-            android:textAllCaps="false"
-            style="@style/txtstyle_content"/>
+            style="@style/Contained_button_green"/>
     </LinearLayout>
 
 </ScrollView>

@@ -24,4 +24,12 @@
     <color name="orangePrimary">#F4C74A</color>
     <color name="redPrimary">#E44848</color>
     <color name="purplePrimary">#B6A6D6</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#06141D</color>
+    <color name="blue">#1977AB</color>
+    <color name="red">#E3001B</color>
+    <color name="grey">#F5F5F5</color>
+    <color name="grey_dark">#878787</color>
+    <color name="green">#109A83</color>
 </resources>

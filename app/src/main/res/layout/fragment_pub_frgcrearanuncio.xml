@@ -19,7 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <TextView
-                style="@style/txtstyle_content"
+                style="@style/Subtitle_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/pub_varstrcrearanuncio1"
@@ -31,12 +31,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/pub_varstrcrearanuncio2"
-                android:textAllCaps="false"
-                android:background="@drawable/containedbutton_white"
                 android:drawableRight="@drawable/pub_iconchevronleftblue"
                 android:drawablePadding="10dp"
-                android:stateListAnimator="@null"
-                style="@style/txtstyle_blue"
+                style="@style/Text_button_blue"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
@@ -61,57 +58,43 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/pub_varstrcrearanuncio3"
-            style="@style/txtstyle_content"/>
-        <com.google.android.material.textfield.TextInputLayout
+            style="@style/textinput"/>
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/pub_caedttituloanuncio"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/pub_caedttituloanuncio"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/outline_textinputedittext"
-                android:inputType="text"/>
-        </com.google.android.material.textfield.TextInputLayout>
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            style="@style/input"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/pub_varstrcrearanuncio4"
-            style="@style/txtstyle_content"
-            android:layout_marginTop="10dp"/>
-        <com.google.android.material.textfield.TextInputLayout
+            style="@style/textinput"/>
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/pub_caedttextoanuncio"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/pub_caedttextoanuncio"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/outline_textinputedittext"
-                android:inputType="text"/>
-        </com.google.android.material.textfield.TextInputLayout>
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            style="@style/input"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/pub_varstrcrearanuncio5"
-            style="@style/txtstyle_content"
-            android:layout_marginTop="10dp"/>
-        <com.google.android.material.textfield.TextInputLayout
+            style="@style/textinput"/>
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/pub_caedtlinkanuncio"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/pub_caedtlinkanuncio"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/outline_textinputedittext"
-                android:inputType="text"/>
-        </com.google.android.material.textfield.TextInputLayout>
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            style="@style/input"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/pub_varstrcrearanuncio6"
-            style="@style/txtstyle_content"
+            style="@style/Body_2"
             android:layout_marginTop="10dp"/>
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -133,7 +116,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
                 <TextView
-                    style="@style/txtstyle_content"
+                    style="@style/textinput"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/pub_varstrcrearanuncio7" />
@@ -142,17 +125,13 @@
                     android:layout_width="500dp"
                     android:layout_height="wrap_content"
                     android:visibility="gone" />
-                <com.google.android.material.textfield.TextInputLayout
+                <TextView
+                    android:id="@+id/pub_caedtfechainitanuncio"
                     android:layout_width="140dp"
-                    android:layout_height="wrap_content">
-                    <TextView
-                        android:id="@+id/pub_caedtfechainitanuncio"
-                        android:layout_width="140dp"
-                        android:layout_height="wrap_content"
-                        android:textAlignment="center"
-                        android:background="@drawable/outline_textinputedittext"
-                        android:drawableRight="@drawable/pub_iconcalendario_1"/>
-                </com.google.android.material.textfield.TextInputLayout>
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:drawableRight="@drawable/pub_iconcalendario_1"
+                    style="@style/input"/>
 
             </LinearLayout>
 
@@ -167,7 +146,7 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <TextView
-                    style="@style/txtstyle_content"
+                    style="@style/textinput"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/pub_varstrcrearanuncio8" />
@@ -177,19 +156,13 @@
                     android:layout_width="500dp"
                     android:layout_height="wrap_content"
                     android:visibility="gone" />
-
-                <com.google.android.material.textfield.TextInputLayout
+                <TextView
+                    android:id="@+id/pub_caedtfechafinanuncio"
                     android:layout_width="140dp"
-                    android:layout_height="match_parent">
-
-                    <TextView
-                        android:id="@+id/pub_caedtfechafinanuncio"
-                        android:layout_width="140dp"
-                        android:layout_height="wrap_content"
-                        android:textAlignment="center"
-                        android:background="@drawable/outline_textinputedittext"
-                        android:drawableRight="@drawable/pub_iconcalendario_1"/>
-                </com.google.android.material.textfield.TextInputLayout>
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:drawableRight="@drawable/pub_iconcalendario_1"
+                    style="@style/input"/>
             </LinearLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -197,6 +170,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
+            android:gravity="center_vertical"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="20dp">
             <CheckBox
@@ -206,33 +180,18 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center">
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="@string/str_al_continuar"
-                        android:textAlignment="center"
-                        style="@style/txtstyle_content"/>
-                    <TextView
-                        android:id="@+id/pub_varstrterminos"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="@string/str_terminos"
-                        android:textAlignment="center"
-                        style="@style/txtstyle_blue"/>
-                </LinearLayout>
+                android:orientation="vertical">
                 <TextView
-                    android:id="@+id/pub_varstrpoliticas"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:text="@string/str_politicas"
-                    android:textAlignment="center"
-                    style="@style/txtstyle_blue"/>
+                    android:text="@string/str_al_continuar"
+                    style="@style/Body_2"/>
+                <TextView
+                    android:id="@+id/pub_varstrterminos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/str_terminos"
+                    style="@style/Body_2_b"/>
             </LinearLayout>
         </LinearLayout>
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -246,8 +205,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                android:background="@drawable/containedbutton_cyan"
-                android:textAllCaps="false"/>
+                style="@style/Contained_button_blue"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
 </ScrollView>

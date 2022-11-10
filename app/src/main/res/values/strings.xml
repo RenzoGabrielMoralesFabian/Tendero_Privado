@@ -24,8 +24,7 @@
 
     <!-- GENERALES -->
     <string name="str_al_continuar">Al continuar, usted acepta los </string>
-    <string name="str_terminos">Términos y condiciones</string>
-    <string name="str_politicas">y Política de Privacidad</string>
+    <string name="str_terminos">Términos y condiciones, y Política de Privacidad</string>
     <string name="str_btn_continuar">Continuar</string>
     <string name="str_btn_cancelar">Cancelar</string>
     <string name="str_home">Eso fue rápido!</string>
