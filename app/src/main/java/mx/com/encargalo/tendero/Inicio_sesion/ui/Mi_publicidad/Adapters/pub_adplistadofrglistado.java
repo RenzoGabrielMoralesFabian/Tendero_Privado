@@ -57,8 +57,6 @@ public class pub_adplistadofrglistado extends RecyclerView.Adapter<pub_adplistad
         holder.pub_txtvistas.setText(String.valueOf(pub_strvistas));
         holder.pub_txtconversion.setText(String.valueOf(pub_strconversion));
         holder.pub_imgvwimagen.setImageResource(imagen);
-
-
     }
 
     @Override
