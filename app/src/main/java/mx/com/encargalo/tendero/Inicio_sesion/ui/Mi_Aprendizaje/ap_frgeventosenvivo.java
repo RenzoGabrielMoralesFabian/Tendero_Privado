@@ -47,10 +47,6 @@ public class ap_frgeventosenvivo extends Fragment {
 
         parseJSON();
 
-//        ap_cargaLista();
-//
-//        ap_mostrarData();
-
         return vista;
     }
 
@@ -70,13 +66,21 @@ public class ap_frgeventosenvivo extends Fragment {
                                 eventoEnVivo=new EventoEnVivo();
                                 JSONObject jsonObject=null;
                                 jsonObject=json.getJSONObject(i);
-                                eventoEnVivo.setAp_strcharla(jsonObject.optString("evTitulo"));
-                                eventoEnVivo.setAp_strfecha(jsonObject.optString("evEstado"));
+                                eventoEnVivo.setAp_strtitulo(jsonObject.optString("evTitulo"));
+                                eventoEnVivo.setAp_strcharla(jsonObject.optString("evDescripcion"));
+                                eventoEnVivo.setAp_strfecha(jsonObject.optString("eveFechaPublicacion"));
                                 ap_listaeventoenvivo.add(eventoEnVivo);
 
                             }
                             ap_adpeventosenvivo = new ap_adplistadofrgeventosenvivo(getContext(),ap_listaeventoenvivo);
                             ap_rclvevento.setAdapter(ap_adpeventosenvivo);
+                            ap_adpeventosenvivo.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View view) {
+                                    String charla = ap_listaeventoenvivo.get(ap_rclvevento.getChildAdapterPosition(view)).getAp_strcharla();
+                                    Toast.makeText(getContext(), "Seleccionó: " + charla, Toast.LENGTH_SHORT).show();
+                                }
+                            });
                         } catch (Exception e) {
                             e.printStackTrace();
                         }
@@ -92,23 +96,4 @@ public class ap_frgeventosenvivo extends Fragment {
         requestQueue.add(request);
 
     }
-
-    /*private void ap_cargaLista() {
-        ap_listaeventoenvivo.add(new EventoEnVivo("Conoce sobre el programa Ventas top","5 sept 2022 07:00 p.m. Lima"));
-        ap_listaeventoenvivo.add(new EventoEnVivo("Conoce sobre el programa Ventas top","5 sept 2022 07:00 p.m. Lima"));
-    }
-
-    private void ap_mostrarData() {
-        ap_rclvevento.setLayoutManager(new LinearLayoutManager(getContext()));
-        ap_adpeventosenvivo = new ap_adplistadofrgeventosenvivo(getContext(), ap_listaeventoenvivo);
-        ap_rclvevento.setAdapter(ap_adpeventosenvivo);
-
-        ap_adpeventosenvivo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String charla = ap_listaeventoenvivo.get(ap_rclvevento.getChildAdapterPosition(view)).getAp_strcharla();
-                Toast.makeText(getContext(), "Seleccionó: " + charla, Toast.LENGTH_SHORT).show();
-            }
-        });
-    }*/
 }

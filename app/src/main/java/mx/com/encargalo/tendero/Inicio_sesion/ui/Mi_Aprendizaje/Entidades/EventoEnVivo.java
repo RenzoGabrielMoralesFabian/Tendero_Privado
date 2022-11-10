@@ -1,15 +1,25 @@
 package mx.com.encargalo.tendero.Inicio_sesion.ui.Mi_Aprendizaje.Entidades;
 
 public class EventoEnVivo {
+    String ap_strtitulo;
     String ap_strcharla;
     String ap_strfecha;
 
     public EventoEnVivo() {
     }
 
-    public EventoEnVivo(String charla, String fecha) {
-        this.ap_strcharla = charla;
-        this.ap_strfecha = fecha;
+    public EventoEnVivo(String ap_strtitulo, String ap_strcharla, String ap_strfecha) {
+        this.ap_strtitulo = ap_strtitulo;
+        this.ap_strcharla = ap_strcharla;
+        this.ap_strfecha = ap_strfecha;
+    }
+
+    public String getAp_strtitulo() {
+        return ap_strtitulo;
+    }
+
+    public void setAp_strtitulo(String ap_strtitulo) {
+        this.ap_strtitulo = ap_strtitulo;
     }
 
     public String getAp_strcharla() {

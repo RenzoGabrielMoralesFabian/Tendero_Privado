@@ -43,10 +43,12 @@ public class ap_adplistadofrgeventosenvivo extends RecyclerView.Adapter<ap_adpli
 
     @Override
     public void onBindViewHolder(@NonNull @NotNull ap_adplistadofrgeventosenvivo.ViewHolder holder, int position) {
+        String titulo = ap_model.get(position).getAp_strtitulo();
         String charla = ap_model.get(position).getAp_strcharla();
         String fecha = ap_model.get(position).getAp_strfecha();
-        holder.charla.setText(charla);
-        holder.fecha.setText(fecha);
+        holder.titulo.setText(String.valueOf(titulo));
+        holder.charla.setText(String.valueOf(charla));
+        holder.fecha.setText(String.valueOf(fecha));
 
     }
 
@@ -63,10 +65,11 @@ public class ap_adplistadofrgeventosenvivo extends RecyclerView.Adapter<ap_adpli
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        TextView charla,fecha;
+        TextView titulo, charla,fecha;
 
         public ViewHolder(@NonNull @NotNull View itemView) {
             super(itemView);
+            titulo = itemView.findViewById(R.id.textView3);
             charla = itemView.findViewById(R.id.ap_eevtxtnombreevento);
             fecha = itemView.findViewById(R.id.ap_eevtxtfechahora);
         }
