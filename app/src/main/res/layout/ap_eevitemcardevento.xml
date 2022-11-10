@@ -18,7 +18,7 @@
         android:background="@drawable/outlinedbutton_white">
         <TextView
             android:id="@+id/textView3"
-            style="@style/txtstyle_title"
+            style="@style/Subtitle_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/ap_varstreventosenvivo1"
@@ -26,7 +26,7 @@
             app:layout_constraintTop_toTopOf="parent" />
         <TextView
             android:id="@+id/textView4"
-            style="@style/txtstyle_content"
+            style="@style/Subtitle_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/ap_varstreventosenvivo2"
@@ -35,7 +35,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView3" />
         <TextView
             android:id="@+id/ap_eevtxtnombreevento"
-            style="@style/txtstyle_content"
+            style="@style/Body_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="{nombre evento}"
@@ -45,7 +45,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView3" />
         <TextView
             android:id="@+id/textView5"
-            style="@style/txtstyle_content"
+            style="@style/Subtitle_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/ap_varstreventosenvivo3"
@@ -54,7 +54,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView4" />
         <TextView
             android:id="@+id/ap_eevtxtfechahora"
-            style="@style/txtstyle_content"
+            style="@style/Body_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="{nombre evento}"

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".tendero.Inicio_sesion.ui.Mi_publicidad.pub_frgpagaranuncio"
     android:orientation="vertical"
-    android:background="@color/grey_200">
+    android:background="@color/grey">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -18,7 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/pub_varstrpagaranuncio1"
-            style="@style/txtstyle_title"
+            style="@style/Subtitle_1"
             android:layout_marginBottom="30dp"/>
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -35,7 +35,7 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <TextView
-                    style="@style/txtstyle_content"
+                    style="@style/Body_1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="15dp"
@@ -48,14 +48,14 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        style="@style/txtstyle_content"
+                        style="@style/Body_2"
                         android:layout_width="110dp"
                         android:layout_height="wrap_content"
                         android:text="@string/pub_varstrpagaranuncio4" />
 
                     <TextView
                         android:id="@+id/pub_patxtcargodia"
-                        style="@style/txtstyle_content"
+                        style="@style/Body_2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="{dato}" />
@@ -68,14 +68,14 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        style="@style/txtstyle_content"
+                        style="@style/Body_2"
                         android:layout_width="110dp"
                         android:layout_height="wrap_content"
                         android:text="@string/pub_varstrpagaranuncio5" />
 
                     <TextView
                         android:id="@+id/pub_patxtdia"
-                        style="@style/txtstyle_content"
+                        style="@style/Body_2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="{dato}" />
@@ -88,14 +88,14 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        style="@style/txtstyle_content"
+                        style="@style/Body_2"
                         android:layout_width="110dp"
                         android:layout_height="wrap_content"
                         android:text="@string/pub_varstrpagaranuncio6" />
 
                     <TextView
                         android:id="@+id/pub_patxttotalpago"
-                        style="@style/txtstyle_content"
+                        style="@style/Body_2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="{dato}" />
@@ -112,7 +112,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/pub_varstrpagaranuncio3"
-                    style="@style/txtstyle_content"
+                    style="@style/Body_1"
                     android:layout_marginBottom="15dp"/>
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -123,11 +123,11 @@
                         android:layout_width="50dp"
                         android:layout_height="wrap_content"
                         android:text="@string/pub_varstrpagaranuncio7"
-                        style="@style/txtstyle_content"/>
+                        style="@style/Body_2"/>
 
                     <TextView
                         android:id="@+id/pub_patxtfechadesde"
-                        style="@style/txtstyle_content"
+                        style="@style/Body_2"
                         android:layout_width="wrap_content"
                         android:layout_height="29dp"
                         android:text="{dato}" />
@@ -141,13 +141,13 @@
                         android:layout_width="50dp"
                         android:layout_height="wrap_content"
                         android:text="@string/pub_varstrpagaranuncio8"
-                        style="@style/txtstyle_content"/>
+                        style="@style/Body_2"/>
                     <TextView
                         android:id="@+id/pub_patxtfechahasta"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="{dato}"
-                        style="@style/txtstyle_content"/>
+                        style="@style/Body_2"/>
                 </LinearLayout>
             </LinearLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -161,7 +161,7 @@
             android:paddingBottom="20dp">
 
             <TextView
-                style="@style/txtstyle_content"
+                style="@style/Body_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/pub_varstrpagaranuncio9"
@@ -170,17 +170,16 @@
 
             <Button
                 android:id="@+id/pub_pabtnpagoefectivo"
-                android:layout_width="@dimen/btn_type04_width"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/pub_varstrpagaranuncio10"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.498"
                 app:layout_constraintStart_toStartOf="parent"
-                android:textAllCaps="false"
-                style="@style/txtstyle_content"
+                style="@style/Outlined_button_blue"
                 android:drawableLeft="@drawable/pub_paypal"
-                android:background="@drawable/outlinedbutton_grey"/>
+                android:drawablePadding="10dp"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -189,21 +188,17 @@
             android:gravity="center">
             <Button
                 android:id="@+id/pub_pabtncancelarpago"
-                android:layout_width="@dimen/btn_type03_width"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/str_btn_cancelar"
-                android:background="@drawable/containedbutton_red"
                 android:layout_marginRight="50dp"
-                style="@style/txtstyle_white"
-                android:textAllCaps="false"/>
+                style="@style/Contained_button_green"/>
             <Button
                 android:id="@+id/pub_pabtnpagaranuncio"
-                android:layout_width="@dimen/btn_type03_width"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/pub_varstrpagaranuncio11"
-                android:background="@drawable/containedbutton_orange"
-                style="@style/txtstyle_content"
-                android:textAllCaps="false"/>
+                style="@style/Contained_button_blue"/>
         </LinearLayout>
 
     </LinearLayout>

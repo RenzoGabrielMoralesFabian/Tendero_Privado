@@ -16,8 +16,8 @@
 
         <ImageView
             android:id="@+id/pub_lmaimgvwimgprevia"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
             android:src="@drawable/ic_launcher_background"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -36,14 +36,14 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
                 <TextView
-                    style="@style/txtstyle_content"
+                    style="@style/Subtitle_2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="5dp"
                     android:text="@string/pub_varstrlistadomisanuncios1" />
                 <TextView
                     android:id="@+id/pub_lmatxttitulo"
-                    style="@style/txtstyle_content"
+                    style="@style/Body_2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="{dato}" />
@@ -53,14 +53,14 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
                 <TextView
-                    style="@style/txtstyle_content"
+                    style="@style/Subtitle_2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="5dp"
                     android:text="@string/pub_varstrlistadomisanuncios2" />
                 <TextView
                     android:id="@+id/pub_lmatxtfechapub"
-                    style="@style/txtstyle_content"
+                    style="@style/Body_2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="{dato}" />
@@ -70,14 +70,14 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
                 <TextView
-                    style="@style/txtstyle_content"
+                    style="@style/Subtitle_2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="5dp"
                     android:text="@string/pub_varstrlistadomisanuncios3" />
                 <TextView
                     android:id="@+id/pub_lmatxtduracion"
-                    style="@style/txtstyle_content"
+                    style="@style/Body_2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="{dato}" />
@@ -87,14 +87,14 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
                 <TextView
-                    style="@style/txtstyle_content"
+                    style="@style/Subtitle_2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="5dp"
                     android:text="@string/pub_varstrlistadomisanuncios4" />
                 <TextView
                     android:id="@+id/pub_lmatxtnrovistas"
-                    style="@style/txtstyle_content"
+                    style="@style/Body_2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="{dato}" />
@@ -104,14 +104,14 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
                 <TextView
-                    style="@style/txtstyle_content"
+                    style="@style/Subtitle_2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="5dp"
                     android:text="@string/pub_varstrlistadomisanuncios5" />
                 <TextView
                     android:id="@+id/pub_lmatxttasaconv"
-                    style="@style/txtstyle_content"
+                    style="@style/Body_2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="{dato}" />
