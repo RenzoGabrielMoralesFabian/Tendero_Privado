@@ -104,7 +104,7 @@ public class ap_frgcategoriaaprendizaje extends Fragment {
                                 lastFavoritos=new LastFavoritos();
                                 JSONObject jsonObject=null;
                                 jsonObject=json.getJSONObject(i);
-                                lastFavoritos.setAp_strtitulo(jsonObject.optString("apreDescripcionRecurso"));
+                                lastFavoritos.setAp_strtitulo(jsonObject.optString("apreTituloRecurso"));
                                 ap_listaultimos.add(lastFavoritos);
 
                             }

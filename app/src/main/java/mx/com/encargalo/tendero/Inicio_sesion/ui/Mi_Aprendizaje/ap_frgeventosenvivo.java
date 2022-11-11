@@ -68,7 +68,7 @@ public class ap_frgeventosenvivo extends Fragment {
                                 jsonObject=json.getJSONObject(i);
                                 eventoEnVivo.setAp_strtitulo(jsonObject.optString("evTitulo"));
                                 eventoEnVivo.setAp_strcharla(jsonObject.optString("evDescripcion"));
-                                eventoEnVivo.setAp_strfecha(jsonObject.optString("eveFechaPublicacion"));
+                                eventoEnVivo.setAp_strfecha(jsonObject.optString("evFechaPublicacion"));
                                 ap_listaeventoenvivo.add(eventoEnVivo);
 
                             }

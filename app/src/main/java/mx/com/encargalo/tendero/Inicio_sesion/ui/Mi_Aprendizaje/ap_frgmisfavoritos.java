@@ -67,7 +67,7 @@ public class ap_frgmisfavoritos extends Fragment {
                                 favorito=new Favorito();
                                 JSONObject jsonObject=null;
                                 jsonObject=json.getJSONObject(i);
-                                favorito.setAp_strtitulo(jsonObject.optString("apreDescripcionRecurso"));
+                                favorito.setAp_strtitulo(jsonObject.optString("apreTituloRecurso"));
                                 ap_listafavoritos.add(favorito);
 
                             }
