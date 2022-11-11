@@ -39,8 +39,7 @@ public class pub_frgpagaranuncio extends Fragment {
     Button pub_pabtncancelarpago;
     Button pub_pabtnpagaranuncio;
     View auxview;
-    TextView pub_patxtcargodia, pub_patxtdia, pub_patxttotalpago,
-            pub_patxtfechadesde, pub_patxtfechahasta;
+    TextView pub_patxtcargodia, pub_patxtdia, pub_patxttotalpago, pub_patxtfechadesde, pub_patxtfechahasta;
     float preciot = 0;
     RequestQueue request;
     JsonObjectRequest jsonObjectRequest;
@@ -50,13 +49,10 @@ public class pub_frgpagaranuncio extends Fragment {
                              Bundle savedInstanceState) {
 
         View vista = inflater.inflate(R.layout.fragment_pub_frgpagaranuncio, container, false);
-
         request= Volley.newRequestQueue(getContext());
-
         pub_pabtnpagoefectivo=vista.findViewById(R.id.pub_pabtnpagoefectivo);
         pub_pabtncancelarpago=vista.findViewById(R.id.pub_pabtncancelarpago);
         pub_pabtnpagaranuncio=vista.findViewById(R.id.pub_pabtnpagaranuncio);
-
         pub_patxtcargodia=vista.findViewById(R.id.pub_patxtcargodia);
         pub_patxtdia=vista.findViewById(R.id.pub_patxtdia);
         pub_patxttotalpago=vista.findViewById(R.id.pub_patxttotalpago);
@@ -78,19 +74,15 @@ public class pub_frgpagaranuncio extends Fragment {
         pub_patxtcargodia.setText(preciodia+" $");
         pub_patxtdia.setText(dias+" dias");
         pub_patxttotalpago.setText(preciot+" $");
-
         pub_pabtncancelarpago.setVisibility(View.INVISIBLE);
         pub_pabtnpagaranuncio.setVisibility(View.INVISIBLE);
-
         pub_pabtnpagoefectivo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 pub_pabtncancelarpago.setVisibility(View.VISIBLE);
                 pub_pabtnpagaranuncio.setVisibility(View.VISIBLE);
-
             }
         });
-
         pub_pabtnpagaranuncio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -106,7 +98,6 @@ public class pub_frgpagaranuncio extends Fragment {
                 showDialogoCancelar();
             }
         });
-
         return vista;
     }
 
