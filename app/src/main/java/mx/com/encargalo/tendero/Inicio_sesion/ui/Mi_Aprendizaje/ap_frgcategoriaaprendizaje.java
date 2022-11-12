@@ -1,5 +1,7 @@
 package mx.com.encargalo.tendero.Inicio_sesion.ui.Mi_Aprendizaje;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
@@ -27,6 +29,7 @@ import mx.com.encargalo.tendero.Inicio_sesion.ui.Mi_Aprendizaje.Adapters.ap_adpl
 import mx.com.encargalo.tendero.Inicio_sesion.ui.Mi_Aprendizaje.Adapters.ap_adplistadofrgultimos;
 import mx.com.encargalo.tendero.Inicio_sesion.ui.Mi_Aprendizaje.Entidades.Favorito;
 import mx.com.encargalo.tendero.Inicio_sesion.ui.Mi_Aprendizaje.Entidades.LastFavoritos;
+import mx.com.encargalo.tendero.UTIL.DATOS;
 
 public class ap_frgcategoriaaprendizaje extends Fragment {
     Button ap_cabtnvermas;
@@ -69,6 +72,11 @@ public class ap_frgcategoriaaprendizaje extends Fragment {
         ap_cabtncursosvender.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                String categoria = "Aprendizaje relacionado a vender";
+                SharedPreferences preferencias=getContext().getSharedPreferences(DATOS.SHAREDPREFERENCES, Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor=preferencias.edit();
+                editor.putString("ap_categoriacurso", categoria);
+                editor.apply();
                 Navigation.findNavController(view).navigate(R.id.nav_cursoscategoria);
             }
         });
@@ -76,6 +84,11 @@ public class ap_frgcategoriaaprendizaje extends Fragment {
         ap_cabtncursosautoaprendizaje.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                String categoria = "Aprendizaje relacionado a autoaprendizaje";
+                SharedPreferences preferencias=getContext().getSharedPreferences(DATOS.SHAREDPREFERENCES, Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor=preferencias.edit();
+                editor.putString("ap_categoriacurso", categoria);
+                editor.apply();
                 Navigation.findNavController(view).navigate(R.id.nav_cursoscategoria);
             }
         });
@@ -83,6 +96,11 @@ public class ap_frgcategoriaaprendizaje extends Fragment {
         ap_cabtncursosoperiones.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                String categoria = "Aprendizaje relacionado a las operaciones de negocio";
+                SharedPreferences preferencias=getContext().getSharedPreferences(DATOS.SHAREDPREFERENCES, Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor=preferencias.edit();
+                editor.putString("ap_categoriacurso", categoria);
+                editor.apply();
                 Navigation.findNavController(view).navigate(R.id.nav_cursoscategoria);
             }
         });
