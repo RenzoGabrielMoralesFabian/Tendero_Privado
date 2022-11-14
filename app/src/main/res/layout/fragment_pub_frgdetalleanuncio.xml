@@ -131,6 +131,24 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:text="@string/pub_varstrlistadomisanuncios4"
+                    android:layout_marginRight="5dp"
+                    style="@style/Subtitle_2"/>
+                <TextView
+                    android:id="@+id/pub_datxtnrovistas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="40"
+                    style="@style/Body_2"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:text="@string/pub_varstrlistadomisanuncios5"
                     android:layout_marginRight="5dp"
                     style="@style/Subtitle_2"/>
