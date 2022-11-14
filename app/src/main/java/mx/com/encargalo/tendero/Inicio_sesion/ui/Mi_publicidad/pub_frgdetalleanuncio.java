@@ -22,7 +22,7 @@ import static mx.com.encargalo.tendero.UTIL.DATOS.IP_SERVER;
 public class pub_frgdetalleanuncio extends Fragment {
     Button pub_pabtnvolverlista;
     ImageView pub_daimgvwimgprevia;
-    TextView pub_datxttitulo, pub_datxtdescripcion, pub_datxtfechapub, pub_datxtduracion, pub_datxtmonto, pub_datxttasa;
+    TextView pub_datxttitulo, pub_datxtdescripcion, pub_datxtfechapub, pub_datxtduracion, pub_datxtmonto, pub_datxtnrovistas, pub_datxttasa;
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -36,6 +36,7 @@ public class pub_frgdetalleanuncio extends Fragment {
         String dpduracion = preferencias.getString("pub_dpduracion","");
         String dpmonto = preferencias.getString("pub_dpmonto","");
         String dpvistas = preferencias.getString("pub_dpvistas","");
+        String dpconversion = preferencias.getString("pub_dpconversion", "");
 
         pub_daimgvwimgprevia=vista.findViewById(R.id.pub_daimgvwimgprevia);
 
@@ -56,8 +57,11 @@ public class pub_frgdetalleanuncio extends Fragment {
         pub_datxtduracion.setText(dpduracion);
         pub_datxtmonto=vista.findViewById(R.id.pub_datxtmonto);
         pub_datxtmonto.setText(dpmonto);
-//        pub_datxttasa=vista.findViewById(R.id.pub_datxttasa);  <----------- reemplazar por vistas
-//        pub_datxttasa.setText(dpvistas);
+        pub_datxtnrovistas=vista.findViewById(R.id.pub_datxtnrovistas);
+        pub_datxtnrovistas.setText(dpvistas);
+        pub_datxttasa=vista.findViewById(R.id.pub_datxttasa);
+        pub_datxttasa.setText(dpconversion);
+
 
         pub_pabtnvolverlista=vista.findViewById(R.id.pub_pabtnvolverlista);
         pub_pabtnvolverlista.setOnClickListener(new View.OnClickListener() {
