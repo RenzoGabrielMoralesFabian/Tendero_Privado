@@ -13,7 +13,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.squareup.picasso.Picasso;
 
 import mx.com.encargalo.R;
 import mx.com.encargalo.tendero.UTIL.DATOS;
@@ -24,8 +23,6 @@ public class pub_frgdetalleanuncio extends Fragment {
     Button pub_pabtnvolverlista;
     ImageView pub_daimgvwimgprevia;
     TextView pub_datxttitulo, pub_datxtdescripcion, pub_datxtfechapub, pub_datxtduracion, pub_datxtmonto, pub_datxttasa;
-
-    Context context;
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -45,14 +42,9 @@ public class pub_frgdetalleanuncio extends Fragment {
 
 
         String url = IP_SERVER;
-        Picasso.get()
+        Glide.with(getContext())
                 .load(url+dpimagenurl)
-                .error(R.mipmap.ic_launcher)
                 .into(pub_daimgvwimgprevia);
-
-        /*Glide.with(context)
-                .load(url+dpimagenurl)
-                .into(pub_daimgvwimgprevia);*/
 
         pub_datxttitulo=vista.findViewById(R.id.pub_datxttitulo);
         pub_datxttitulo.setText(dptitulo);
