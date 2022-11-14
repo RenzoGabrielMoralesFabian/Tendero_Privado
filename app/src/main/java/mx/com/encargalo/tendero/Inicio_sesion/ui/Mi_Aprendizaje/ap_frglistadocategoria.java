@@ -1,7 +1,9 @@
 package mx.com.encargalo.tendero.Inicio_sesion.ui.Mi_Aprendizaje;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -21,6 +23,7 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import java.net.URI;
 import java.util.ArrayList;
 import mx.com.encargalo.R;
 import mx.com.encargalo.tendero.Inicio_sesion.ui.Mi_Aprendizaje.Adapters.ap_adplistadofrgcategoria;
@@ -38,6 +41,8 @@ public class ap_frglistadocategoria extends Fragment {
     Curso curso;
     RequestQueue requestQueue;
     JsonObjectRequest request;
+
+    String urlprueba = "https://www.youtube.com/watch?v=hPr-Yc92qaY";
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -82,6 +87,9 @@ public class ap_frglistadocategoria extends Fragment {
                                 @Override
                                 public void onClick(View view) {
                                     String ap_varlocnombrecurso = ap_listacategoria.get(ap_rclvcategoria.getChildAdapterPosition(view)).getAp_varstrnombrecurso();
+                                    Uri link = Uri.parse(urlprueba);
+                                    Intent i = new Intent(Intent.ACTION_VIEW, link);
+                                    startActivity(i);
                                     Toast.makeText(getContext(), "Seleccionó: " + ap_varlocnombrecurso, Toast.LENGTH_SHORT).show();
                                 }
                             });
