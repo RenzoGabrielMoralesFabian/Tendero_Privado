@@ -129,5 +129,4 @@
     <style name="input" parent="Body_2">
         <item name="android:background">@drawable/inputstyle</item>
     </style>
-
 </resources>
