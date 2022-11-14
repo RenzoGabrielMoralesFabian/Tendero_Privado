@@ -45,18 +45,7 @@ public class MainActivity extends AppCompatActivity {
                 R.id.nav_mis_productos,
                 R.id.nav_mis_ordenes,
                 R.id.nav_mi_publicidad,
-//                R.id.nav_crearanuncio,
-//                R.id.nav_detalleanuncio,
-//                R.id.nav_listadomisanuncios,
-//                R.id.nav_pagaranuncios,
-//                R.id.nav_codigopago,
                 R.id.nav_mi_aprendizaje,
-//                R.id.nav_categoriaaprendizaje,
-//                R.id.nav_cursoscategoriavender,
-//                R.id.nav_cursoscategoriautoaprendizaje,
-//                R.id.nav_cursoscategoriaoperacionesnegocio,
-//                R.id.nav_eventosenvivo,
-//                R.id.nav_misfavoritos,
                 R.id.nav_soporte)
                 .setDrawerLayout(drawer)
                 .build();

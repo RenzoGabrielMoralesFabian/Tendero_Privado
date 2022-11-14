@@ -43,13 +43,10 @@ public class pub_frgcrearanuncio extends Fragment {
     Button pub_cabtncontinuar, pub_cabtnseleccionarimg;
     ImageView pub_caimgvwpubcargada;
     EditText pub_caedttituloanuncio, pub_caedttextoanuncio, pub_caedtlinkanuncio;
-
     TextView pub_caedtfechainitanuncio, pub_caedtfechafinanuncio;
     CheckBox pub_cachkbaceptarterminos;
-
     DatePickerDialog.OnDateSetListener setListener1, setListener2;
     Calendar calendar;
-
     Dialog dialog;
 
     int TOMAR_FOTO = 100;
@@ -71,7 +68,6 @@ public class pub_frgcrearanuncio extends Fragment {
         pub_caedtfechainitanuncio=vista.findViewById(R.id.pub_caedtfechainitanuncio);
         pub_caedtfechafinanuncio=vista.findViewById(R.id.pub_caedtfechafinanuncio);
         pub_cachkbaceptarterminos=vista.findViewById(R.id.pub_cachkbaceptarterminos);
-
         calendar = Calendar.getInstance();
 
         final int año = calendar.get(Calendar.YEAR);
@@ -84,45 +80,38 @@ public class pub_frgcrearanuncio extends Fragment {
                 DatePickerDialog datePickerDialog = new DatePickerDialog(getContext(),
                         android.R.style.Theme_Holo_Dialog_MinWidth, setListener1, año, mes, dia
                 );
-
                 datePickerDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
                 datePickerDialog.show();
             }
         });
-
         setListener1 = new DatePickerDialog.OnDateSetListener() {
             @Override
             public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
                 pub_caedtfechainitanuncio.setText(year+"/"+month+"/"+dayOfMonth);
             }
         };
-
         pub_caedtfechafinanuncio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 DatePickerDialog datePickerDialog = new DatePickerDialog(getContext(),
                         android.R.style.Theme_Holo_Dialog_MinWidth, setListener2, año, mes, dia
                 );
-
                 datePickerDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
                 datePickerDialog.show();
             }
         });
-
         setListener2 = new DatePickerDialog.OnDateSetListener() {
             @Override
             public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
                 pub_caedtfechafinanuncio.setText(year+"/"+month+"/"+dayOfMonth);
             }
         };
-
         pub_cabtnseleccionarimg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 elegirAccion();
             }
         });
-
         pub_cabtncontinuar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -139,10 +128,8 @@ public class pub_frgcrearanuncio extends Fragment {
                 Navigation.findNavController(view).navigate(R.id.nav_pagaranuncios);
             }
         });
-
         return vista;
     }
-
     public void elegirAccion(){
         dialog = new Dialog(getContext());
         dialog.setContentView(R.layout.pub_dialog_camara_galeria);
@@ -167,7 +154,6 @@ public class pub_frgcrearanuncio extends Fragment {
         });
         dialog.show();
     }
-
     public void tomarFoto() {
         ContentValues values = new ContentValues();
         values.put(MediaStore.Images.Media.TITLE, "Titulo de la Imagen");
@@ -177,13 +163,11 @@ public class pub_frgcrearanuncio extends Fragment {
         cameraIntent.putExtra(MediaStore.EXTRA_OUTPUT, imageUri);
         startActivityForResult(cameraIntent, TOMAR_FOTO);
     }
-
     public void seleccionarImagen() {
         Intent galleryIntent = new Intent(Intent.ACTION_PICK);
         galleryIntent.setType("image/*");
         startActivityForResult(galleryIntent, SELEC_IMAGEN);
     }
-
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -222,7 +206,6 @@ public class pub_frgcrearanuncio extends Fragment {
             Toast.makeText(getContext(), e.toString(), Toast.LENGTH_SHORT).show();
         }
     }
-
     public String getStringImagen(Bitmap bmp) {
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         bmp.compress(Bitmap.CompressFormat.JPEG, 100, baos);

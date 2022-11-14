@@ -1,5 +1,7 @@
 package mx.com.encargalo.tendero.Inicio_sesion.ui.Mi_Aprendizaje;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -25,6 +27,7 @@ import mx.com.encargalo.tendero.Inicio_sesion.ui.Mi_Aprendizaje.Adapters.ap_adpl
 import mx.com.encargalo.tendero.Inicio_sesion.ui.Mi_Aprendizaje.Entidades.Curso;
 import mx.com.encargalo.tendero.Inicio_sesion.ui.Mi_publicidad.Adapters.pub_adplistadofrglistado;
 import mx.com.encargalo.tendero.Inicio_sesion.ui.Mi_publicidad.Entidades.Publicidad;
+import mx.com.encargalo.tendero.UTIL.DATOS;
 
 public class ap_frglistadocategoria extends Fragment {
 
@@ -52,8 +55,10 @@ public class ap_frglistadocategoria extends Fragment {
     }
 
     private void parseJSON() {
+        SharedPreferences preferencias=getContext().getSharedPreferences(DATOS.SHAREDPREFERENCES, Context.MODE_PRIVATE);
+        String categoria = preferencias.getString("ap_categoriacurso","");
 
-        String URL = "http://129.151.103.228/Encargalo/APIS/TenderoApp/c_consultar_materiales_por_categoria_aprendizaje.php";
+        String URL = "http://129.151.103.228/Encargalo/APIS/TenderoApp/c_consultar_materiales_por_categoria_aprendizaje.php?categoria="+categoria;
 
         request = new JsonObjectRequest(Request.Method.GET, URL, null,
                 new Response.Listener<JSONObject>() {
@@ -67,7 +72,7 @@ public class ap_frglistadocategoria extends Fragment {
                                 curso=new Curso();
                                 JSONObject jsonObject=null;
                                 jsonObject=json.getJSONObject(i);
-                                curso.setAp_varstrnombrecurso(jsonObject.optString("apreDescripcionRecurso"));
+                                curso.setAp_varstrnombrecurso(jsonObject.optString("apreTituloRecurso"));
                                 ap_listacategoria.add(curso);
 
                             }

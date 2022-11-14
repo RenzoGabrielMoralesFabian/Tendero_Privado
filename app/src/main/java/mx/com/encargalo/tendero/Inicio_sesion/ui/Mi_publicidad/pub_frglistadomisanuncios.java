@@ -1,5 +1,7 @@
 package mx.com.encargalo.tendero.Inicio_sesion.ui.Mi_publicidad;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
@@ -24,6 +26,7 @@ import java.util.ArrayList;
 import mx.com.encargalo.R;
 import mx.com.encargalo.tendero.Inicio_sesion.ui.Mi_publicidad.Adapters.pub_adplistadofrglistado;
 import mx.com.encargalo.tendero.Inicio_sesion.ui.Mi_publicidad.Entidades.Publicidad;
+import mx.com.encargalo.tendero.UTIL.DATOS;
 
 public class pub_frglistadomisanuncios extends Fragment {
 
@@ -67,10 +70,14 @@ public class pub_frglistadomisanuncios extends Fragment {
                                 JSONObject jsonObject=null;
                                 jsonObject=json.getJSONObject(i);
                                 publicidad.setPub_strtitulo(jsonObject.optString("pubTitulo"));
-                                publicidad.setPub_strfecha(jsonObject.optString("pubFechaInicio"));
+                                publicidad.setPub_strfechainicio(jsonObject.optString("pubFechaInicio"));
                                 publicidad.setPub_strduracion(jsonObject.optString("fecha_Dias"));
                                 publicidad.setPub_strvistas(jsonObject.optString("pubCantVistas"));
-                                publicidad.setPub_intimagenid(jsonObject.optString("pubImagen"));
+                                publicidad.setPub_strimagenurl(jsonObject.optString("pubImagen"));
+//                                publicidad.setPub_strconversion(jsonObject.optString("ACA DEBE IR LA TASA CONVERSION"));
+
+                                publicidad.setPub_strdescripcion(jsonObject.optString("pubDescripcion"));
+                                publicidad.setPub_strmonto(jsonObject.optString("factpubMontoTotal"));
                                 pub_listapublicidad.add(publicidad);
 
                             }
@@ -79,8 +86,26 @@ public class pub_frglistadomisanuncios extends Fragment {
                             pub_adplista.setOnClickListener(new View.OnClickListener() {
                                 @Override
                                 public void onClick(View view) {
-                                    String pub_strtitulo = pub_listapublicidad.get(pub_rclvpublicidad.getChildAdapterPosition(view)).getPub_strtitulo();
-                                    Toast.makeText(getContext(), "Selecciono: " + pub_strtitulo, Toast.LENGTH_SHORT).show();
+                                    String dpimagen = pub_listapublicidad.get(pub_rclvpublicidad.getChildAdapterPosition(view)).getPub_strimagenurl();
+                                    String dptitulo = pub_listapublicidad.get(pub_rclvpublicidad.getChildAdapterPosition(view)).getPub_strtitulo();
+                                    String dpdescripcion = pub_listapublicidad.get(pub_rclvpublicidad.getChildAdapterPosition(view)).getPub_strdescripcion();
+                                    String dpFechaIncio = pub_listapublicidad.get(pub_rclvpublicidad.getChildAdapterPosition(view)).getPub_strfechainicio();
+                                    String dpduracion = pub_listapublicidad.get(pub_rclvpublicidad.getChildAdapterPosition(view)).getPub_strduracion();
+                                    String dpmonto = pub_listapublicidad.get(pub_rclvpublicidad.getChildAdapterPosition(view)).getPub_strmonto();
+                                    String dpvistas = pub_listapublicidad.get(pub_rclvpublicidad.getChildAdapterPosition(view)).getPub_strvistas();
+                                    Toast.makeText(getContext(), "Selecciono: " + dptitulo, Toast.LENGTH_SHORT).show();
+
+                                    SharedPreferences preferencias=getContext().getSharedPreferences(DATOS.SHAREDPREFERENCES, Context.MODE_PRIVATE);
+                                    SharedPreferences.Editor editor=preferencias.edit();
+                                    editor.putString("pub_dpimagenurl", dpimagen);
+                                    editor.putString("pub_dptitulo", dptitulo);
+                                    editor.putString("pub_dpdescripcion", dpdescripcion);
+                                    editor.putString("pub_dpfechainicio", dpFechaIncio);
+                                    editor.putString("pub_dpduracion", dpduracion);
+                                    editor.putString("pub_dpmonto", dpmonto);
+                                    editor.putString("pub_dpvistas", dpvistas);
+                                    editor.apply();
+
                                     Navigation.findNavController(view).navigate(R.id.nav_detalleanuncio);
                                 }
                             });

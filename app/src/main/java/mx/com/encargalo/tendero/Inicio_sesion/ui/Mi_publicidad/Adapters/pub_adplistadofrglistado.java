@@ -52,11 +52,11 @@ public class pub_adplistadofrglistado extends RecyclerView.Adapter<pub_adplistad
     @Override
     public void onBindViewHolder(@NonNull @NotNull pub_adplistadofrglistado.ViewHolder holder, int position) {
         String pub_strtitulo = pub_model.get(position).getPub_strtitulo();
-        String pub_strfecha = pub_model.get(position).getPub_strfecha();
+        String pub_strfecha = pub_model.get(position).getPub_strfechainicio();
         String pu_strduracion = pub_model.get(position).getPub_strduracion();
         String pub_strvistas = pub_model.get(position).getPub_strvistas();
         String pub_strconversion = pub_model.get(position).getPub_strconversion();
-        String imagen = pub_model.get(position).getPub_intimagenid();
+        String imagen = pub_model.get(position).getPub_strimagenurl();
         holder.pub_txttitulo.setText(String.valueOf(pub_strtitulo));
         holder.pub_txtfecha.setText(String.valueOf(pub_strfecha));
         holder.pub_txtduracion.setText(String.valueOf(pu_strduracion));
