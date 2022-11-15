@@ -72,7 +72,7 @@ public class ap_frgcategoriaaprendizaje extends Fragment {
         ap_cabtncursosvender.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String categoria = "Aprendizaje relacionado a vender";
+                String categoria = "vender";
                 SharedPreferences preferencias=getContext().getSharedPreferences(DATOS.SHAREDPREFERENCES, Context.MODE_PRIVATE);
                 SharedPreferences.Editor editor=preferencias.edit();
                 editor.putString("ap_categoriacurso", categoria);
@@ -84,7 +84,7 @@ public class ap_frgcategoriaaprendizaje extends Fragment {
         ap_cabtncursosautoaprendizaje.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String categoria = "Aprendizaje relacionado a autoaprendizaje";
+                String categoria = "autoaprendizaje";
                 SharedPreferences preferencias=getContext().getSharedPreferences(DATOS.SHAREDPREFERENCES, Context.MODE_PRIVATE);
                 SharedPreferences.Editor editor=preferencias.edit();
                 editor.putString("ap_categoriacurso", categoria);
@@ -96,7 +96,7 @@ public class ap_frgcategoriaaprendizaje extends Fragment {
         ap_cabtncursosoperiones.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String categoria = "Aprendizaje relacionado a las operaciones de negocio";
+                String categoria = "las operaciones de negocio";
                 SharedPreferences preferencias=getContext().getSharedPreferences(DATOS.SHAREDPREFERENCES, Context.MODE_PRIVATE);
                 SharedPreferences.Editor editor=preferencias.edit();
                 editor.putString("ap_categoriacurso", categoria);
