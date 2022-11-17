@@ -24,6 +24,7 @@ import java.util.ArrayList;
 import mx.com.encargalo.R;
 import mx.com.encargalo.tendero.Inicio_sesion.ui.Mi_Aprendizaje.Adapters.ap_adplistadofrgeventosenvivo;
 import mx.com.encargalo.tendero.Inicio_sesion.ui.Mi_Aprendizaje.Entidades.EventoEnVivo;
+import mx.com.encargalo.tendero.Util.Util;
 
 import static mx.com.encargalo.tendero.Util.Util.RUTA;
 
@@ -54,7 +55,7 @@ public class ap_frgeventosenvivo extends Fragment {
 
     private void parseJSON() {
 
-        String URL = RUTA+"c_consultar_eventos_aprendizaje.php";
+        String URL = Util.RUTA+"c_consultar_eventos_aprendizaje.php";
 
         request = new JsonObjectRequest(Request.Method.GET, URL, null,
                 new Response.Listener<JSONObject>() {

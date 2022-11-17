@@ -36,9 +36,11 @@ public class ap_frgcategoriaaprendizaje extends Fragment {
     Button ap_cabtncursosvender;
     Button ap_cabtncursosautoaprendizaje;
     Button ap_cabtncursosoperiones;
+
     ap_adplistadofrgultimos ap_adpultimos;
     RecyclerView ap_rclvultimos;
     ArrayList<LastFavoritos> ap_listaultimos;
+
     LastFavoritos lastFavoritos;
     RequestQueue requestQueue;
     JsonObjectRequest request;
@@ -70,7 +72,7 @@ public class ap_frgcategoriaaprendizaje extends Fragment {
         ap_cabtncursosvender.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String categoria = "Aprendizaje relacionado a vender";
+                String categoria = "vender";
                 SharedPreferences preferencias=getContext().getSharedPreferences(Util.SHAREDPREFERENCES, Context.MODE_PRIVATE);
                 SharedPreferences.Editor editor=preferencias.edit();
                 editor.putString("ap_categoriacurso", categoria);
@@ -82,7 +84,7 @@ public class ap_frgcategoriaaprendizaje extends Fragment {
         ap_cabtncursosautoaprendizaje.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String categoria = "Aprendizaje relacionado a autoaprendizaje";
+                String categoria = "autoaprendizaje";
                 SharedPreferences preferencias=getContext().getSharedPreferences(Util.SHAREDPREFERENCES, Context.MODE_PRIVATE);
                 SharedPreferences.Editor editor=preferencias.edit();
                 editor.putString("ap_categoriacurso", categoria);
@@ -94,7 +96,7 @@ public class ap_frgcategoriaaprendizaje extends Fragment {
         ap_cabtncursosoperiones.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String categoria = "Aprendizaje relacionado a las operaciones de negocio";
+                String categoria = "las operaciones de negocio";
                 SharedPreferences preferencias=getContext().getSharedPreferences(Util.SHAREDPREFERENCES, Context.MODE_PRIVATE);
                 SharedPreferences.Editor editor=preferencias.edit();
                 editor.putString("ap_categoriacurso", categoria);
@@ -106,7 +108,7 @@ public class ap_frgcategoriaaprendizaje extends Fragment {
     }
 
     private void parseJSON() {
-        String URL = RUTA+"c_listar_ultimos_favoritos_aprendizaje.php?id_DocumentoPersona=11111119";
+        String URL = Util.RUTA+"c_listar_ultimos_favoritos_aprendizaje.php?id_DocumentoPersona=11111119";
 
         request = new JsonObjectRequest(Request.Method.GET, URL, null,
                 new Response.Listener<JSONObject>() {
