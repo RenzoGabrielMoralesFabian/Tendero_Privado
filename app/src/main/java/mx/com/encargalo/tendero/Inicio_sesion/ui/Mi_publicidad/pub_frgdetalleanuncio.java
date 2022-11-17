@@ -11,14 +11,10 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import com.bumptech.glide.Glide;
-
 import mx.com.encargalo.R;
-import mx.com.encargalo.tendero.UTIL.DATOS;
-
-import static mx.com.encargalo.tendero.UTIL.DATOS.IP_SERVER;
-
+import mx.com.encargalo.tendero.Util.Util;
+import static mx.com.encargalo.tendero.Util.Util.IP_SERVER;
 public class pub_frgdetalleanuncio extends Fragment {
     Button pub_pabtnvolverlista;
     ImageView pub_daimgvwimgprevia;
@@ -28,7 +24,7 @@ public class pub_frgdetalleanuncio extends Fragment {
                              Bundle savedInstanceState) {
         View vista = inflater.inflate(R.layout.fragment_pub_frgdetalleanuncio, container, false);
 
-        SharedPreferences preferencias=getContext().getSharedPreferences(DATOS.SHAREDPREFERENCES, Context.MODE_PRIVATE);
+        SharedPreferences preferencias=getContext().getSharedPreferences(Util.SHAREDPREFERENCES, Context.MODE_PRIVATE);
         String dpimagenurl = preferencias.getString("pub_dpimagenurl", "");
         String dptitulo = preferencias.getString("pub_dptitulo","");
         String dpdescripcion = preferencias.getString("pub_dpdescripcion","");
@@ -39,8 +35,6 @@ public class pub_frgdetalleanuncio extends Fragment {
         String dpconversion = preferencias.getString("pub_dpconversion", "");
 
         pub_daimgvwimgprevia=vista.findViewById(R.id.pub_daimgvwimgprevia);
-
-
 
         String url = IP_SERVER;
         Glide.with(getContext())
@@ -61,7 +55,6 @@ public class pub_frgdetalleanuncio extends Fragment {
         pub_datxtnrovistas.setText(dpvistas);
         pub_datxttasa=vista.findViewById(R.id.pub_datxttasa);
         pub_datxttasa.setText(dpconversion);
-
 
         pub_pabtnvolverlista=vista.findViewById(R.id.pub_pabtnvolverlista);
         pub_pabtnvolverlista.setOnClickListener(new View.OnClickListener() {

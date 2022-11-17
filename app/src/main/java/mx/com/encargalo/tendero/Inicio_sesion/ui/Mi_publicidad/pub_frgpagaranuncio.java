@@ -4,7 +4,6 @@ import android.app.Dialog;
 import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
-
 import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
@@ -14,7 +13,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -23,14 +21,11 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-
 import java.util.Date;
 import java.util.Hashtable;
 import java.util.Map;
-
 import mx.com.encargalo.R;
-import mx.com.encargalo.tendero.UTIL.DATOS;
-
+import mx.com.encargalo.tendero.Util.Util;
 import static android.content.Context.MODE_PRIVATE;
 
 public class pub_frgpagaranuncio extends Fragment {
@@ -60,7 +55,7 @@ public class pub_frgpagaranuncio extends Fragment {
         pub_patxtfechahasta=vista.findViewById(R.id.pub_patxtfechahasta);
 
         SharedPreferences sharedPreferences =
-                getContext().getSharedPreferences(DATOS.SHAREDPREFERENCES, MODE_PRIVATE);
+                getContext().getSharedPreferences(Util.SHAREDPREFERENCES, MODE_PRIVATE);
 
         Date fecha_inicio = new Date(Date.parse(sharedPreferences.getString("fechaInicio",""))) ;
         Date fecha_fin = new Date(Date.parse(sharedPreferences.getString("fechaFin",""))) ;
@@ -110,7 +105,7 @@ public class pub_frgpagaranuncio extends Fragment {
         btnpagar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String myURL = DATOS.IP_SERVER+ "a_nuevo_anuncio.php";
+                String myURL = Util.IP_SERVER+ "a_nuevo_anuncio.php";
                 StringRequest stringRequest = new StringRequest(Request.Method.POST, myURL,
                         new Response.Listener<String>() {
                             @Override
@@ -128,7 +123,7 @@ public class pub_frgpagaranuncio extends Fragment {
                     @Override
                     protected Map<String, String> getParams() throws AuthFailureError {
                         SharedPreferences sharedPreferences =
-                                getContext().getSharedPreferences(DATOS.SHAREDPREFERENCES, MODE_PRIVATE);
+                                getContext().getSharedPreferences(Util.SHAREDPREFERENCES, MODE_PRIVATE);
                         Map<String, String> params = new Hashtable<String, String>();
                         params.put("pathImg", sharedPreferences.getString("pathImg",""));
                         params.put("titulo", sharedPreferences.getString("titulo",""));
@@ -136,7 +131,7 @@ public class pub_frgpagaranuncio extends Fragment {
                         params.put("linkRed", sharedPreferences.getString("linkRed",""));
                         params.put("fechaInicio", sharedPreferences.getString("fechaInicio",""));
                         params.put("fechaFin", sharedPreferences.getString("fechaFin",""));
-                        params.put("idTienda", sharedPreferences.getString(DATOS.VARGOB_ID_TENDERO,""));
+                        params.put("idTienda", sharedPreferences.getString(Util.VARGOB_ID_TENDERO,""));
                         params.put("montoPubli", preciot+"" );
                         params.put("fechaPago", sharedPreferences.getString("fechaInicio",""));
                         return params;

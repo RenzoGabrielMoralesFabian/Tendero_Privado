@@ -11,29 +11,26 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
-
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
-
 import org.json.JSONArray;
 import org.json.JSONObject;
-
 import java.util.ArrayList;
 import mx.com.encargalo.R;
 import mx.com.encargalo.tendero.Inicio_sesion.ui.Mi_publicidad.Adapters.pub_adplistadofrglistado;
 import mx.com.encargalo.tendero.Inicio_sesion.ui.Mi_publicidad.Entidades.Publicidad;
-import mx.com.encargalo.tendero.UTIL.DATOS;
+import mx.com.encargalo.tendero.Util.Util;
+import static mx.com.encargalo.tendero.Util.Util.RUTA;
 
 public class pub_frglistadomisanuncios extends Fragment {
 
     pub_adplistadofrglistado pub_adplista;
     RecyclerView pub_rclvpublicidad;
     ArrayList<Publicidad> pub_listapublicidad;
-
     Publicidad publicidad;
     RequestQueue requestQueue;
     JsonObjectRequest request;
@@ -55,7 +52,7 @@ public class pub_frglistadomisanuncios extends Fragment {
     }
 
     private void parseJSON() {
-        String URL = "http://129.151.103.228/Encargalo/APIS/TenderoApp/c_mostrar_detalle_publicidad.php?id_Tienda=1";
+        String URL = RUTA+"c_mostrar_detalle_publicidad.php?id_Tienda=1";
 
         request = new JsonObjectRequest(Request.Method.GET, URL, null,
                 new Response.Listener<JSONObject>() {
@@ -95,7 +92,7 @@ public class pub_frglistadomisanuncios extends Fragment {
                                     String dpvistas = pub_listapublicidad.get(pub_rclvpublicidad.getChildAdapterPosition(view)).getPub_strvistas();
                                     Toast.makeText(getContext(), "Selecciono: " + dptitulo, Toast.LENGTH_SHORT).show();
 
-                                    SharedPreferences preferencias=getContext().getSharedPreferences(DATOS.SHAREDPREFERENCES, Context.MODE_PRIVATE);
+                                    SharedPreferences preferencias=getContext().getSharedPreferences(Util.SHAREDPREFERENCES, Context.MODE_PRIVATE);
                                     SharedPreferences.Editor editor=preferencias.edit();
                                     editor.putString("pub_dpimagenurl", dpimagen);
                                     editor.putString("pub_dptitulo", dptitulo);

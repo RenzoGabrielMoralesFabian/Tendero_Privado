@@ -1,6 +1,7 @@
-package mx.com.encargalo.tendero.UTIL;
+package mx.com.encargalo.tendero.Util;
 
-public class DATOS {
+public class Util {
+    public static final String RUTA="http://129.151.103.228/Encargalo/APIS/TenderoApp/";
 
     //public static final String IP_SERVER = "";
     public static final String IP_SERVER = "http://129.151.103.228/Encargalo/APIS/TenderoApp/";
@@ -13,5 +14,8 @@ public class DATOS {
 
     //MENU
     public static final String VARGOB_ID_TENDERO = "id_tendero";
+
+    //SHARED PREFERENCES MI TIENDA
+    public static final String ARCHIVO_PREFRENCIAS = "Preferencias_RegTienda";
 
 }
