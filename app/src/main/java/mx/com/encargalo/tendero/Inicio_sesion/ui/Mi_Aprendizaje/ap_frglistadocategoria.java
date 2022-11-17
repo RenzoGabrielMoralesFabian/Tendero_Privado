@@ -29,6 +29,8 @@ import mx.com.encargalo.tendero.Inicio_sesion.ui.Mi_Aprendizaje.Adapters.ap_adpl
 import mx.com.encargalo.tendero.Inicio_sesion.ui.Mi_Aprendizaje.Entidades.Curso;
 import mx.com.encargalo.tendero.Util.Util;
 
+import static mx.com.encargalo.tendero.Util.Util.RUTA;
+
 public class ap_frglistadocategoria extends Fragment {
 
     ap_adplistadofrgcategoria ap_adpcategoria;
@@ -60,7 +62,7 @@ public class ap_frglistadocategoria extends Fragment {
         SharedPreferences preferencias=getContext().getSharedPreferences(Util.SHAREDPREFERENCES, Context.MODE_PRIVATE);
         String categoria = preferencias.getString("ap_categoriacurso","");
 
-        String URL = "http://129.151.103.228/Encargalo/APIS/TenderoApp/c_consultar_materiales_por_categoria_aprendizaje.php?categoria="+categoria;
+        String URL = RUTA+"c_consultar_materiales_por_categoria_aprendizaje.php?categoria="+categoria;
 
         request = new JsonObjectRequest(Request.Method.GET, URL, null,
                 new Response.Listener<JSONObject>() {

@@ -25,6 +25,8 @@ import mx.com.encargalo.R;
 import mx.com.encargalo.tendero.Inicio_sesion.ui.Mi_Aprendizaje.Adapters.ap_adplistadofrgeventosenvivo;
 import mx.com.encargalo.tendero.Inicio_sesion.ui.Mi_Aprendizaje.Entidades.EventoEnVivo;
 
+import static mx.com.encargalo.tendero.Util.Util.RUTA;
+
 public class ap_frgeventosenvivo extends Fragment {
 
     ap_adplistadofrgeventosenvivo ap_adpeventosenvivo;
@@ -52,7 +54,7 @@ public class ap_frgeventosenvivo extends Fragment {
 
     private void parseJSON() {
 
-        String URL = "http://129.151.103.228/Encargalo/APIS/TenderoApp/c_consultar_eventos_aprendizaje.php";
+        String URL = RUTA+"c_consultar_eventos_aprendizaje.php";
 
         request = new JsonObjectRequest(Request.Method.GET, URL, null,
                 new Response.Listener<JSONObject>() {

@@ -29,16 +29,16 @@ import mx.com.encargalo.tendero.Inicio_sesion.ui.Mi_Aprendizaje.Adapters.ap_adpl
 import mx.com.encargalo.tendero.Inicio_sesion.ui.Mi_Aprendizaje.Entidades.LastFavoritos;
 import mx.com.encargalo.tendero.Util.Util;
 
+import static mx.com.encargalo.tendero.Util.Util.RUTA;
+
 public class ap_frgcategoriaaprendizaje extends Fragment {
     Button ap_cabtnvermas;
     Button ap_cabtncursosvender;
     Button ap_cabtncursosautoaprendizaje;
     Button ap_cabtncursosoperiones;
-
     ap_adplistadofrgultimos ap_adpultimos;
     RecyclerView ap_rclvultimos;
     ArrayList<LastFavoritos> ap_listaultimos;
-
     LastFavoritos lastFavoritos;
     RequestQueue requestQueue;
     JsonObjectRequest request;
@@ -106,7 +106,7 @@ public class ap_frgcategoriaaprendizaje extends Fragment {
     }
 
     private void parseJSON() {
-        String URL = "http://129.151.103.228/Encargalo/APIS/TenderoApp/c_listar_ultimos_favoritos_aprendizaje.php?id_DocumentoPersona=11111119";
+        String URL = RUTA+"c_listar_ultimos_favoritos_aprendizaje.php?id_DocumentoPersona=11111119";
 
         request = new JsonObjectRequest(Request.Method.GET, URL, null,
                 new Response.Listener<JSONObject>() {

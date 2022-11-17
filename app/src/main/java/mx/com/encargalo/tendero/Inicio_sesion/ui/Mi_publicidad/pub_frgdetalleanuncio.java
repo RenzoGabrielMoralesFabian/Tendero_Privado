@@ -11,12 +11,9 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import com.bumptech.glide.Glide;
-
 import mx.com.encargalo.R;
 import mx.com.encargalo.tendero.Util.Util;
-
 import static mx.com.encargalo.tendero.Util.Util.IP_SERVER;
 
 public class pub_frgdetalleanuncio extends Fragment {

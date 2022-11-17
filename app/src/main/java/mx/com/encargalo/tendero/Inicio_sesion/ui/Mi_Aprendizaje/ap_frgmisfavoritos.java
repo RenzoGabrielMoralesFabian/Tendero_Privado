@@ -27,6 +27,8 @@ import mx.com.encargalo.tendero.Inicio_sesion.ui.Mi_Aprendizaje.Entidades.Favori
 import mx.com.encargalo.tendero.Inicio_sesion.ui.Mi_publicidad.Adapters.pub_adplistadofrglistado;
 import mx.com.encargalo.tendero.Inicio_sesion.ui.Mi_publicidad.Entidades.Publicidad;
 
+import static mx.com.encargalo.tendero.Util.Util.RUTA;
+
 public class ap_frgmisfavoritos extends Fragment {
 
     ap_adplistadofrgmisfavoritos ap_adpfavoritos;
@@ -53,7 +55,7 @@ public class ap_frgmisfavoritos extends Fragment {
     }
 
     private void parseJSON() {
-        String URL = "http://129.151.103.228/Encargalo/APIS/TenderoApp/c_listar_favoritos_aprendizaje.php?id_DocumentoPersona=11111119";
+        String URL = RUTA+"c_listar_favoritos_aprendizaje.php?id_DocumentoPersona=11111119";
 
         request = new JsonObjectRequest(Request.Method.GET, URL, null,
                 new Response.Listener<JSONObject>() {
