@@ -41,8 +41,6 @@ public class ap_frglistadocategoria extends Fragment {
     RequestQueue requestQueue;
     JsonObjectRequest request;
 
-    String urlprueba = "https://www.youtube.com/watch?v=hPr-Yc92qaY";
-
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View vista = inflater.inflate(R.layout.fragment_ap_frglistadocategoria, container, false);
@@ -77,6 +75,7 @@ public class ap_frglistadocategoria extends Fragment {
                                 JSONObject jsonObject=null;
                                 jsonObject=json.getJSONObject(i);
                                 curso.setAp_varstrnombrecurso(jsonObject.optString("apreTituloRecurso"));
+                                curso.setAp_varstrlinkcurso(jsonObject.optString("apreContenido"));
                                 ap_listacategoria.add(curso);
 
                             }
@@ -86,7 +85,8 @@ public class ap_frglistadocategoria extends Fragment {
                                 @Override
                                 public void onClick(View view) {
                                     String ap_varlocnombrecurso = ap_listacategoria.get(ap_rclvcategoria.getChildAdapterPosition(view)).getAp_varstrnombrecurso();
-                                    Uri link = Uri.parse(urlprueba);
+                                    String ap_varloclinkcurso = ap_listacategoria.get(ap_rclvcategoria.getChildAdapterPosition(view)).getAp_varstrlinkcurso();
+                                    Uri link = Uri.parse(ap_varloclinkcurso);
                                     Intent i = new Intent(Intent.ACTION_VIEW, link);
                                     startActivity(i);
                                     Toast.makeText(getContext(), "Seleccionó: " + ap_varlocnombrecurso, Toast.LENGTH_SHORT).show();
