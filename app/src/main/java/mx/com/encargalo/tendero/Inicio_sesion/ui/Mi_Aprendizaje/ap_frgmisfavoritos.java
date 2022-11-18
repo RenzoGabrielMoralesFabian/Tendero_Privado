@@ -1,5 +1,7 @@
 package mx.com.encargalo.tendero.Inicio_sesion.ui.Mi_Aprendizaje;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -70,6 +72,7 @@ public class ap_frgmisfavoritos extends Fragment {
                                 JSONObject jsonObject=null;
                                 jsonObject=json.getJSONObject(i);
                                 favorito.setAp_strtitulo(jsonObject.optString("apreTituloRecurso"));
+                                favorito.setAp_strlink(jsonObject.optString("apreContenido"));
                                 ap_listafavoritos.add(favorito);
 
                             }
@@ -79,6 +82,10 @@ public class ap_frgmisfavoritos extends Fragment {
                                 @Override
                                 public void onClick(View view) {
                                     String titulo = ap_listafavoritos.get(ap_rclvfavoritos.getChildAdapterPosition(view)).getAp_strtitulo();
+                                    String link = ap_listafavoritos.get(ap_rclvfavoritos.getChildAdapterPosition(view)).getAp_strlink();
+                                    Uri url = Uri.parse(link);
+                                    Intent i = new Intent(Intent.ACTION_VIEW, url);
+                                    startActivity(i);
                                     Toast.makeText(getContext(), "Seleccionó: " + titulo, Toast.LENGTH_SHORT).show();
                                 }
                             });
