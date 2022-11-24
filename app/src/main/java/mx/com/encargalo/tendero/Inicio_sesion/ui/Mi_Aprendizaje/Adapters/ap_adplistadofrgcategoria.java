@@ -23,9 +23,6 @@ public class ap_adplistadofrgcategoria extends RecyclerView.Adapter<ap_adplistad
     LayoutInflater ap_inflater;
     ArrayList<Curso> ap_model;
 
-    LottieAnimationView lottieFav;
-    private Boolean btnFav = false;
-
     private View.OnClickListener ap_listener;
 
     public ap_adplistadofrgcategoria(Context context, ArrayList<Curso>model){
@@ -38,20 +35,6 @@ public class ap_adplistadofrgcategoria extends RecyclerView.Adapter<ap_adplistad
     @Override
     public ViewHolder onCreateViewHolder(@NonNull @NotNull ViewGroup parent, int viewType) {
         View view = ap_inflater.inflate(R.layout.ap_ccitemcardcurso, parent, false);
-        /*lottieFav= view.findViewById(R.id.ap_ccbtnanimacion);
-        lottieFav.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (btnFav){
-                    lottieFav.setMaxFrame(0);
-                    btnFav = false;
-                }else {
-                    lottieFav.setMinAndMaxProgress(0.0f,1.0f);
-                    lottieFav.playAnimation();
-                    btnFav = true;
-                }
-            }
-        });*/
         view.setOnClickListener(this);
         return new ViewHolder(view);
     }
@@ -64,6 +47,26 @@ public class ap_adplistadofrgcategoria extends RecyclerView.Adapter<ap_adplistad
     public void onBindViewHolder(@NonNull @NotNull ap_adplistadofrgcategoria.ViewHolder holder, int position) {
         String ap_varlocnombrecurso = ap_model.get(position).getAp_varstrnombrecurso();
         holder.ap_varlocnombrecurso.setText(String.valueOf(ap_varlocnombrecurso));
+
+        if(holder.btnFav){
+            holder.lottieFav.setFrame(100);
+        }else {
+            holder.lottieFav.setFrame(0);
+        }
+
+        holder.lottieFav.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (holder.btnFav){
+                    holder.lottieFav.setMaxFrame(0);
+                    holder.btnFav = false;
+                }else {
+                    holder.lottieFav.setMinAndMaxProgress(0.0f,1.0f);
+                    holder.lottieFav.playAnimation();
+                    holder.btnFav = true;
+                }
+            }
+        });
     }
 
     @Override
@@ -80,10 +83,12 @@ public class ap_adplistadofrgcategoria extends RecyclerView.Adapter<ap_adplistad
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         TextView ap_varlocnombrecurso;
-
+        LottieAnimationView lottieFav;
+        private Boolean btnFav = false;
         public ViewHolder(@NonNull @NotNull View itemView) {
             super(itemView);
             ap_varlocnombrecurso = itemView.findViewById(R.id.ap_cctxtnombrecurso);
+            lottieFav= itemView.findViewById(R.id.ap_ccbtnanimacion);
         }
     }
 }
