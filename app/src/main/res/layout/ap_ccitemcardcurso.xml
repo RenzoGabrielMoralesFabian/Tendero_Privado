@@ -35,7 +35,16 @@
             android:background="@color/whitePrimary"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:padding="10dp"/>
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <!--<com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/ap_ccbtnanimacion"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            app:lottie_rawRes="@raw/favorite"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>-->
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>

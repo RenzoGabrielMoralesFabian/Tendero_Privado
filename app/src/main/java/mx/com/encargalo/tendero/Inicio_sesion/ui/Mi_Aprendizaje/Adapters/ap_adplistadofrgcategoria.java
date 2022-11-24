@@ -9,6 +9,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.airbnb.lottie.LottieAnimationView;
+
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
@@ -20,6 +22,9 @@ public class ap_adplistadofrgcategoria extends RecyclerView.Adapter<ap_adplistad
 
     LayoutInflater ap_inflater;
     ArrayList<Curso> ap_model;
+
+    LottieAnimationView lottieFav;
+    private Boolean btnFav = false;
 
     private View.OnClickListener ap_listener;
 
@@ -33,6 +38,20 @@ public class ap_adplistadofrgcategoria extends RecyclerView.Adapter<ap_adplistad
     @Override
     public ViewHolder onCreateViewHolder(@NonNull @NotNull ViewGroup parent, int viewType) {
         View view = ap_inflater.inflate(R.layout.ap_ccitemcardcurso, parent, false);
+        /*lottieFav= view.findViewById(R.id.ap_ccbtnanimacion);
+        lottieFav.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (btnFav){
+                    lottieFav.setMaxFrame(0);
+                    btnFav = false;
+                }else {
+                    lottieFav.setMinAndMaxProgress(0.0f,1.0f);
+                    lottieFav.playAnimation();
+                    btnFav = true;
+                }
+            }
+        });*/
         view.setOnClickListener(this);
         return new ViewHolder(view);
     }
