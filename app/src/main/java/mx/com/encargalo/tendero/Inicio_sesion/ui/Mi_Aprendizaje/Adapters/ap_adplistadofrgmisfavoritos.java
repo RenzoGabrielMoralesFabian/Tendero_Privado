@@ -62,16 +62,22 @@ public class ap_adplistadofrgmisfavoritos extends RecyclerView.Adapter<ap_adplis
 
 //        Toast.makeText(context, estado, Toast.LENGTH_SHORT).show();
 
-        if(estado.equals("ACTIVO")){
+        /*if(estado.equals("ACTIVO")){
             holder.lottieFav.setFrame(100);
         }else {
             holder.lottieFav.setFrame(0);
-        }
+        }*/
 
-        /*holder.lottieFav.setOnClickListener(new View.OnClickListener() {
+        if(holder.btnFav){
+            holder.lottieFav.setFrame(100);
+        }else {
+            holder.lottieFav.setFrame(0);
+        }//----------------------------------------solo para presentacion, borrar luego
+
+        holder.lottieFav.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (finalBtnestado){
+                if (holder.btnFav){
                     holder.lottieFav.setMaxFrame(0);
                     holder.btnFav = false;
                 }else {
@@ -80,7 +86,7 @@ public class ap_adplistadofrgmisfavoritos extends RecyclerView.Adapter<ap_adplis
                     holder.btnFav = true;
                 }
             }
-        });*/
+        });
     }
 
     @Override
@@ -99,11 +105,11 @@ public class ap_adplistadofrgmisfavoritos extends RecyclerView.Adapter<ap_adplis
     public class ViewHolder extends RecyclerView.ViewHolder {
         TextView titulo;
         LottieAnimationView lottieFav;
-        private Boolean btnFav = false;
+        private Boolean btnFav = true;
         public ViewHolder(@NonNull @NotNull View itemView) {
             super(itemView);
             titulo = itemView.findViewById(R.id.ap_mftxtnombrecurso);
-            lottieFav= itemView.findViewById(R.id.ap_ccbtnanimacion);
+            lottieFav= itemView.findViewById(R.id.ap_mfbtnanimacion);
         }
     }
 }

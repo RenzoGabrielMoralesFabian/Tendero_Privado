@@ -9,6 +9,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.airbnb.lottie.LottieAnimationView;
+
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
@@ -46,6 +48,26 @@ public class ap_adplistadofrgultimos extends RecyclerView.Adapter<ap_adplistadof
         String titulo = ap_model.get(position).getAp_strtitulo();
         holder.titulo.setText(String.valueOf(titulo));
 
+        if(holder.btnFav){
+            holder.lottieFav.setFrame(100);
+        }else {
+            holder.lottieFav.setFrame(0);
+        }//----------------------------------------solo para presentacion, borrar luego
+
+        holder.lottieFav.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (holder.btnFav){
+                    holder.lottieFav.setMaxFrame(0);
+                    holder.btnFav = false;
+                }else {
+                    holder.lottieFav.setMinAndMaxProgress(0.0f,1.0f);
+                    holder.lottieFav.playAnimation();
+                    holder.btnFav = true;
+                }
+            }
+        });
+
     }
 
     @Override
@@ -62,9 +84,12 @@ public class ap_adplistadofrgultimos extends RecyclerView.Adapter<ap_adplistadof
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         TextView titulo;
+        LottieAnimationView lottieFav;
+        private Boolean btnFav = true;
         public ViewHolder(@NonNull @NotNull View itemView) {
             super(itemView);
             titulo = itemView.findViewById(R.id.ap_catxtnombrecurso);
+            lottieFav= itemView.findViewById(R.id.ap_cabtnanimacion);
         }
     }
 }
