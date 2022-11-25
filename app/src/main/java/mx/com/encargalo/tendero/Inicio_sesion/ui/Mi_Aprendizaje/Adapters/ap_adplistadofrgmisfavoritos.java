@@ -5,9 +5,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.airbnb.lottie.LottieAnimationView;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -21,11 +24,14 @@ public class ap_adplistadofrgmisfavoritos extends RecyclerView.Adapter<ap_adplis
     LayoutInflater ap_inflater;
     ArrayList<Favorito> ap_model;
 
+    Context context;
+
     private View.OnClickListener ap_listener;
 
     public ap_adplistadofrgmisfavoritos(Context context, ArrayList<Favorito> model){
         this.ap_inflater =LayoutInflater.from(context);
         this.ap_model =model;
+        this.context=context;
     }
 
     @NonNull
@@ -46,6 +52,35 @@ public class ap_adplistadofrgmisfavoritos extends RecyclerView.Adapter<ap_adplis
         String titulo = ap_model.get(position).getAp_strtitulo();
         holder.titulo.setText(String.valueOf(titulo));
 
+        String estado = ap_model.get(position).getAp_strestado();
+
+        /*String estado = ap_model.get(position).getAp_strestado();
+        Boolean btnestado = null;
+        if(estado == "ACTIVO"){
+            btnestado=true;
+        }*/
+
+//        Toast.makeText(context, estado, Toast.LENGTH_SHORT).show();
+
+        if(estado.equals("ACTIVO")){
+            holder.lottieFav.setFrame(100);
+        }else {
+            holder.lottieFav.setFrame(0);
+        }
+
+        /*holder.lottieFav.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (finalBtnestado){
+                    holder.lottieFav.setMaxFrame(0);
+                    holder.btnFav = false;
+                }else {
+                    holder.lottieFav.setMinAndMaxProgress(0.0f,1.0f);
+                    holder.lottieFav.playAnimation();
+                    holder.btnFav = true;
+                }
+            }
+        });*/
     }
 
     @Override
@@ -63,9 +98,12 @@ public class ap_adplistadofrgmisfavoritos extends RecyclerView.Adapter<ap_adplis
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         TextView titulo;
+        LottieAnimationView lottieFav;
+        private Boolean btnFav = false;
         public ViewHolder(@NonNull @NotNull View itemView) {
             super(itemView);
             titulo = itemView.findViewById(R.id.ap_mftxtnombrecurso);
+            lottieFav= itemView.findViewById(R.id.ap_ccbtnanimacion);
         }
     }
 }

@@ -25,7 +25,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-        <ImageButton
+        <!--<ImageButton
             android:id="@+id/ap_cabtnquitfavorito"
             android:layout_weight="1"
             android:layout_width="wrap_content"
@@ -35,7 +35,15 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:padding="10dp"/>
+            android:padding="10dp"/>-->
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/ap_ccbtnanimacion"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            app:lottie_rawRes="@raw/favorite"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.cardview.widget.CardView>

@@ -3,13 +3,15 @@ package mx.com.encargalo.tendero.Inicio_sesion.ui.Mi_Aprendizaje.Entidades;
 public class Favorito {
     String ap_strtitulo;
     String ap_strlink;
+    String ap_strestado;
 
     public Favorito() {
     }
 
-    public Favorito(String ap_strtitulo, String ap_strlink) {
+    public Favorito(String ap_strtitulo, String ap_strlink, String ap_strestado) {
         this.ap_strtitulo = ap_strtitulo;
         this.ap_strlink = ap_strlink;
+        this.ap_strestado = ap_strestado;
     }
 
     public String getAp_strtitulo() {
@@ -26,5 +28,13 @@ public class Favorito {
 
     public void setAp_strlink(String ap_strlink) {
         this.ap_strlink = ap_strlink;
+    }
+
+    public String getAp_strestado() {
+        return ap_strestado;
+    }
+
+    public void setAp_strestado(String ap_strestado) {
+        this.ap_strestado = ap_strestado;
     }
 }
