@@ -49,24 +49,9 @@ public class ap_adplistadofrgmisfavoritos extends RecyclerView.Adapter<ap_adplis
 
     @Override
     public void onBindViewHolder(@NonNull @NotNull ap_adplistadofrgmisfavoritos.ViewHolder holder, int position) {
+
         String titulo = ap_model.get(position).getAp_strtitulo();
         holder.titulo.setText(String.valueOf(titulo));
-
-        String estado = ap_model.get(position).getAp_strestado();
-
-        /*String estado = ap_model.get(position).getAp_strestado();
-        Boolean btnestado = null;
-        if(estado == "ACTIVO"){
-            btnestado=true;
-        }*/
-
-//        Toast.makeText(context, estado, Toast.LENGTH_SHORT).show();
-
-        /*if(estado.equals("ACTIVO")){
-            holder.lottieFav.setFrame(100);
-        }else {
-            holder.lottieFav.setFrame(0);
-        }*/
 
         if(holder.btnFav){
             holder.lottieFav.setFrame(100);
